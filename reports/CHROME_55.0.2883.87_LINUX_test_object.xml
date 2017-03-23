@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test_object"
+    errors="0" failures="0" hostname="" id="" package="test_object" skipped="0"
+    tests="1" time="34.62" timestamp="Tue, 14 Mar 2017 08:02:46 GMT">
+  
+    <testcase name="test import CSV object" time="34.62" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test_object"
+    errors="1" failures="0" hostname="" id="" package="test_object" skipped="0"
+    tests="1" time="0.04000" timestamp="Tue, 14 Mar 2017 07:16:57 GMT">
+  
+    <testcase name="test import exists object" time="0.04000" assertions="0">
+    </testcase>
+      <system-err>
+          Error while running [Test Object / test import exists object]:
+
+  Error: existsObjectList .webix_list_item was not found in &quot;object_workspace&quot;. Available elements: objectList,addNewObjectButton,addNewObjectPopup,blankObjectTab,blankObjectPanel,blankObjectNameTextbox,blankObjectSaveButton,blankObjectCancelButton,existsObjectTab,existsObjectPanel,existsObjectList,existsObjectSaveButton,existsObjectCancelButton
+    at getElement (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:13:13)
+    at Object.click (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:81:32)
+    at Object.selectExistsObject (/home/pong/Desktop/test-app_builder/pages/app_builder/object_workspace.js:66:6)
+    at Object.test import exists object (/home/pong/Desktop/test-app_builder/tests/test_object.js:48:5)
+    at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>

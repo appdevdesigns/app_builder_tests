@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="3">
+
+  <testsuite name="test_appList"
+    errors="1" failures="0" hostname="" id="" package="test_appList" skipped="0"
+    tests="3" time="130.8" timestamp="Wed, 15 Mar 2017 09:19:53 GMT">
+  
+    <testcase name="test create new application" time="73.87" assertions="10">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+      <system-err>
+          Error while running [Test App List / test delete application]:
+
+  TypeError: Cannot read property &#39;ELEMENT&#39; of undefined
+    at Object.&lt;anonymous&gt; (/home/pong/Desktop/test-app_builder/tests/test_appList.js:124:39)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:365:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:381:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/http/request.js:166:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+      </system-err>
+  
+    <testcase name="test edit application name &amp; description" time="30.11" assertions="11">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+      <system-err>
+          Error while running [Test App List / test delete application]:
+
+  TypeError: Cannot read property &#39;ELEMENT&#39; of undefined
+    at Object.&lt;anonymous&gt; (/home/pong/Desktop/test-app_builder/tests/test_appList.js:124:39)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:365:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:381:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/http/request.js:166:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+      </system-err>
+  
+    <testcase name="test delete application" time="26.85" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+      <system-err>
+          Error while running [Test App List / test delete application]:
+
+  TypeError: Cannot read property &#39;ELEMENT&#39; of undefined
+    at Object.&lt;anonymous&gt; (/home/pong/Desktop/test-app_builder/tests/test_appList.js:124:39)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:365:18)
+    at emitTwo (events.js:106:13)
+    at HttpRequest.emit (events.js:191:7)
+    at HttpRequest.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/index.js:381:15)
+    at emitThree (events.js:116:13)
+    at HttpRequest.emit (events.js:194:7)
+    at IncomingMessage.&lt;anonymous&gt; (/usr/local/lib/node_modules/nightwatch/lib/http/request.js:166:16)
+    at emitNone (events.js:91:20)
+    at IncomingMessage.emit (events.js:185:7)
+      </system-err>
+  
+  
+  </testsuite>
+</testsuites>
