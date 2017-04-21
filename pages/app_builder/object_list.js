@@ -23,7 +23,10 @@ module.exports = {
 		importCsvObjectPanel: 'div[view_id="ab-object-csv-import-form"]',
 		importCsvObjectNameTextbox: 'div[view_id="ab-object-csv-import-object-name"] input',
 		importCsvObjectSaveButton: 'div[view_id="ab-object-csv-import-save"] button',
-		importCsvObjectCancelButton: 'div[view_id="ab-object-csv-import-cancel"] button'
+		importCsvObjectCancelButton: 'div[view_id="ab-object-csv-import-cancel"] button',
+
+		objectAlertDialog: 'div[class="webix_modal_box webix_confirm"]',
+		objectAlertDialogButton: 'div[class="webix_modal_box webix_confirm"] button',
 	},
 	commands: [{
 		// Add new object
@@ -42,7 +45,7 @@ module.exports = {
 			return this;
 		},
 		enterBlankObjectName: function (objectName) {
-			this.waitForElementVisible('@blankObjectNameTextbox', 500)
+			this.waitForElementVisible('@blankObjectNameTextbox', 1200)
 				.setValue('@blankObjectNameTextbox', objectName);
 
 			return this;
@@ -111,6 +114,18 @@ module.exports = {
 
 			return this;
 		},
+		selectObject: function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-object-list"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		}
 
 
 	}]
