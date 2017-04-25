@@ -1,464 +1,900 @@
-16:19:53.691 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
-16:19:53.692 INFO - Launching a standalone Selenium Server
-2017-03-15 16:19:53.710:INFO::main: Logging initialized @274ms
-16:19:53.763 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
- registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform LINUX
-16:19:53.763 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
- registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform LINUX
-16:19:53.763 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-16:19:53.764 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+00:28:00.273 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+00:28:00.274 INFO - Launching a standalone Selenium Server
+2560-04-26 00:28:00.298:INFO::main: Logging initialized @392ms to org.seleniumhq.jetty9.util.log.StdErrLog
+00:28:00.394 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+00:28:00.395 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-16:19:53.764 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-16:19:53.764 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-16:19:53.765 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
- registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform LINUX
-2017-03-15 16:19:53.801:INFO:osjs.Server:main: jetty-9.2.15.v20160210
-2017-03-15 16:19:53.823:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@32d992b2{/,null,AVAILABLE}
-2017-03-15 16:19:53.836:INFO:osjs.ServerConnector:main: Started ServerConnector@29a5dfb7{HTTP/1.1}{0.0.0.0:4444}
-2017-03-15 16:19:53.837:INFO:osjs.Server:main: Started @400ms
-16:19:53.837 INFO - Selenium Server is up and running
-16:19:54.117 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-16:19:54.148 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-16:19:54.163 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f) on port 14275
+00:28:00.395 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+00:28:00.395 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+00:28:00.405 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN8_1
+2560-04-26 00:28:00.490:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2560-04-26 00:28:00.543:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@39c0f4a{/,null,AVAILABLE}
+2560-04-26 00:28:01.065:INFO:osjs.AbstractConnector:main: Started ServerConnector@56762d31{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2560-04-26 00:28:01.067:INFO:osjs.Server:main: Started @1161ms
+00:28:01.067 INFO - Selenium Server is up and running
+00:28:01.443 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+00:28:01.482 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+00:28:01.495 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 13790
 Only local connections are allowed.
-16:19:54.591 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-16:19:55.966 INFO - Detected dialect: OSS
-16:19:55.981 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-16:19:55.996 INFO - Executing: [get: http://localhost:1337/page/opsportal])
-16:19:57.514 INFO - Done: [get: http://localhost:1337/page/opsportal]
-16:19:57.527 INFO - Executing: [find elements: By.cssSelector: body])
-16:19:57.573 INFO - Done: [find elements: By.cssSelector: body]
-16:19:57.580 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: body]])
-16:19:57.607 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: body]]
-16:19:57.615 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
-16:19:57.647 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
-16:19:57.652 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
-16:19:57.722 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
-16:19:57.737 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
-16:19:57.762 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
-16:19:57.768 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
-16:19:57.841 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
-16:19:57.848 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
-16:19:57.877 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
-16:19:57.882 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: button[type="submit"]]])
-16:20:00.261 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: button[type="submit"]]]
-16:20:00.271 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:00.295 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:00.801 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:00.810 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:01.316 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:01.325 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:01.831 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:01.842 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:02.346 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:02.355 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:02.859 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:02.868 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:03.372 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:03.385 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:03.889 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:03.897 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:04.402 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:04.411 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:04.915 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:04.924 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:05.429 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:05.438 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:05.943 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:05.962 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:06.467 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:06.480 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:06.985 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:06.996 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:07.500 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:07.509 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:08.013 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:08.021 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:08.526 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:08.536 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:09.044 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:09.055 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:09.560 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:09.570 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:10.076 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:10.153 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:10.659 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:10.669 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:11.173 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:11.188 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:11.693 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:11.704 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:12.209 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:12.221 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:12.725 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:13.393 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:13.398 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:13.417 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:13.922 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:13.933 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:14.438 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:14.449 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:14.954 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:14.966 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:15.472 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:15.484 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:15.988 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:17.798 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:17.802 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
-16:20:17.837 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
-16:20:17.840 INFO - Executing: [click: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]])
-16:20:17.933 INFO - Done: [click: 4 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: span[app-label-key="opp.menu"]]]
-16:20:17.938 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
-16:20:17.985 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
-16:20:17.990 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: li[area="app-builder"]]])
-16:20:18.016 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: li[area="app-builder"]]]
-16:20:18.020 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
-16:20:18.049 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
-16:20:18.052 INFO - Executing: [click: 5 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: li[area="app-builder"]]])
-16:20:18.157 INFO - Done: [click: 5 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: li[area="app-builder"]]]
-16:20:18.162 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-new-create"] button])
-16:20:18.189 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-new-create"] button]
-16:20:18.191 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-new-create"] button]])
-16:20:18.251 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-new-create"] button]]
-16:20:18.257 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-new-create"] button])
-16:20:18.288 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-new-create"] button]
-16:20:18.292 INFO - Executing: [click: 6 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-new-create"] button]])
-16:20:18.368 INFO - Done: [click: 6 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-new-create"] button]]
-16:20:18.375 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:20:18.421 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:20:18.424 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:20:18.450 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:20:18.956 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:20:18.979 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:20:18.985 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:20:19.015 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:20:19.018 INFO - Executing: [clear: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:20:19.059 INFO - Done: [clear: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:20:19.063 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:20:19.073 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:20:19.077 INFO - Executing: [send keys: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input], [A, p, p,  , n, a, m, e,  , 2, 2, 6, 8, 5, 7, 5]])
-16:20:19.153 INFO - Done: [send keys: 7 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-name"] input], [A, p, p,  , n, a, m, e,  , 2, 2, 6, 8, 5, 7, 5]]
-16:20:19.157 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:20:19.196 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:20:19.198 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea]])
-16:20:19.228 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea]]
-16:20:19.232 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:20:19.257 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:20:19.261 INFO - Executing: [clear: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea]])
-16:20:19.306 INFO - Done: [clear: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea]]
-16:20:19.310 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:20:19.330 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:20:19.335 INFO - Executing: [send keys: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea], [D, e, s, c, r, i, p, t, i, o, n,  , 8, 2, 6, 6]])
-16:20:19.429 INFO - Done: [send keys: 8 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-description"] textarea], [D, e, s, c, r, i, p, t, i, o, n,  , 8, 2, 6, 6]]
-16:20:19.433 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-form-save"] button])
-16:20:19.462 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-form-save"] button]
-16:20:19.467 INFO - Executing: [is displayed: 9 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-form-save"] button]])
-16:20:19.487 INFO - Done: [is displayed: 9 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-form-save"] button]]
-16:20:19.490 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-form-save"] button])
-16:20:19.522 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-form-save"] button]
-16:20:19.530 INFO - Executing: [click: 9 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-form-save"] button]])
-16:20:19.595 INFO - Done: [click: 9 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list-form-save"] button]]
-16:20:19.599 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:20:19.663 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:20:20.168 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:20:20.180 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:20:20.684 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:20:20.696 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:20:21.201 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:20:21.220 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:20:21.225 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]])
-16:20:21.259 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]]
-16:20:21.265 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:20:21.299 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:20:21.305 INFO - Executing: [get text: 12 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]])
-16:20:21.342 INFO - Done: [get text: 12 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]]
-16:20:21.349 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description])
-16:20:21.384 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]
-16:20:21.391 INFO - Executing: [get text: 15 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]])
-16:20:21.426 INFO - Done: [get text: 15 [[ChromeDriver: chrome on LINUX (320614a56a506426ae265ef0ad19e539)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]]
-16:21:06.438 INFO - Executing: [delete session: 333978c4-ba3c-4d93-9e02-7651050bb7bb])
-16:21:07.781 INFO - Done: [delete session: 333978c4-ba3c-4d93-9e02-7651050bb7bb]
-16:21:07.802 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-16:21:07.808 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f) on port 14719
-Only local connections are allowed.
-16:21:07.823 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-16:21:09.461 INFO - Detected dialect: OSS
-16:21:09.462 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-16:21:09.470 INFO - Executing: [get: http://localhost:1337/page/opsportal])
-16:21:11.511 INFO - Done: [get: http://localhost:1337/page/opsportal]
-16:21:11.517 INFO - Executing: [find elements: By.cssSelector: body])
-16:21:11.547 INFO - Done: [find elements: By.cssSelector: body]
-16:21:11.549 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: body]])
-16:21:11.573 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: body]]
-16:21:11.576 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
-16:21:11.598 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
-16:21:11.602 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
-16:21:11.669 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
-16:21:11.676 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
-16:21:11.705 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
-16:21:11.708 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
-16:21:11.783 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
-16:21:11.787 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
-16:21:11.816 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
-16:21:11.819 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: button[type="submit"]]])
-16:21:14.205 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: button[type="submit"]]]
-16:21:14.213 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:14.243 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:14.747 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:14.765 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:15.269 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:15.278 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:15.782 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:15.791 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:16.295 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:16.304 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:16.809 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:16.820 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:17.323 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:17.332 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:17.836 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:17.844 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:18.347 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:18.355 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:18.858 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:18.869 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:19.375 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:19.384 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:19.888 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:19.896 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:20.399 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:20.409 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:20.914 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:20.925 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:21.429 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:21.442 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:21.945 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:21.954 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:22.457 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:22.465 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:22.968 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:22.977 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:23.484 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:23.501 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:24.005 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:24.017 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:24.523 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:24.538 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:25.042 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:25.141 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:25.647 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:25.660 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:26.164 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:26.174 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:26.677 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:27.221 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:27.224 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:27.293 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:27.796 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:27.809 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:28.312 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:28.321 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:28.827 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:28.841 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:29.343 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:32.112 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:32.614 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:32.928 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:32.933 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:32.963 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:32.965 INFO - Executing: [click: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:33.037 INFO - Done: [click: 4 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: span[app-label-key="opp.menu"]]]
-16:21:33.040 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
-16:21:33.076 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
-16:21:33.080 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: li[area="app-builder"]]])
-16:21:33.112 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: li[area="app-builder"]]]
-16:21:33.118 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
-16:21:33.161 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
-16:21:33.166 INFO - Executing: [click: 5 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: li[area="app-builder"]]])
-16:21:33.297 INFO - Done: [click: 5 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: li[area="app-builder"]]]
-16:21:33.301 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item])
-16:21:33.400 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item]
-16:21:33.415 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit])
-16:21:33.451 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]
-16:21:33.458 INFO - Executing: [is displayed: 9 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]])
-16:21:33.511 INFO - Done: [is displayed: 9 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]]
-16:21:33.518 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit])
-16:21:33.545 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]
-16:21:33.552 INFO - Executing: [click: 9 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]])
-16:21:33.650 INFO - Done: [click: 9 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(3) div.ab-app-list-edit]]
-16:21:33.654 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)])
-16:21:33.684 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]
-16:21:33.693 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]])
-16:21:33.718 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]]
-16:21:33.729 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)])
-16:21:33.762 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]
-16:21:33.766 INFO - Executing: [click: 10 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]])
-16:21:33.824 INFO - Done: [click: 10 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-menu"] .webix_list_item:nth-of-type(1)]]
-16:21:33.826 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:21:33.881 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:21:33.886 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:21:33.938 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:21:34.442 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:21:34.455 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:21:34.457 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:21:34.483 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:21:34.486 INFO - Executing: [clear: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]])
-16:21:34.526 INFO - Done: [clear: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input]]
-16:21:34.531 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input])
-16:21:34.541 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-name"] input]
-16:21:34.545 INFO - Executing: [send keys: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input], [A, p, p,  , n, a, m, e,  , 1, 3, 7, 8, 7]])
-16:21:34.631 INFO - Done: [send keys: 11 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-name"] input], [A, p, p,  , n, a, m, e,  , 1, 3, 7, 8, 7]]
-16:21:34.635 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:21:34.666 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:21:34.668 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea]])
-16:21:34.695 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea]]
-16:21:34.698 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:21:34.732 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:21:34.734 INFO - Executing: [clear: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea]])
-16:21:34.772 INFO - Done: [clear: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea]]
-16:21:34.778 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea])
-16:21:34.789 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-description"] textarea]
-16:21:34.792 INFO - Executing: [send keys: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea], [D, e, s, c, r, i, p, t, i, o, n,  , 6, 9, 7, 9, 5, 5]])
-16:21:34.874 INFO - Done: [send keys: 12 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-description"] textarea], [D, e, s, c, r, i, p, t, i, o, n,  , 6, 9, 7, 9, 5, 5]]
-16:21:34.877 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list-form-save"] button])
-16:21:34.909 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list-form-save"] button]
-16:21:34.911 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-form-save"] button]])
-16:21:34.939 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-form-save"] button]]
-16:21:34.941 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list-form-save"] button])
-16:21:34.970 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list-form-save"] button]
-16:21:34.973 INFO - Executing: [click: 13 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-form-save"] button]])
-16:21:35.055 INFO - Done: [click: 13 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list-form-save"] button]]
-16:21:35.058 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:21:35.093 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:21:35.598 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:21:35.607 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:21:36.111 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:21:36.123 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:21:36.129 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]])
-16:21:36.160 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]]
-16:21:36.163 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:21:36.171 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:21:36.177 INFO - Executing: [get text: 16 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]])
-16:21:36.213 INFO - Done: [get text: 16 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]]
-16:21:36.215 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description])
-16:21:36.248 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]
-16:21:36.252 INFO - Executing: [get text: 19 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]])
-16:21:36.284 INFO - Done: [get text: 19 [[ChromeDriver: chrome on LINUX (405aa15e347da43c515510f5dff4ef07)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-description]]
-16:21:36.787 INFO - Executing: [delete session: 643d9d5c-dcf6-4860-8100-14e5719adf41])
-16:21:37.894 INFO - Done: [delete session: 643d9d5c-dcf6-4860-8100-14e5719adf41]
-16:21:37.918 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-16:21:37.919 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f) on port 2867
-Only local connections are allowed.
-16:21:37.934 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-16:21:39.844 INFO - Detected dialect: OSS
-16:21:39.846 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-16:21:39.860 INFO - Executing: [get: http://localhost:1337/page/opsportal])
-16:21:41.322 INFO - Done: [get: http://localhost:1337/page/opsportal]
-16:21:41.326 INFO - Executing: [find elements: By.cssSelector: body])
-16:21:41.358 INFO - Done: [find elements: By.cssSelector: body]
-16:21:41.361 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: body]])
-16:21:41.382 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: body]]
-16:21:41.389 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
-16:21:41.411 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
-16:21:41.415 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
-16:21:41.480 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
-16:21:41.485 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
-16:21:41.510 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
-16:21:41.512 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
-16:21:41.579 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
-16:21:41.583 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
-16:21:41.614 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
-16:21:41.616 INFO - Executing: [click: 3 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: button[type="submit"]]])
-16:21:44.005 INFO - Done: [click: 3 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: button[type="submit"]]]
-16:21:44.010 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:44.035 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:44.539 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:44.548 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:45.052 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:45.064 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:45.567 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:45.576 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:46.079 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:46.088 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:46.590 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:46.604 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:47.108 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:47.117 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:47.621 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:47.630 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:48.134 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:48.142 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:48.645 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:48.654 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:49.158 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:49.167 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:49.670 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:49.680 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:50.184 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:50.214 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:50.717 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:50.725 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:51.231 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:51.244 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:51.747 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:51.755 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:52.258 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:52.267 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:52.771 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:52.784 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:53.299 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:53.313 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:53.822 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:53.834 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:54.338 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:54.345 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:54.849 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:54.859 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:55.365 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:55.377 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:55.882 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:55.892 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:56.396 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:56.411 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:56.916 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:56.924 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:57.427 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:57.435 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:57.940 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:57.954 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:58.467 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:58.475 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:58.981 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-16:21:59.857 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-16:21:59.860 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:21:59.880 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:00.384 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:00.396 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:00.900 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:00.911 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:01.414 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:01.422 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:01.925 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:01.933 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:02.436 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:04.275 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:04.278 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
-16:22:04.315 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
-16:22:04.317 INFO - Executing: [click: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]])
-16:22:04.401 INFO - Done: [click: 4 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: span[app-label-key="opp.menu"]]]
-16:22:04.408 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
-16:22:04.459 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
-16:22:04.462 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: li[area="app-builder"]]])
-16:22:04.492 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: li[area="app-builder"]]]
-16:22:04.496 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
-16:22:04.529 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
-16:22:04.530 INFO - Executing: [click: 5 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: li[area="app-builder"]]])
-16:22:04.607 INFO - Done: [click: 5 [[ChromeDriver: chrome on LINUX (74b80b8bdfb1ecb6bbcdd1c9a6d4bf7c)] -> css selector: li[area="app-builder"]]]
-16:22:04.615 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item])
-16:22:04.689 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item]
-16:22:04.697 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name])
-16:22:04.738 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item .ab-app-list-name]
-16:22:04.776 INFO - Executing: [delete session: 076e6587-5819-4293-824e-47a951544300])
+00:28:05.116 INFO - Detected dialect: OSS
+00:28:05.252 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+00:28:05.278 INFO - Executing: [get: http://139.59.109.30:1337/page/opsportal])
+00:28:24.637 INFO - Done: [get: http://139.59.109.30:1337/page/opsportal]
+00:28:24.682 INFO - Executing: [find elements: By.cssSelector: body])
+00:28:24.739 INFO - Done: [find elements: By.cssSelector: body]
+00:28:24.750 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: body]])
+00:28:24.800 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: body]]
+00:28:24.810 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
+00:28:24.840 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
+00:28:24.848 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
+00:28:24.926 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
+00:28:24.939 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
+00:28:24.974 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
+00:28:24.982 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
+00:28:25.062 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
+00:28:25.072 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
+00:28:25.102 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
+00:28:25.108 INFO - Executing: [click: 3 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: button[type="submit"]]])
+00:28:36.940 INFO - Done: [click: 3 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: button[type="submit"]]]
+00:28:36.952 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:36.996 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:37.502 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:37.513 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:38.026 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:38.039 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:38.546 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:38.563 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:39.070 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:39.082 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:39.589 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:39.601 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:40.108 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:40.122 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:40.626 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:40.640 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:41.146 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:41.160 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:41.667 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:41.677 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:42.186 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:42.198 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:42.707 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:42.721 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:43.225 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:43.236 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:43.741 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:43.752 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:44.258 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:44.271 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:44.777 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:44.788 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:45.295 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:45.309 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:45.815 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:45.826 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:46.334 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:46.347 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:46.856 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:46.867 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:47.372 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:47.382 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:47.886 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:47.900 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:48.405 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:48.420 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:48.929 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:48.941 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:49.446 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:49.455 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:49.961 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:49.972 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:50.477 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:50.487 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:50.995 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:51.010 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+00:28:51.515 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:28:54.980 WARN - Exception thrown
+java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:405)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:28:54.983 WARN - Exception: null
+00:28:55.847 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:00.311 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.03 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:00.312 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.03 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:01.100 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:05.463 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:05.463 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:06.104 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:10.462 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:10.463 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:11.124 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:15.362 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:15.363 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:15.926 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:20.171 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:20.172 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:20.732 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:25.019 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:25.019 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:25.581 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:29.785 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:29.785 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:30.321 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:34.537 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.00 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:34.538 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.00 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:35.086 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:39.327 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:39.328 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:39.896 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:44.127 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:44.128 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:44.683 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:48.908 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:48.908 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:49.475 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:53.706 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:53.706 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:54.260 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:29:58.509 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:29:58.509 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:29:59.072 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:30:03.291 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:30:03.292 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.01 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:30:03.838 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:30:08.108 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:30:08.109 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:30:08.769 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:30:13.055 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:30:13.056 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:30:13.720 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+00:30:18.025 WARN - Exception thrown
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+00:30:18.025 WARN - Exception: chrome not reachable
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: a601c6940f56be4c6ea633358ec5c168
+*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
+00:30:18.239 INFO - Executing: [delete session: eb519419-6571-4e42-9dc1-1aecba6fd789])
+00:30:26.793 INFO - Done: [delete session: eb519419-6571-4e42-9dc1-1aecba6fd789]
