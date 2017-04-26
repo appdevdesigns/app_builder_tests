@@ -1,900 +1,234 @@
-00:28:00.273 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
-00:28:00.274 INFO - Launching a standalone Selenium Server
-2560-04-26 00:28:00.298:INFO::main: Logging initialized @392ms to org.seleniumhq.jetty9.util.log.StdErrLog
-00:28:00.394 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-00:28:00.395 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+01:53:07.696 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+01:53:07.696 INFO - Launching a standalone Selenium Server
+2560-04-27 01:53:07.720:INFO::main: Logging initialized @331ms to org.seleniumhq.jetty9.util.log.StdErrLog
+01:53:07.792 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+01:53:07.792 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-00:28:00.395 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-00:28:00.395 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-00:28:00.405 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+01:53:07.792 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+01:53:07.792 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+01:53:07.800 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN8_1
-2560-04-26 00:28:00.490:INFO:osjs.Server:main: jetty-9.2.20.v20161216
-2560-04-26 00:28:00.543:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@39c0f4a{/,null,AVAILABLE}
-2560-04-26 00:28:01.065:INFO:osjs.AbstractConnector:main: Started ServerConnector@56762d31{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2560-04-26 00:28:01.067:INFO:osjs.Server:main: Started @1161ms
-00:28:01.067 INFO - Selenium Server is up and running
-00:28:01.443 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-00:28:01.482 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-00:28:01.495 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 13790
+2560-04-27 01:53:07.864:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2560-04-27 01:53:07.912:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@39c0f4a{/,null,AVAILABLE}
+2560-04-27 01:53:08.328:INFO:osjs.AbstractConnector:main: Started ServerConnector@51788c67{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2560-04-27 01:53:08.328:INFO:osjs.Server:main: Started @938ms
+01:53:08.328 INFO - Selenium Server is up and running
+01:53:08.728 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+01:53:08.760 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Interface, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+01:53:08.776 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test Interface, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 8056
 Only local connections are allowed.
-00:28:05.116 INFO - Detected dialect: OSS
-00:28:05.252 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test App List, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-00:28:05.278 INFO - Executing: [get: http://139.59.109.30:1337/page/opsportal])
-00:28:24.637 INFO - Done: [get: http://139.59.109.30:1337/page/opsportal]
-00:28:24.682 INFO - Executing: [find elements: By.cssSelector: body])
-00:28:24.739 INFO - Done: [find elements: By.cssSelector: body]
-00:28:24.750 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: body]])
-00:28:24.800 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: body]]
-00:28:24.810 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
-00:28:24.840 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
-00:28:24.848 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
-00:28:24.926 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
-00:28:24.939 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
-00:28:24.974 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
-00:28:24.982 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
-00:28:25.062 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
-00:28:25.072 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
-00:28:25.102 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
-00:28:25.108 INFO - Executing: [click: 3 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: button[type="submit"]]])
-00:28:36.940 INFO - Done: [click: 3 [[ChromeDriver: chrome on WIN8_1 (a601c6940f56be4c6ea633358ec5c168)] -> css selector: button[type="submit"]]]
-00:28:36.952 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:36.996 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:37.502 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:37.513 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:38.026 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:38.039 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:38.546 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:38.563 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:39.070 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:39.082 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:39.589 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:39.601 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:40.108 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:40.122 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:40.626 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:40.640 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:41.146 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:41.160 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:41.667 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:41.677 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:42.186 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:42.198 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:42.707 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:42.721 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:43.225 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:43.236 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:43.741 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:43.752 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:44.258 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:44.271 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:44.777 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:44.788 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:45.295 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:45.309 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:45.815 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:45.826 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:46.334 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:46.347 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:46.856 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:46.867 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:47.372 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:47.382 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:47.886 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:47.900 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:48.405 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:48.420 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:48.929 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:48.941 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:49.446 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:49.455 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:49.961 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:49.972 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:50.477 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:50.487 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:50.995 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:51.010 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-00:28:51.515 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:28:54.980 WARN - Exception thrown
-java.lang.NullPointerException
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:405)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:28:54.983 WARN - Exception: null
-00:28:55.847 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:00.311 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.03 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:00.312 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.03 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:01.100 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:05.463 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:05.463 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:06.104 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:10.462 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:10.463 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:11.124 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:15.362 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:15.363 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:15.926 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:20.171 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:20.172 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:20.732 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:25.019 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:25.019 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:25.581 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:29.785 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:29.785 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:30.321 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:34.537 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.00 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:34.538 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.00 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:35.086 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:39.327 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:39.328 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:39.896 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:44.127 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:44.128 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:44.683 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:48.908 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:48.908 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:49.475 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:53.706 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:53.706 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:54.260 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:29:58.509 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:29:58.509 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:29:59.072 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:30:03.291 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:30:03.292 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.01 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:30:03.838 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:30:08.108 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:30:08.109 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:30:08.769 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:30:13.055 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:30:13.056 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:30:13.720 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-00:30:18.025 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-	at sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:472)
-	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
-	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:177)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
-	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-00:30:18.025 WARN - Exception: chrome not reachable
-  (Session info: chrome=57.0.2987.133)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'EII', ip: '192.168.16.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\eiei\AppData\Local\Temp\scoped_dir1032_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: a601c6940f56be4c6ea633358ec5c168
-*** Element info: {Using=css selector, value=span[app-label-key="opp.menu"]}
-00:30:18.239 INFO - Executing: [delete session: eb519419-6571-4e42-9dc1-1aecba6fd789])
-00:30:26.793 INFO - Done: [delete session: eb519419-6571-4e42-9dc1-1aecba6fd789]
+01:53:11.548 INFO - Detected dialect: OSS
+01:53:11.573 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Interface, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+01:53:11.597 INFO - Executing: [get: http://139.59.109.30:1337/page/opsportal])
+01:53:22.023 INFO - Done: [get: http://139.59.109.30:1337/page/opsportal]
+01:53:22.043 INFO - Executing: [find elements: By.cssSelector: body])
+01:53:22.088 INFO - Done: [find elements: By.cssSelector: body]
+01:53:22.096 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: body]])
+01:53:22.124 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: body]]
+01:53:22.133 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
+01:53:22.157 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
+01:53:22.163 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
+01:53:22.229 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
+01:53:22.236 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
+01:53:22.261 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
+01:53:22.268 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
+01:53:22.334 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
+01:53:22.339 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
+01:53:22.366 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
+01:53:22.371 INFO - Executing: [click: 3 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: button[type="submit"]]])
+01:53:32.459 INFO - Done: [click: 3 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: button[type="submit"]]]
+01:53:32.470 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:32.509 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:33.018 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:33.042 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:33.554 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:33.578 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:34.104 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:34.128 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:34.640 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:34.656 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:35.168 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:35.208 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:35.728 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:35.748 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:36.263 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:36.290 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:36.795 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:36.826 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:37.342 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:37.366 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:37.882 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:37.910 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:38.426 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:38.454 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:38.958 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:38.989 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:39.497 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:39.529 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:40.039 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:40.057 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:40.563 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:40.573 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:41.082 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:41.098 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:41.606 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:41.637 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:42.154 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:42.177 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:42.688 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:42.701 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:43.213 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:43.245 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:43.754 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:43.770 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:44.283 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:44.307 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:44.819 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:44.835 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:45.339 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:45.363 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:45.885 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:45.912 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:46.421 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:46.453 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:46.966 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:46.990 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:47.505 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:47.529 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:48.040 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:48.064 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:48.570 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:48.594 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:49.105 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:49.137 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:49.650 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:49.674 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:50.192 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:50.215 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:50.727 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:50.801 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:51.309 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:51.333 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:51.846 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:51.869 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:52.385 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:52.393 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:52.905 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:52.921 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:53.425 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:53.457 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:53.966 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:53.984 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:54.500 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:54.523 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:55.036 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:55.059 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:55.572 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:55.580 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:56.089 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:56.311 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:56.819 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:56.843 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:57.356 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:57.384 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:57.893 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:57.917 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:58.430 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:58.462 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:58.969 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:58.993 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:53:59.532 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:53:59.548 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:00.064 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:00.080 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:00.590 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:00.609 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:01.118 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:01.142 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:01.660 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:01.685 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:02.195 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:02.211 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:02.722 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:02.750 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:03.261 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:03.285 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:03.795 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:03.824 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:04.335 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:04.359 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:04.872 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:04.896 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:05.405 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:05.428 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:05.936 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:05.951 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:06.459 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:06.480 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:06.987 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:07.002 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:07.519 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:07.546 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:08.052 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:08.076 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:08.584 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:08.599 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:09.107 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:09.122 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:09.637 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:09.661 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:10.168 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:10.179 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:10.683 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:10.693 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:11.199 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:11.214 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:11.722 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:11.746 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:12.253 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:12.268 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:12.775 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:13.847 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:13.852 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:13.875 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:14.381 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:14.392 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:14.898 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:14.919 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:15.427 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:15.449 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:15.956 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:15.981 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:16.491 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:16.514 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:17.021 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:19.857 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:20.365 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:20.390 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:20.898 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:22.430 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:22.435 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
+01:54:22.473 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
+01:54:22.477 INFO - Executing: [click: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]])
+01:54:22.561 INFO - Done: [click: 4 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: span[app-label-key="opp.menu"]]]
+01:54:22.566 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
+01:54:22.600 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
+01:54:22.608 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: li[area="app-builder"]]])
+01:54:22.638 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: li[area="app-builder"]]]
+01:54:22.644 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
+01:54:22.678 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
+01:54:22.685 INFO - Executing: [click: 5 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: li[area="app-builder"]]])
+01:54:22.807 INFO - Done: [click: 5 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: li[area="app-builder"]]]
+01:54:22.813 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item])
+01:54:22.860 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] div.ab-app-list-item]
+01:54:22.868 INFO - Executing: [find elements: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(14) .ab-app-list-item])
+01:54:22.905 INFO - Done: [find elements: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(14) .ab-app-list-item]
+01:54:22.908 INFO - Executing: [is displayed: 19 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item]])
+01:54:22.945 INFO - Done: [is displayed: 19 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item]]
+01:54:22.958 INFO - Executing: [find element: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(14) .ab-app-list-item])
+01:54:22.986 INFO - Done: [find element: By.cssSelector: div[view_id="ab-app-list"] .webix_list_item:nth-of-type(14) .ab-app-list-item]
+01:54:22.990 INFO - Executing: [click: 19 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item]])
+01:54:23.084 INFO - Done: [click: 19 [[ChromeDriver: chrome on WIN8_1 (936d46d4f4000a220b040dc4cb5e94c1)] -> css selector: div[view_id="ab-app-list"] div.ab-app-list-item]]
+01:54:23.590 INFO - Executing: [delete session: d24c66d7-d19d-4b0e-b6d5-3e5b9b8b9207])
+01:54:24.496 INFO - Done: [delete session: d24c66d7-d19d-4b0e-b6d5-3e5b9b8b9207]
