@@ -10,7 +10,8 @@ module.exports = {
 				.waitForElementVisible('@menuItem', 99999)
 				.click('@menuItem')
 				.waitForElementVisible('@appBuilderItem', 500)
-				.click('@appBuilderItem');
+				.click('@appBuilderItem')
+				.click('@menuItem');
 
 			return this;
 		}

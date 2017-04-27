@@ -4,7 +4,7 @@ module.exports = {
 		interfaceTabButton: 'div[button_id="ab-app-interface-view"]',
 		interfaceList: 'div[view_id="ab-interface-tree"] .ab-interface-list-item',
 
-		addNewPageButton: 'div[view_id="ab-workspace"] button:nth-of-type(1)',
+		addNewPageButton: 'div[view_id="ab-page-new-page"] button:nth-of-type(1)',
 		addNewPagePopup: 'div[view_id="ab-interface-add-new-popup"]',
 		quickPageTab: 'div[button_id="QuickPage"]',
 		blankPageTab: 'div[button_id="BlankPage"]',
@@ -22,13 +22,16 @@ module.exports = {
 		// nameBlankPageTextbox: 'div[view_id="$text11"] input'
 		nameBlankPageTextbox: 'div[view_id="BlankPage"] input',
 
-		interfaceLayoutList: 'div[view_id="view_id="ab-interface-componentList] .ab-component-in-page'
+		interfaceLayoutList: 'div[view_id="view_id="ab-interface-componentList] .ab-component-in-page',
 
+		pageName: 'div[view_id="BlankPage"] input',
+		menuComponents : 'div[view_id="ab-component-space"]',
+		appInterfaceItem : 'div[view_id="ab-interface-tree"] .webix_tree_item .ab-page-list-item'
 
 	},
 	commands: [{
 		selectInterfaceTab: function() {
-			this.waitForElementVisible('@interfaceTabButton', 1200)
+			this.waitForElementVisible('@interfaceTabButton', 5000)
 				.click('@interfaceTabButton')
 
 			return this;
@@ -37,7 +40,7 @@ module.exports = {
 
 		selectInterface: function (index) {
 			var self = this,
-				// deferred = Q.defer(),
+				//deferred = Q.defer(),
 				itemSelector = 'div[view_id="ab-interface-tree"] .webix_tree_item:nth-of-type(#index#) .ab-page-list-item';
 
 			itemSelector = itemSelector.replace('#index#', index || 1);
@@ -64,7 +67,7 @@ module.exports = {
 		},
 
 		clickAddNewPageButton: function() {
-			this.waitForElementVisible('@addNewPageButton', 1200)
+			this.waitForElementVisible('@addNewPageButton', 5000)
 				.click('@addNewPageButton')
 
 			return this;
@@ -79,7 +82,7 @@ module.exports = {
 		},
 
 		selectBlankPageTab: function() {
-			this.waitForElementVisible('@blankPageTab', 1200)
+			this.waitForElementVisible('@blankPageTab', 2000)
 				.click('@blankPageTab')
 
 			return this;
@@ -140,7 +143,24 @@ module.exports = {
 				.click(itemSelector);
 
 			return this;
-		}
+		},
+		enterPageName: function (pageName) {
+			this.waitForElementVisible('@pageName', 500)
+				.clearValue('@pageName')
+				.setValue('@pageName', pageName);
+
+			return this;
+		},
+		selectMenuComponentsToPageLayout(browser){
+			
+
+			return browser
+			.useCss()
+			.moveToElement('@menuComponents', 5, 5)
+			.mouseButtonDown(0) ;
+
+			
+		}	
 	}]
 	
 };
