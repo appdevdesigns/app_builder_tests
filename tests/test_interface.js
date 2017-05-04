@@ -3,7 +3,9 @@ var async = require('async');
 module.exports = {
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
-		menuSection = browser.page.opsportal.menu();
+			menuSection = browser.page.opsportal.menu(),
+			appListPage = browser.page.app_builder.app_list(),
+			appInterfacePage = browser.page.app_builder.interface_list();
 
 		browser
 		.maximizeWindow()
@@ -13,38 +15,28 @@ module.exports = {
 		loginPage.passLogin(); // login
 
 		menuSection.selectAppBuilder(); // Select app builder menu item
+
+		appListPage.selectApp();
+
+		appInterfacePage.selectInterfaceTab();
 	},
 
 /*	'Create Interface' : function (browser) {
 
-		var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
-
 		var interfaceAppName = 'Interface name ' + Math.random().toString(10).substring(3,6);
-		var lastAppIndex;
 
 		console.log("Name:" + interfaceAppName);
 		async.series([
-			// Get last item index
-			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-
-					next();
-				});
-			},
 			// Create a new page
 			function (next) {
-				appListPage.selectApp(lastAppIndex);
-
-					appInterfacePage
-					.selectInterfaceTab()
+				appInterfacePage
 					.clickAddNewPageButton()
 					.selectBlankPageTab()
 					.enterPageName(interfaceAppName)
-					.clickInterfaceSaveButton();
+					.clickInterfaceSaveButton()
 
-					browser.pause(5000).end();
+				browser.pause(5000).end();
 				next();
 			},
 			], function (err) {
@@ -53,81 +45,62 @@ module.exports = {
 
 	},*/
 
-	'Select Menu components' : function (browser) {
-		var appListPage = browser.page.app_builder.app_list();
-		var appInterfacePage = browser.page.app_builder.interface_list();
-		var lastNewPageIndex,lastAppIndex;
-		async.series([
-			// Get last item index
-			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
 
-					next();
-				});
-			},		
-			function(next){
+	'Select Menu components' : function (browser) {
+		var appInterfacePage = browser.page.app_builder.interface_list();
+		var lastNewPageIndex;
+		async.series([
+			function (next){
 
 				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 					lastNewPageIndex = elems.value.length;
 
 					console.log("lIndex:"+lastNewPageIndex);
+
+					appInterfacePage
+						.selectInterface(lastNewPageIndex);
 					
 				});
 
 
-				appInterfacePage
-				.selectInterfaceTab()
-				.selectInterface(0);
-
 				next();
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 17)
-				.mouseButtonDown(0)
+					.mouseButtonDown(0)
 					.moveToElement('div[view_id="ab-interface-componentList"]',  5,  5) // Move to offset position of 200(x) 600(y)
 					.mouseButtonUp(0)
 					.pause(2000).end();
 
-					next();
-				},
-				function(next){
-					//var appInterfacePage = browser.page.app_builder.interface_list();
-					
-				}
-				], function (err) {
-					browser.pause(500).end();
-				});
+				next();	
+			}
+		], function (err) {
+			browser.pause(500).end();
+		});
 	},
 	'Select Grid components' : function (browser) {
-		var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
-		var lastNewPageIndex,lastAppIndex;
+		var lastNewPageIndex;
 
 		async.series([
 			// Get last item index
 			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
 
 					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 						lastNewPageIndex = elems.value.length;
 
 						console.log("lIndex:"+lastNewPageIndex);
 
+						appInterfacePage
+							.selectInterface(lastNewPageIndex);
+
 					});
 
-					appInterfacePage
-					.selectInterfaceTab()
-					.selectInterface(0);
 
 					next();
-				});
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 51)
 				.mouseButtonDown(0)
@@ -144,32 +117,24 @@ module.exports = {
 
 	},
 	'Select Form components' : function (browser) {
-		var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
-		var lastNewPageIndex,lastAppIndex;
+		var lastNewPageIndex;
 
 		async.series([
 			// Get last item index
 			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
-
-					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-						lastNewPageIndex = elems.value.length;
+				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+					lastNewPageIndex = elems.value.length;
 
 						console.log("lIndex:"+lastNewPageIndex);
+						appInterfacePage
+							.selectInterface(lastNewPageIndex);
 
 					});
 
-					appInterfacePage
-					.selectInterfaceTab()
-					.selectInterface(0);
-
 					next();
-				});
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 85)
 				.mouseButtonDown(0)
@@ -185,32 +150,24 @@ module.exports = {
 
 	},
 	'Select View components' : function (browser) {
-var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
-		var lastNewPageIndex,lastAppIndex;
+		var lastNewPageIndex;
 
 		async.series([
 			// Get last item index
 			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
+				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+					lastNewPageIndex = elems.value.length;
 
-					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-						lastNewPageIndex = elems.value.length;
-
-						console.log("lIndex:"+lastNewPageIndex);
+					console.log("lIndex:"+lastNewPageIndex);
+					appInterfacePage
+						.selectInterface(lastNewPageIndex);
 
 					});
 
-					appInterfacePage
-					.selectInterfaceTab()
-					.selectInterface(0);
-
 					next();
-				});
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 119)
 				.mouseButtonDown(0)
@@ -226,32 +183,24 @@ var appListPage = browser.page.app_builder.app_list();
 
 	},
 	'Select Link components' : function (browser) {
-var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
-		var lastNewPageIndex,lastAppIndex;
+		var lastNewPageIndex;
 
 		async.series([
 			// Get last item index
 			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
+				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+					lastNewPageIndex = elems.value.length;
 
-					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-						lastNewPageIndex = elems.value.length;
-
-						console.log("lIndex:"+lastNewPageIndex);
-
-					});
-
+					console.log("lIndex:"+lastNewPageIndex);
 					appInterfacePage
-					.selectInterfaceTab()
-					.selectInterface(0);
+						.selectInterface(lastNewPageIndex);
 
-					next();
 				});
+
+				next();
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 153)
 				.mouseButtonDown(0)
@@ -268,32 +217,27 @@ var appListPage = browser.page.app_builder.app_list();
 	},
 	'Select Tab components' : function (browser) {
 
-var appListPage = browser.page.app_builder.app_list();
 		var appInterfacePage = browser.page.app_builder.interface_list();
 		var lastNewPageIndex,lastAppIndex;
 
 		async.series([
 			// Get last item index
 			function (next) {
-				browser.elements('css selector', appListPage.elements.appItem.selector, function (elems) {
-					lastAppIndex = elems.value.length;
-					appListPage.selectApp(lastAppIndex);
 
-					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-						lastNewPageIndex = elems.value.length;
+				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+					lastNewPageIndex = elems.value.length;
 
-						console.log("lIndex:"+lastNewPageIndex);
-
-					});
+					console.log("lIndex:"+lastNewPageIndex);
 
 					appInterfacePage
-					.selectInterfaceTab()
-					.selectInterface(0);
+						.selectInterface(lastNewPageIndex);
 
-					next();
 				});
+
+				next();
+
 			},
-			function(next){
+			function (next){
 				browser.pause(2000);
 				browser.moveToElement('div[view_id="ab-component-space"]', 5, 187)
 				.mouseButtonDown(0)

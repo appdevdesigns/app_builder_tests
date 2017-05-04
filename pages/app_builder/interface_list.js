@@ -30,7 +30,7 @@ module.exports = {
 
 	},
 	commands: [{
-		selectInterfaceTab: function() {
+		selectInterfaceTab: function () {
 			this.waitForElementVisible('@interfaceTabButton', 5000)
 				.click('@interfaceTabButton')
 
@@ -39,9 +39,10 @@ module.exports = {
 		},
 
 		selectInterface: function (index) {
+			console.log("selectInterface_"+index);
 			var self = this,
 				//deferred = Q.defer(),
-				itemSelector = 'div[view_id="ab-interface-tree"] .webix_tree_item:nth-of-type(#index#) .ab-page-list-item';
+				itemSelector = 'div[view_id="ab-interface-tree"] .webix_scroll_cont .webix_tree_branch_1:nth-of-type(#index#) .webix_tree_item .ab-page-list-item';
 
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
@@ -54,7 +55,7 @@ module.exports = {
 		renameInterface: function (index) {
 			var self = this,
 				// deferred = Q.defer(),
-				itemSelector = 'div[view_id="ab-interface-tree"] .webix_tree_item:nth-of-type(#index#) .ab-page-list-item';
+				itemSelector = 'div[view_id="ab-interface-tree"] .webix_scroll_cont .webix_tree_branch_1:nth-of-type(#index#) .webix_tree_item .ab-page-list-item';
 
 			itemSelector = itemSelector.replace('#index#', index || 1);
 			itemSelector += " .ab-page-list-edit"
@@ -66,14 +67,14 @@ module.exports = {
 			return this;
 		},
 
-		clickAddNewPageButton: function() {
+		clickAddNewPageButton: function () {
 			this.waitForElementVisible('@addNewPageButton', 5000)
 				.click('@addNewPageButton')
 
 			return this;
 		},
 
-		selectQuickPageTab: function() {
+		selectQuickPageTab: function () {
 			this.waitForElementVisible('@quickPageTab', 1200)
 				.click('@quickPageTab')
 
@@ -89,49 +90,49 @@ module.exports = {
 
 		},
 
-		clickDisplayGridQuickPageCheckBox: function() {
+		clickDisplayGridQuickPageCheckBox: function () {
 			this.waitForElementVisible('@displayGridQuickPageCheckBox', 1200)
 				.click('@displayGridQuickPageCheckBox');
 
 			return this;
 		},
 
-		clickAddLinkToQuickPageCheckBox: function() {
+		clickAddLinkToQuickPageCheckBox: function () {
 			this.waitForElementVisible('@addLinkToQuickPageCheckBox', 1200)
 				.click('@addLinkToQuickPageCheckBox');
 
 			return this;
 		},
 
-		clickAddNewFormQuickPageCheckBox: function() {
+		clickAddNewFormQuickPageCheckBox: function () {
 			this.waitForElementVisible('@addNewFormQuickPageCheckBox', 1200)
 				.click('@addNewFormQuickPageCheckBox');
 
 			return this;
 		},
 
-		clickEditDataQuickPageCheckBox: function() {
+		clickEditDataQuickPageCheckBox: function () {
 			this.waitForElementVisible('@editDataQuickPageCheckBox', 1200)
 				.click('@editDataQuickPageCheckBox');
 
 			return this;
 		},
 
-		clickViewDataQuickPageCheckBox: function() {
+		clickViewDataQuickPageCheckBox: function () {
 			this.waitForElementVisible('@viewDataQuickPageCheckBox', 1200)
 				.click('@viewDataQuickPageCheckBox');
 
 			return this;
 		},
 
-		clickInterfaceSaveButton: function() {
+		clickInterfaceSaveButton: function () {
 			this.waitForElementVisible('@interfaceSaveButton', 1200)
 				.click('@interfaceSaveButton');
 
 			return this;
 		},
 
-		removeLayoutAtIndex: function(index) {
+		removeLayoutAtIndex: function (index) {
 			var self = this,
 				// deferred = Q.defer(),
 				itemSelector = 'div[view_id="view_id="ab-interface-componentList] .webix_list_item:nth-of-type(#index#) .ab-component-in-page';
@@ -150,17 +151,7 @@ module.exports = {
 				.setValue('@pageName', pageName);
 
 			return this;
-		},
-		selectMenuComponentsToPageLayout(browser){
-			
-
-			return browser
-			.useCss()
-			.moveToElement('@menuComponents', 5, 5)
-			.mouseButtonDown(0) ;
-
-			
-		}	
+		}
 	}]
 	
 };
