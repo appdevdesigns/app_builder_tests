@@ -1,3 +1,5 @@
+require('../../shared_libs/global_config.js');
+
 module.exports = {
 	url: 'http://localhost:1337/page/opsportal',
 	elements: {
@@ -39,7 +41,7 @@ module.exports = {
 		},
 
 		selectInterface: function (index) {
-			console.log("selectInterface_"+index);
+			// console.log("selectInterface_"+index);
 			var self = this,
 				//deferred = Q.defer(),
 				itemSelector = 'div[view_id="ab-interface-tree"] .webix_scroll_cont .webix_tree_branch_1:nth-of-type(#index#) .webix_tree_item .ab-page-list-item';
@@ -47,6 +49,10 @@ module.exports = {
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
 			self.waitForElementVisible(itemSelector, 10000)
+				.getText(itemSelector, function (result) {
+					// console.log(result);
+					global.interfaceNameArray.push(result.value);
+				})
 				.click(itemSelector);
 
 			return this;
@@ -145,6 +151,35 @@ module.exports = {
 
 			return this;
 		},
+
+		editLayoutAtIndex: function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="view_id="ab-interface-componentList] .webix_list_item:nth-of-type(#index#) .ab-component-in-page';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+			itemSelector += ".ab-component-remove";
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
+
+		getWebixLayoutId: function (index, interfaceId) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-interface-componentList"] .webix_list_item:nth-of-type(#index#)';
+			global.interfaceId = interfaceId;
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.getAttribute(itemSelector, 'webix_l_id', function (result) {
+					var interfaceId = global.interfaceId;
+					global.webixIdArray[interfaceId].push(result.value);
+				});
+			return this;
+		},
+
 		enterPageName: function (pageName) {
 			this.waitForElementVisible('@pageName', 500)
 				.clearValue('@pageName')
