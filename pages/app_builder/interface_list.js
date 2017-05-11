@@ -89,8 +89,9 @@ module.exports = {
 		},
 
 		selectBlankPageTab: function() {
-			this.waitForElementVisible('@blankPageTab', 2000)
+			this.waitForElementVisible('@blankPageTab', 5000)
 				.click('@blankPageTab')
+				.click('select option[value=""]')
 
 			return this;
 

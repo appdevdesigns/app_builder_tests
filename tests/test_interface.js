@@ -21,57 +21,77 @@ module.exports = {
 		appInterfacePage.selectInterfaceTab();
 	},
 
-/*	'Create Interface' : function (browser) {
+	'Create Interface' : function (browser) {
 
 		var appInterfacePage = browser.page.app_builder.interface_list();
-		var interfaceAppName = 'Interface name ' + Math.random().toString(10).substring(3,6);
+		var interfaceAppName;
+		var countComponents = 6;
+		var i = 1;
 
-		console.log("Name:" + interfaceAppName);
-		async.series([
-			// Create a new page
-			function (next) {
+
+		while (i <= countComponents) {
+			i++;
+			interfaceAppName = 'Interface name ' + Math.random().toString(10).substring(3,6);
 				appInterfacePage
 					.clickAddNewPageButton()
 					.selectBlankPageTab()
 					.enterPageName(interfaceAppName)
-					.clickInterfaceSaveButton()
+					.clickInterfaceSaveButton();
 
-				browser.pause(5000).end();
-				next();
-			},
-			], function (err) {
-			browser.pause(500).end();
-		});
+					browser.pause(5000);
 
-	},*/
-
-
+		}
+		
+		browser.pause(5000).end();
+	},
 	'Select Menu components' : function (browser) {
 		var appInterfacePage = browser.page.app_builder.interface_list();
+
 		var lastNewPageIndex;
-		async.series([
-			function (next){
+		var i = 0;
+		var countComponentIndex = 17;
+		
+		browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+			lastNewPageIndex = elems.value.length;
+			console.log(lastNewPageIndex);
+			appInterfacePage
+			.selectInterface(lastNewPageIndex);
 
-				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-					lastNewPageIndex = elems.value.length;
+			while (i <= lastNewPageIndex) {
+				//console.log("start");
 
-					console.log("lIndex:"+lastNewPageIndex);
+				browser.moveToElement('div[view_id="ab-components-list"]', 5, countComponentIndex)
+				.mouseButtonDown(0)
+						.moveToElement('div[view_id="ab-interface-componentList"]',  5,  5) // Move to offset position of 200(x) 600(y)
+						.mouseButtonUp(0);
 
-					appInterfacePage
-						.selectInterface(lastNewPageIndex);
-					
-				});
+				i++;
+				countComponentIndex += 34;
 
+				browser.pause(3000);
 
-				next();
-			},
-			function (next){
+				appInterfacePage
+					.selectInterface(lastNewPageIndex - i);
+
+				browser.pause(5000);
+			}
+		});
+		browser.pause(5000).end();
+	},
+			/*function (next){
+
+				while (i <= lastNewPageIndex) {
+					i++;
+
 				browser.pause(2000);
-				browser.moveToElement('div[view_id="ab-component-space"]', 5, 17)
+				browser.moveToElement('div[view_id="ab-components-list"]', 5, countComponentIndex)
 					.mouseButtonDown(0)
 					.moveToElement('div[view_id="ab-interface-componentList"]',  5,  5) // Move to offset position of 200(x) 600(y)
 					.mouseButtonUp(0)
 					.pause(2000).end();
+
+					countComponentIndex += 34;
+				}
 
 				next();	
 			}
@@ -79,26 +99,24 @@ module.exports = {
 			browser.pause(500).end();
 		});
 	},
-	'Select Grid components' : function (browser) {
+/*	'Select Grid components' : function (browser) {
 		var appInterfacePage = browser.page.app_builder.interface_list();
 		var lastNewPageIndex;
 
 		async.series([
 			// Get last item index
-			function (next) {
+			function (next){
 
-					browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
-						lastNewPageIndex = elems.value.length;
-
-						console.log("lIndex:"+lastNewPageIndex);
-
-						appInterfacePage
-							.selectInterface(lastNewPageIndex);
-
-					});
+				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
+					lastNewPageIndex = elems.value.length;
+					console.log(lastNewPageIndex);
+					appInterfacePage
+						.selectInterface(lastNewPageIndex - (lastNewPageIndex - 1));
+					
+				});
 
 
-					next();
+				next();
 			},
 			function (next){
 				browser.pause(2000);
@@ -122,17 +140,18 @@ module.exports = {
 
 		async.series([
 			// Get last item index
-			function (next) {
+			function (next){
+
 				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 					lastNewPageIndex = elems.value.length;
+					console.log(lastNewPageIndex);
+					appInterfacePage
+						.selectInterface(lastNewPageIndex - (lastNewPageIndex - 2));
+					
+				});
 
-						console.log("lIndex:"+lastNewPageIndex);
-						appInterfacePage
-							.selectInterface(lastNewPageIndex);
 
-					});
-
-					next();
+				next();
 			},
 			function (next){
 				browser.pause(2000);
@@ -155,17 +174,18 @@ module.exports = {
 
 		async.series([
 			// Get last item index
-			function (next) {
+			function (next){
+
 				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 					lastNewPageIndex = elems.value.length;
-
-					console.log("lIndex:"+lastNewPageIndex);
+					console.log(lastNewPageIndex);
 					appInterfacePage
-						.selectInterface(lastNewPageIndex);
+						.selectInterface(lastNewPageIndex - (lastNewPageIndex - 3));
+					
+				});
 
-					});
 
-					next();
+				next();
 			},
 			function (next){
 				browser.pause(2000);
@@ -188,15 +208,16 @@ module.exports = {
 
 		async.series([
 			// Get last item index
-			function (next) {
+			function (next){
+
 				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 					lastNewPageIndex = elems.value.length;
-
-					console.log("lIndex:"+lastNewPageIndex);
+					console.log(lastNewPageIndex);
 					appInterfacePage
-						.selectInterface(lastNewPageIndex);
-
+						.selectInterface(lastNewPageIndex - (lastNewPageIndex - 4));
+					
 				});
+
 
 				next();
 			},
@@ -222,20 +243,18 @@ module.exports = {
 
 		async.series([
 			// Get last item index
-			function (next) {
+			function (next){
 
 				browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 					lastNewPageIndex = elems.value.length;
-
-					console.log("lIndex:"+lastNewPageIndex);
-
+					console.log(lastNewPageIndex);
 					appInterfacePage
-						.selectInterface(lastNewPageIndex);
-
+						.selectInterface(lastNewPageIndex - (lastNewPageIndex - 5));
+					
 				});
 
-				next();
 
+				next();
 			},
 			function (next){
 				browser.pause(2000);
@@ -250,6 +269,6 @@ module.exports = {
 				browser.pause(500).end();
 		});		
 
-	}
+	}*/
 
 };
