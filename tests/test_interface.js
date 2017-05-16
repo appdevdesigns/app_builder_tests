@@ -44,7 +44,7 @@ module.exports = {
 		
 		browser.pause(5000).end();
 	},
-	'Select Menu components' : function (browser) {
+	'Select All components' : function (browser) {
 		var appInterfacePage = browser.page.app_builder.interface_list();
 
 		var lastNewPageIndex;
@@ -53,9 +53,12 @@ module.exports = {
 		
 		browser.elements('css selector', 'div[view_id="ab-interface-tree"] .ab-page-list-item', function (elems) {
 			lastNewPageIndex = elems.value.length;
-			console.log(lastNewPageIndex);
+			//console.log(lastNewPageIndex);
+			browser.pause(3000);
+
 			appInterfacePage
 			.selectInterface(lastNewPageIndex);
+			browser.pause(3000);
 
 			while (i <= lastNewPageIndex) {
 				//console.log("start");
@@ -75,8 +78,9 @@ module.exports = {
 
 				browser.pause(5000);
 			}
+			//browser.pause(1000).end();
 		});
-		browser.pause(5000).end();
+		
 	},
 			/*function (next){
 
