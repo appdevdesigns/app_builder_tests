@@ -26,7 +26,7 @@ module.exports = {
         	randomString += possible.charAt(Math.floor(Math.random() * possible.length));
     	}
 
-		console.log("randomTextInput");
+		// console.log("randomTextInput");
 		return randomString;
 	},
 
@@ -43,9 +43,27 @@ module.exports = {
         	randomString += possible.charAt(Math.floor(Math.random() * possible.length));
     	}
 
-		console.log("randomNumberInput");
+		// console.log("randomNumberInput");
 		return randomString;
 	},
+
+    randomNegativeNumberInput: function(lenght) {
+        var randomString = '';
+        var possible = "0123456789";
+
+        if (length == null ) {
+            length = 6;
+        };
+        randomString += "-";
+
+        for( var i=0; i < length-1; i++ ) {
+            randomString += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+
+        // console.log("randomNumberInput");
+        return randomString;
+        
+    },
 
 	randomSpecialCharacterInput: function(length) {
 		var randomString = '';
@@ -59,7 +77,7 @@ module.exports = {
         	randomString += possible.charAt(Math.floor(Math.random() * possible.length));
     	}
 
-		console.log("randomSpecialCharacterInput");
+		// console.log("randomSpecialCharacterInput");
 		return randomString;
 	},
 
@@ -75,7 +93,35 @@ module.exports = {
         	randomString += possible.charAt(Math.floor(Math.random() * possible.length));
     	}
 
-		console.log("randomExtraCharacterInput");
+		// console.log("randomExtraCharacterInput");
 		return randomString;
-	}
+	},
+
+    randomEmailInput: function(length1, length2) {
+        var randomString = '';
+        if (length1 == null ) {
+            length1 = 6;
+        };
+
+        if (length2 == null ) {
+            length2 = 6;
+        };
+
+        var possible = "0123456789abcdefghijklmnopqrstuvwxyz";
+
+        for( var i=0; i < length1; i++ ) {
+            randomString += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+
+        randomString += "@";
+
+        for( var j=0; j < length2; j++ ) {
+            randomString += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+
+        randomString += ".com"
+
+        return randomString;
+    },
+
 }
