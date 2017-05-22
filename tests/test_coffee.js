@@ -8,6 +8,7 @@ module.exports = {
 
 		browser
 			.url(browser.launchUrl)
+			.maximizeWindow()
 			.waitForElementVisible('body', 1000);
 
 		loginPage.passLogin();
@@ -17,7 +18,7 @@ module.exports = {
 //////////////////////////
 //TEST CASE ADD USER//
 //////////////////////////
-	'test add male user data': function (browser) {
+/*	'test add male user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var email = shared_func.randomEmailInput();
 		var firstName = shared_func.randomTextInput(6);
@@ -87,12 +88,30 @@ module.exports = {
 			.pause(3000)
 			.end(); 
 		
-	},
+	},*/
 
 //////////////////////////
 //END TEST CASE ADD USER//
 //////////////////////////
+	'test update user data' : function (browser){
+			var coffeePage = browser.page.app.coffee_list();
 
+			browser
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickUserListButton();
+
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 2");
+				coffeePage
+					.selectRowUserList();
+			}
+			
+			.pause(1000);
+	}
 
 /////////////////////////////
 //END TEST CASE UPDATE USER//
@@ -108,7 +127,7 @@ module.exports = {
 /////////////////////////////
 //END TEST CASE DELETE USER//
 /////////////////////////////
-	'test delete user data': function (browser) {
+/*	'test delete user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 
 		browser
@@ -119,7 +138,7 @@ module.exports = {
 			})
 			.pause(3000)
 			.end();
-	}
+	}*/
 	
 /////////////////////////////
 //END TEST CASE DELETE USER//

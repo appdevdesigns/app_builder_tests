@@ -3,7 +3,7 @@ module.exports = {
 	elements: {
 		coffeeShopButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="15"]',
 		addUserButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="16"]',
-		userListButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="17"]',
+		userListButton: 'div[view_id="ab_live_item_13_28"] .webix_scroll_cont a[webix_l_id="15"]',
 		addProductButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="18"]',
 		productListButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="19"]',
 		reloadButton: 'i[id="ab_live_tool_4_15-reload-button"]',
@@ -32,6 +32,8 @@ module.exports = {
 		saveAddUserButton: 'div[view_id="ab-form-save-button-ab_live_item_16_39#"] .webix_el_box button',
 		cancelAddUserButton: 'div[view_id="ab_live_item_16_39-form-cancel-button"] .webix_el_box button',
 
+		updateRecordButton : 'div[view_id="ab_live_item_15_33-update-items-button"] .webix_img_btn',
+
 	},
 	commands: [{
 		clickCoffeeShopButton: function () {
@@ -47,7 +49,7 @@ module.exports = {
 			return this;
 		},
 		clickUserListButton: function () {
-			this.waitForElementVisible('@userListButton', 1200)
+			this.waitForElementVisible('@userListButton', 2000)
 				.click('@userListButton')
 
 			return this;
@@ -129,6 +131,15 @@ module.exports = {
 				.click('@userFemale');
 
 			return this;
+		},
+		selectRowUserList : function(){
+			this.waitForElementVisible('div[aria-rowindex="1"] input', 5000)
+				.click('div[aria-rowindex="1"] input');
+
+			return this;
+		},
+		selectUpdateRecord : function(){
+
 		}
 	}]
 };
