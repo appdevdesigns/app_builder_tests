@@ -33,6 +33,9 @@ module.exports = {
 		cancelAddUserButton: 'div[view_id="ab_live_item_16_39-form-cancel-button"] .webix_el_box button',
 
 		updateRecordButton : 'div[view_id="ab_live_item_15_33-update-items-button"] .webix_img_btn',
+		updateUserListButton : 'div[view_id="ab_live_item_15_33-update-items-button"] .webix_el_box .webixtype_form',
+		
+
 
 	},
 	commands: [{
@@ -49,7 +52,7 @@ module.exports = {
 			return this;
 		},
 		clickUserListButton: function () {
-			this.waitForElementVisible('@userListButton', 2000)
+			this.waitForElementVisible('@userListButton', 5000)
 				.click('@userListButton')
 
 			return this;
@@ -133,13 +136,41 @@ module.exports = {
 			return this;
 		},
 		selectRowUserList : function(){
-			this.waitForElementVisible('div[aria-rowindex="1"] input', 5000)
-				.click('div[aria-rowindex="1"] input');
+			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
+				.click('div[aria-colindex="1"] .webix_table_checkbox');
 
 			return this;
 		},
 		selectUpdateRecord : function(){
+			this.waitForElementVisible('@updateRecordButton', 4000)
+				.click('@updateRecordButton');
 
+			return this;	
+		},
+		setUpdateUserEmail : function(userEmail){
+			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_el_box input', 4000)
+				.clearValue('div[view_id="ab-update-records-popup"] .webix_el_box input')
+				.setValue('div[view_id="ab-update-records-popup"] .webix_el_box input', userEmail);
+
+			return this;
+		},
+		setUpdateUserFirstName : function(){
+			/*this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_el_box input', 5000)
+				.clearValue('div[view_id="ab-update-records-popup"] .webix_el_box input')
+				.setValue('div[view_id="ab-update-records-popup"] .webix_el_box input', userEmail);*/
+
+			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_inp_static', 4000)
+				.click('div[view_id="ab-update-records-popup"] .webix_inp_static')
+				.waitForElementVisible('.webix_view .webix_window .webix_popup div[webix_l_id="UserLastname"]', 5000)
+				.click('.webix_view .webix_window .webix_popup div[webix_l_id="UserLastname"]');
+
+			return this;
+		},
+		clickUpdateButton : function(){
+			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webixtype_form', 4000)
+				.click('div[view_id="ab-update-records-popup"] .webixtype_form');
+
+			return this;
 		}
 	}]
 };
