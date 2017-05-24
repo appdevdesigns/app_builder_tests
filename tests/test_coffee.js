@@ -97,6 +97,7 @@ module.exports = {
 			var coffeePage = browser.page.app.coffee_list();
 			var email = shared_func.randomEmailInput();
 			var firstName = shared_func.randomTextInput(6);
+			var lastName = shared_func.randomTextInput(10);
 
 			browser
 			.perform(function() {
@@ -105,7 +106,7 @@ module.exports = {
 					.clickUserListButton();
 
 			})
-			/*.pause(1000)
+			.pause(1000)
 			.perform(function() {
 				console.log("step 2");
 				coffeePage
@@ -116,8 +117,14 @@ module.exports = {
 			.perform(function(){
 				console.log("step 3 Update UserEmail");
 				coffeePage
-				.setUpdateUserEmail(email)
-				.clickUpdateButton();
+					.setUpdateUserEmail(email)
+					.clickAddMoreFieldButton()
+					.setUpdateUserFirstName(firstName)
+					.clickAddMoreFieldButton()
+					.setUpdateUserLastName(lastName)
+					.clickAddMoreFieldButton()
+					.setUpdateUserDateOfBirth()
+					.clickUpdateButton();
 			})
 			.pause(1000)
 			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
@@ -127,20 +134,22 @@ module.exports = {
 					browser.assert.equal(result.value, email);
 					console.log("End Update UserEmail");
 				});
-			})*/
-			.pause(1000)
-			.perform(function() {
-				console.log("step 2");
-				coffeePage
-					.selectRowUserList()
-					.selectUpdateRecord();
 			})
-			.pause(1000)
-			.perform(function(){
-				console.log("step 3 Update User FirstName");
-				coffeePage
-				.setUpdateUserFirstName();
-				
+			.elements('css selector', coffeePage.elements.userFirstNameList.selector, function (elems) {
+				var userFirstNameListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(userFirstNameListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + firstName);
+					browser.assert.equal(result.value, firstName);
+					console.log("End Update userFirstNameListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.userLastNameList.selector, function (elems) {
+				var userLastNameListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(userLastNameListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + lastName);
+					browser.assert.equal(result.value, lastName);
+					console.log("End Update userLastNameListObject");
+				});
 			});
 	}
 

@@ -34,7 +34,10 @@ module.exports = {
 
 		updateRecordButton : 'div[view_id="ab_live_item_15_33-update-items-button"] .webix_img_btn',
 		updateUserListButton : 'div[view_id="ab_live_item_15_33-update-items-button"] .webix_el_box .webixtype_form',
-		
+		updateUserEmail : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(1) .webix_el_box input',
+		updateUserFirstName : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(2) .webix_el_box input',
+		updateUserLastName : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(3) .webix_el_box input',
+		updateUserDateOfBirth : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .fa-calendar',
 
 
 	},
@@ -148,27 +151,47 @@ module.exports = {
 			return this;	
 		},
 		setUpdateUserEmail : function(userEmail){
-			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_el_box input', 4000)
-				.clearValue('div[view_id="ab-update-records-popup"] .webix_el_box input')
-				.setValue('div[view_id="ab-update-records-popup"] .webix_el_box input', userEmail);
+			this.waitForElementVisible('@updateUserEmail', 4000)
+				.clearValue('@updateUserEmail')
+				.setValue('@updateUserEmail', userEmail);
 
 			return this;
 		},
-		setUpdateUserFirstName : function(){
-			/*this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_el_box input', 5000)
-				.clearValue('div[view_id="ab-update-records-popup"] .webix_el_box input')
-				.setValue('div[view_id="ab-update-records-popup"] .webix_el_box input', userEmail);*/
+		setUpdateUserFirstName : function(userFirstName){
+			this.waitForElementVisible('@updateUserFirstName', 4000)
+				.clearValue('@updateUserFirstName')
+				.setValue('@updateUserFirstName', userFirstName);
 
-			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webix_inp_static', 4000)
-				.click('div[view_id="ab-update-records-popup"] .webix_inp_static')
-				.waitForElementVisible('.webix_view .webix_window .webix_popup div[webix_l_id="UserLastname"]', 5000)
-				.click('.webix_view .webix_window .webix_popup div[webix_l_id="UserLastname"]');
+			return this;
+		},
+		setUpdateUserLastName : function(userLastname){
+			this.waitForElementVisible('@updateUserLastName', 4000)
+				.clearValue('@updateUserLastName')
+				.setValue('@updateUserLastName', userLastname);
+
+			return this;
+		},
+		setUpdateUserDateOfBirth : function(){
+			this.waitForElementVisible('@updateUserDateOfBirth', 4000)
+				.click('@updateUserDateOfBirth')
+				.waitForElementVisible('.webix_cal_month .webix_cal_month_name', 10000)
+				.click('.webix_cal_month .webix_cal_month_name')
+				.waitForElementVisible('.webix_cal_month .webix_cal_month_name', 10000)
+				.click('.webix_cal_month .webix_cal_month_name')
+				.waitForElementVisible('.webix_cal_footer input', 10000)
+				.click('.webix_cal_footer input');
 
 			return this;
 		},
 		clickUpdateButton : function(){
 			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webixtype_form', 4000)
 				.click('div[view_id="ab-update-records-popup"] .webixtype_form');
+
+			return this;
+		},
+		clickAddMoreFieldButton : function(){
+			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webixtype_base:nth-child(1)', 4000)
+				.click('div[view_id="ab-update-records-popup"] .webixtype_base:nth-child(1)');
 
 			return this;
 		}
