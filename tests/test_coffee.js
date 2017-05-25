@@ -18,7 +18,7 @@ module.exports = {
 //////////////////////////
 //TEST CASE ADD USER//
 //////////////////////////
-	'test add male user data': function (browser) {
+/*	'test add male user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var email = shared_func.randomEmailInput();
 		var firstName = shared_func.randomTextInput(6);
@@ -89,16 +89,16 @@ module.exports = {
 			.end(); 
 		
 	},
-
+*/
 //////////////////////////
 //END TEST CASE ADD USER//
 //////////////////////////
-/*
+
 /////////////////////////////
 //END TEST CASE UPDATE USER//
 /////////////////////////////
 
-	'test update user data' : function (browser){
+/*	'test update user data' : function (browser){
 			var coffeePage = browser.page.app.coffee_list();
 			var email = shared_func.randomEmailInput();
 			var firstName = shared_func.randomTextInput(6);
@@ -156,13 +156,13 @@ module.exports = {
 					console.log("End Update userLastNameListObject");
 				});
 			});
-	}
+	}*/
 
 	
 /////////////////////////////
 //END TEST CASE UPDATE USER//
 /////////////////////////////
-*/	
+	
 /*
 /////////////////////////////
 //END TEST CASE DELETE USER//
@@ -184,4 +184,76 @@ module.exports = {
 //END TEST CASE DELETE USER//
 /////////////////////////////
 */
+
+
+/////////////////////////////
+//END TEST CASE UPDATE Product//
+/////////////////////////////
+
+	'test update product data' : function (browser){
+			var coffeePage = browser.page.app.coffee_list();
+			var productName = shared_func.randomTextInput(6);
+			var productPrice = 100;
+			var productStock = 100;
+
+
+			browser
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickProductListButton();
+
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 2");
+				coffeePage
+					.selectRowProductList()
+					.clickUpdateRecordUserListButton();
+			})
+			.pause(1000)
+			.perform(function(){
+				console.log("step 3 Update UserEmail");
+				coffeePage
+					.setUpdateProductName(productName)
+					.clickAddMoreFieldButton()
+					.setUpdateProductPrice(productPrice)
+					.clickAddMoreFieldButton()
+					.setUpdateProductStock(productStock)
+					//.clickAddMoreFieldButton()
+					//.setUpdateproductProductTypeProduct();
+					.clickUpdateButton();
+			})
+			.pause(10000)
+			.elements('css selector', coffeePage.elements.productNameList.selector, function (elems) {
+				var productNameListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(productNameListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + productName);
+					browser.assert.equal(result.value, productName);
+					console.log("End Update productNameListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.productPriceList.selector, function (elems) {
+				var productPriceListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(productPriceListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + productPrice);
+					browser.assert.equal(result.value, productPrice);
+					console.log("End Update productPriceListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.productStockList.selector, function (elems) {
+				var productStockListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(productStockListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + productStock);
+					browser.assert.equal(result.value, productStock);
+					console.log("End Update productStockListObject");
+				});
+			});
+			
+	}
+
+	
+/////////////////////////////
+//END TEST CASE UPDATE USER//
+/////////////////////////////
 };

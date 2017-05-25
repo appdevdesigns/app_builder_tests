@@ -5,7 +5,7 @@ module.exports = {
 		addUserButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="16"]',
 		userListButton: 'div[view_id="ab_live_item_13_28"] .webix_scroll_cont a[webix_l_id="15"]',
 		addProductButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="18"]',
-		productListButton: 'div[view_id="ab_live_item_15_37"] .webix_scroll_cont a[webix_l_id="19"]',
+		productListButton: 'div[view_id="ab_live_item_13_28"] .webix_scroll_cont a[webix_l_id="17"]',
 		reloadButton: 'i[id="ab_live_tool_4_15-reload-button"]',
 
 		addUserForm: 'view_id="ab_live_item_16_39-columns"]',
@@ -40,6 +40,16 @@ module.exports = {
 		updateUserDateOfBirth : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .fa-calendar',
 
 
+		updateProductName : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(1) .webix_el_box input',
+		updateProductPrice : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(2) .webix_el_box input',
+		updateProductStock : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(3) .webix_el_box input',
+		updateProductTypeProduct : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .webix_inp_static',
+
+		updateRecordUserListButton : 'div[view_id="ab_live_item_17_37-update-items-button"] .webix_img_btn',
+
+		productNameList: 'div[column="1"] .webix_cell',
+		productPriceList: 'div[column="2"] .webix_cell',
+		productStockList: 'div[column="3"] .webix_cell',
 	},
 	commands: [{
 		clickCoffeeShopButton: function () {
@@ -194,6 +204,52 @@ module.exports = {
 				.click('div[view_id="ab-update-records-popup"] .webixtype_base:nth-child(1)');
 
 			return this;
-		}
+		},
+
+		selectRowProductList : function(){
+			this.waitForElementVisible('div[aria-rowindex="1"] .webix_table_checkbox', 5000)
+				.click('div[aria-rowindex="1"] .webix_table_checkbox');
+
+			return this;
+		},
+		setUpdateProductName : function(productName){
+
+			this.waitForElementVisible('@updateProductName', 4000)
+				.clearValue('@updateProductName')
+				.setValue('@updateProductName', productName);
+
+			return this;
+		},
+		setUpdateProductPrice : function(productPrice){
+
+			this.waitForElementVisible('@updateProductPrice', 4000)
+				.clearValue('@updateProductPrice')
+				.setValue('@updateProductPrice', productPrice);
+
+			return this;
+		},
+		setUpdateProductStock : function(productStock){
+
+			this.waitForElementVisible('@updateProductStock', 4000)
+				.clearValue('@updateProductStock')
+				.setValue('@updateProductStock', productStock);
+
+			return this;
+		},
+		setUpdateproductProductTypeProduct : function(productProductTypeProduct){
+
+			this.waitForElementVisible('@updateProductTypeProduct', 4000)
+				.click('@updateProductTypeProduct');
+
+			return this;
+		},
+		clickUpdateRecordUserListButton : function(){
+			this.waitForElementVisible('@updateRecordUserListButton', 4000)
+				.click('@updateRecordUserListButton');
+
+			return this;
+		},
+		
+
 	}]
 };
