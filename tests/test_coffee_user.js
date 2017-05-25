@@ -38,7 +38,6 @@ module.exports = {
 				coffeePage
 					.clickAddUserButton();
 			})
-			.pause(2000)
 			.perform(function() {
 				console.log("step 2");
 				coffeePage
@@ -240,7 +239,8 @@ module.exports = {
 					browser.assert.equal(result.value, lastName);
 					console.log("End Update userLastNameListObject");
 				});
-			});
+			})
+			.end();
 	},
 
 	
@@ -249,9 +249,10 @@ module.exports = {
 /////////////////////////////
 	
 
-/////////////////////////////
-//END TEST CASE DELETE USER//
-/////////////////////////////
+/////////////////////////
+//TEST CASE DELETE USER//
+/////////////////////////
+
 	'test delete user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 
@@ -268,7 +269,7 @@ module.exports = {
 			.perform(function() {
 				console.log("step 2");
 				coffeePage
-					.selectDeleteRecord();
+					.selectDeleteUserRecord();
 			})
 			.pause(2000)
 			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
@@ -291,6 +292,7 @@ module.exports = {
 					browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + userEmail);
 						browser.assert.equal(result.value, "");
+						console.log("End Delete userEmailListObject");
 					});
 				};
 

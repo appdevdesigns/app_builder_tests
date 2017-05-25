@@ -60,20 +60,31 @@ module.exports = {
 		updateUserLastName : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(3) .webix_el_box input',
 		updateUserDateOfBirth : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .fa-calendar',
 
-		updateProductName : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(1) .webix_el_box input',
-		updateProductPrice : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(2) .webix_el_box input',
-		updateProductStock : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(3) .webix_el_box input',
-		updateProductTypeProduct : 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .webix_inp_static',
-
-		updateRecordUserListButton : 'div[view_id="ab_live_item_17_37-update-items-button"] .webix_img_btn',
-
 		deleteUserRecordButton: 'div[view_id="ab_live_item_15_33-delete-items-button"] .webix_el_box .webix_img_btn',
-		deleteRecordPopup: 'div[view_id="ab-delete-records-popup"]',
-		deleteRecordButton: 'div[view_id="ab-delete-records-popup"] .webixtype_form',
+
+		addProductForm: 'view_id="ab_live_item_16_35-columns"]',
+		productName: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(1) .webix_el_box input',
+		productPrice: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(2) .webix_el_box input',
+		productStock: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(3) .webix_el_box input',
+		typeProduct: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(4) .webix_el_box .webix_inp_static',
+
+		saveAddProductButton: 'div[view_id="ab-form-save-button-ab_live_item_16_35#"] .webix_el_box button',
+		cancelAddProductButton: 'div[view_id="ab_live_item_16_35-form-cancel-button"] .webix_el_box button',
+
+		updateProductName: 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(1) .webix_el_box input',
+		updateProductPrice: 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(2) .webix_el_box input',
+		updateProductStock: 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(3) .webix_el_box input',
+		updateProductTypeProduct: 'div[view_id="ab-update-records-popup"] .webix_layout_line:nth-child(4) .webix_el_box .webix_inp_static',
+
+		updateRecordProductListButton: 'div[view_id="ab_live_item_17_37-update-items-button"] .webix_img_btn',
 
 		productNameList: 'div[column="1"] .webix_cell',
 		productPriceList: 'div[column="2"] .webix_cell',
 		productStockList: 'div[column="3"] .webix_cell',
+
+		deleteRecordProductListButton: 'div[view_id="ab_live_item_17_37-delete-items-button"] .webix_el_box .webix_img_btn',
+		deleteRecordPopup: 'div[view_id="ab-delete-records-popup"]',
+		deleteRecordButton: 'div[view_id="ab-delete-records-popup"] .webixtype_form',
 	},
 	commands: [{
 		clickCoffeeShopButton: function () {
@@ -217,6 +228,43 @@ module.exports = {
 
 			return this;
 		},
+		setProductName : function (productName){
+
+			this.waitForElementVisible('@productName', 4000)
+				.clearValue('@productName')
+				.setValue('@productName', productName);
+
+			return this;
+		},
+		setProductPrice : function (productPrice){
+
+			this.waitForElementVisible('@productPrice', 4000)
+				.clearValue('@productPrice')
+				.setValue('@productPrice', productPrice);
+
+			return this;
+		},
+		setProductStock : function (productStock){
+
+			this.waitForElementVisible('@productStock', 4000)
+				.clearValue('@productStock')
+				.setValue('@productStock', productStock);
+
+			return this;
+		},
+		setTypeProduct : function (typeProduct) {
+
+			this.waitForElementVisible('@updateProductTypeProduct', 4000)
+				.click('@updateProductTypeProduct');
+
+			return this;
+		},
+		clickSaveAddProductButton: function () {
+			this.waitForElementVisible('@saveAddProductButton', 2000)
+				.click('@saveAddProductButton')
+
+			return this;
+		},
 		clickUpdateButton : function (){
 			this.waitForElementVisible('div[view_id="ab-update-records-popup"] .webixtype_form', 4000)
 				.click('div[view_id="ab-update-records-popup"] .webixtype_form');
@@ -267,13 +315,13 @@ module.exports = {
 
 			return this;
 		},
-		clickUpdateRecordUserListButton : function () {
-			this.waitForElementVisible('@updateRecordUserListButton', 4000)
-				.click('@updateRecordUserListButton');
+		clickUpdateRecordProductListButton : function () {
+			this.waitForElementVisible('@updateRecordProductListButton', 4000)
+				.click('@updateRecordProductListButton');
 
 			return this;
-		},
-		selectDeleteRecord : function () {
+		},	
+		selectDeleteUserRecord : function () {
 			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
 				.click('div[aria-colindex="1"] .webix_table_checkbox');
 
@@ -287,7 +335,24 @@ module.exports = {
 				.click('@deleteRecordButton');
 
 			return this;
-		}
+		},
+		selectDeleteProductRecord : function () {
+			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
+				.click('div[aria-colindex="1"] .webix_table_checkbox');
+
+			return this;
+		},
+
+		clickDeleteRecordProductListButton : function () {
+			this
+
+				.click('@deleteRecordProductListButton')
+				.waitForElementVisible('@deleteRecordPopup', 3000)
+				.waitForElementVisible('@deleteRecordButton', 3000)
+				.click('@deleteRecordButton');
+
+			return this;
+		},
 
 	}]
 };
