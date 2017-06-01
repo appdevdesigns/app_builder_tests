@@ -23,7 +23,7 @@ module.exports = {
 //////////////////////////
 //TEST CASE ADD USER//////
 //////////////////////////
-	'test add male user data': function (browser) {
+	/*'test add male user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var email = shared_func.randomEmailInput();
 		var firstName = shared_func.randomTextInput(6);
@@ -98,7 +98,7 @@ module.exports = {
 			.pause(3000)
 			.end(); 
 		
-	},
+	},*/
 
 /*
 	'test add female user data': function (browser) {
@@ -190,15 +190,9 @@ module.exports = {
 
 			browser
 			.perform(function() {
-				console.log("step 1");
+				console.log("step 1 step 2");
 				coffeePage
-					.clickUserListButton();
-
-			})
-			.pause(1000)
-			.perform(function() {
-				console.log("step 2");
-				coffeePage
+					.clickUserListButton()
 					.selectRowUserList()
 					.selectUpdateRecord();
 			})
@@ -217,7 +211,8 @@ module.exports = {
 			})
 			.pause(1000)
 			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
-				var userEmailListObject = elems.value[elems.value.length - 1];
+				var userEmailListObject = elems.value[elems.value.length - 2];
+				console.log("Length:" + elems.value.length);
 				browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + email);
 					browser.assert.equal(result.value, email);
@@ -225,7 +220,7 @@ module.exports = {
 				});
 			})
 			.elements('css selector', coffeePage.elements.userFirstNameList.selector, function (elems) {
-				var userFirstNameListObject = elems.value[elems.value.length - 1];
+				var userFirstNameListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userFirstNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + firstName);
 					browser.assert.equal(result.value, firstName);
@@ -233,11 +228,27 @@ module.exports = {
 				});
 			})
 			.elements('css selector', coffeePage.elements.userLastNameList.selector, function (elems) {
-				var userLastNameListObject = elems.value[elems.value.length - 1];
+				var userLastNameListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userLastNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + lastName);
 					browser.assert.equal(result.value, lastName);
 					console.log("End Update userLastNameListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.userDateofBirthList.selector, function (elems) {
+				var userDateOfBirthListObject = elems.value[elems.value.length - 2];
+				browser.elementIdText(userDateOfBirthListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + "1/01/2009");
+					browser.assert.equal(result.value, "1/01/2009");
+					console.log("End Update userDateOfBirthListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.userAgeOfBirthList.selector, function (elems) {
+				var userAgeOfBirthListObject = elems.value[elems.value.length - 2];
+				browser.elementIdText(userAgeOfBirthListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + 8);
+					browser.assert.equal(result.value, 8);
+					console.log("End Update userAgeOfBirthListObject");
 				});
 			})
 			.end();
@@ -253,7 +264,7 @@ module.exports = {
 //TEST CASE DELETE USER//
 /////////////////////////
 
-	'test delete user data': function (browser) {
+	/*'test delete user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 
 		var userEmail = "";
@@ -298,7 +309,7 @@ module.exports = {
 
 			})
 			.end();
-	}
+	}*/
 	
 /////////////////////////////
 //END TEST CASE DELETE USER//

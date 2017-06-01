@@ -46,6 +46,7 @@ module.exports = {
 		userFirstNameList: 'div[column="2"] .webix_cell',
 		userLastNameList: 'div[column="3"] .webix_cell',
 		userDateofBirthList: 'div[column="4"] .webix_cell',
+		userAgeOfBirthList : 'div[column="5"] .webix_cell',
 		userAddressList: 'div[column="6"] .webix_cell',
 		userMaleList: 'div[column="7"] .webix_cell',
 		userFemaleList: 'div[column="8"] .webix_cell ',
@@ -184,7 +185,7 @@ module.exports = {
 			return this;
 		},
 		selectRowUserList : function (){
-			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
+			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 2000)
 				.click('div[aria-colindex="1"] .webix_table_checkbox');
 
 			return this;
@@ -223,8 +224,12 @@ module.exports = {
 				.click('.webix_cal_month .webix_cal_month_name')
 				.waitForElementVisible('.webix_cal_month .webix_cal_month_name', 10000)
 				.click('.webix_cal_month .webix_cal_month_name')
-				.waitForElementVisible('.webix_cal_footer input', 10000)
-				.click('.webix_cal_footer input');
+				.waitForElementVisible('.webix_cal_block:nth-child(1)', 10000)
+				.click('.webix_cal_block:nth-child(1)')
+				.waitForElementVisible('.webix_cal_block:nth-child(1)', 10000)
+				.click('.webix_cal_block:nth-child(1)')
+				.waitForElementVisible('div[day="5"] .webix_cal_day_inner', 3000)
+				.click('div[day="5"]  .webix_cal_day_inner');
 
 			return this;
 		},
