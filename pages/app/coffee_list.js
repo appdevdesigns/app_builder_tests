@@ -136,6 +136,12 @@ module.exports = {
 
 			return this;
 		},
+		clickCoffeeShopAUButton: function () {
+			this.waitForElementVisible('@coffeeShopAUButton', 1200)
+				.click('@coffeeShopAUButton')
+
+			return this;
+		},
 		setUserEmail: function (userEmail) {
 			this.waitForElementVisible('@userEmailForm', 5000)
 				.clearValue('@userEmailForm')

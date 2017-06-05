@@ -47,6 +47,21 @@ module.exports = {
 		return randomString;
 	},
 
+    randomTextWithNumberInput: function(length) {
+        var randomString = '';
+        var possible = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        if (length == null ) {
+            length = 6;
+        };
+
+        for( var i=0; i < length; i++ ) {
+            randomString += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        
+        return randomString;
+    },
+
     randomNegativeNumberInput: function(lenght) {
         var randomString = '';
         var possible = "0123456789";
