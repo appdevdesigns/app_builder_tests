@@ -23,13 +23,16 @@ module.exports = {
 //////////////////////////
 //TEST CASE ADD USER//////
 //////////////////////////
-	/*'test add male user data': function (browser) {
+
+	'test add male user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var email = shared_func.randomEmailInput();
 		var firstName = shared_func.randomTextInput(6);
 		var lastName = shared_func.randomTextInput(10);
 		var userAddress = shared_func.randomTextInput(50);
 		var isMale = true;
+		var dateOfbirth = "31/12/2011";
+		var age = shared_func.calculateAge(dateOfbirth);
 
 		browser
 			.pause(2000)
@@ -89,6 +92,22 @@ module.exports = {
 				});
 				
 			})
+			.elements('css selector', coffeePage.elements.userDateofBirthList.selector, function (elems) {
+				var userDateofBirthObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(userDateofBirthObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + dateOfbirth);
+					browser.assert.equal(result.value, dateOfbirth);
+				});
+				
+			})
+			.elements('css selector', coffeePage.elements.userAgeOfBirthList.selector, function (elems) {
+				var userAgeOfBirthObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(userAgeOfBirthObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + age);
+					browser.assert.equal(result.value, age);
+				});
+				
+			})
 			.elements('css selector', coffeePage.elements.userMaleList.selector, function (elems) {
 				browser.assert.cssClassPresent('div[column="7"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
 			})
@@ -98,86 +117,13 @@ module.exports = {
 			.pause(3000)
 			.end(); 
 		
-	},*/
-
-/*
-	'test add female user data': function (browser) {
-		var coffeePage = browser.page.app.coffee_list();
-		var email = shared_func.randomEmailInput();
-		var firstName = shared_func.randomTextInput(6);
-		var lastName = shared_func.randomTextInput(10);
-		var userAddress = shared_func.randomTextInput(50);
-		var isFemale = true;
-
-		browser
-			.perform(function() {
-				console.log("step 1");
-				coffeePage
-					.clickAddUserButton();
-			})
-			.pause(2000)
-			.perform(function() {
-				console.log("step 2");
-				coffeePage
-					.setUserEmail(email)
-					.setUserFirstName(firstName)
-					.setUserLastname(lastName)
-					.setUserAddress(userAddress)
-					.setUserFemale()
-					.setUserDateofBirth()
-					.clickSaveAddUserButton()
-					.clickUserListButton();
-			})
-			.pause(3000)
-			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
-				var emailObject = elems.value[elems.value.length - 1];
-				browser.elementIdText(emailObject.ELEMENT, function (result) {
-					console.log(":" + result.value + ":" + email);
-					browser.assert.equal(result.value, email);
-				});
-				
-			})
-			.elements('css selector', coffeePage.elements.userFirstNameList.selector, function (elems) {
-				var userFirstNameObject = elems.value[elems.value.length - 1];
-
-				browser.elementIdText(userFirstNameObject.ELEMENT, function (result) {
-					console.log(":" + result.value + ":" + firstName);
-					browser.assert.equal(result.value, firstName);
-				});
-				
-			})
-			.elements('css selector', coffeePage.elements.userLastNameList.selector, function (elems) {
-				var userLastNameObject = elems.value[elems.value.length - 1];
-				browser.elementIdText(userLastNameObject.ELEMENT, function (result) {
-					console.log(":" + result.value + ":" + lastName);
-					browser.assert.equal(result.value, lastName);
-				});
-				
-			})
-			.elements('css selector', coffeePage.elements.userAddressList.selector, function (elems) {
-				var userAddressObject = elems.value[elems.value.length - 1];
-				browser.elementIdText(userAddressObject.ELEMENT, function (result) {
-					console.log(":" + result.value + ":" + userAddress);
-					browser.assert.equal(result.value, userAddress);
-				});
-				
-			})
-			.elements('css selector', coffeePage.elements.userMaleList.selector, function (elems) {
-				browser.assert.cssClassNotPresent('div[column="7"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
-			})
-			.elements('css selector', coffeePage.elements.userFemaleList.selector, function (elems) {
-				browser.assert.cssClassPresent('div[column="8"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
-			})
-			.pause(3000)
-			.end(); 
-		
 	},
 
-*/
 //////////////////////////
 //END TEST CASE ADD USER//
 //////////////////////////
 
+/*
 /////////////////////////////
 //END TEST CASE UPDATE USER//
 /////////////////////////////
@@ -253,20 +199,20 @@ module.exports = {
 			})
 			.end();
 	},
-
 	
 /////////////////////////////
 //END TEST CASE UPDATE USER//
 /////////////////////////////
 	
+*/
 
 /////////////////////////
 //TEST CASE DELETE USER//
 /////////////////////////
 
-	/*'test delete user data': function (browser) {
+	'test delete user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
-
+		var userSize = 0;
 		var userEmail = "";
 
 		browser
@@ -277,18 +223,25 @@ module.exports = {
 					.clickUserListButton();
 			})
 			.pause(2000)
+			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
+				if (elems.value.length > 0) {	
+					userSize = elems.value.length - 1;
+					console.log(userSize);
+					if (parseInt(userSize) > 1) {
+						console.log("userSize > 1");
+						var emailObject = elems.value[elems.value.length - 2];
+						browser.elementIdText(emailObject.ELEMENT, function (result) {
+							userEmail = result.value;
+						});
+					};
+				};
+				
+			})
+			.pause(2000)
 			.perform(function() {
 				console.log("step 2");
 				coffeePage
-					.selectDeleteUserRecord();
-			})
-			.pause(2000)
-			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
-				var emailObject = elems.value[elems.value.length - 1];
-				browser.elementIdText(emailObject.ELEMENT, function (result) {
-					userEmail = result.value;
-				});
-				
+					.selectDeleteUserRecord(userSize);
 			})
 			.pause(2000)			
 			.perform(function(){
@@ -302,18 +255,17 @@ module.exports = {
 				if (userEmailListObject != null) {
 					browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + userEmail);
-						browser.assert.equal(result.value, "");
+						browser.assert.equal(result.value, userEmail);
 						console.log("End Delete userEmailListObject");
 					});
 				};
 
 			})
 			.end();
-	}*/
+	}
 	
 /////////////////////////////
 //END TEST CASE DELETE USER//
 /////////////////////////////
-
 
 };

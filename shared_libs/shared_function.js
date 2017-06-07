@@ -139,4 +139,30 @@ module.exports = {
         return randomString;
     },
 
+    calculateAge: function (dateString) {
+        var age = 0;
+        if (dateString != null) {
+            var array_date = dateString.split("/");
+            var birth_month = array_date[0];
+            var birth_day = array_date[1];
+            var birth_year = array_date[2];
+
+            today_date = new Date();
+            today_year = today_date.getFullYear();
+            today_month = today_date.getMonth();
+            today_day = today_date.getDate();
+            age = today_year - birth_year;
+
+            if ( today_month < (birth_month - 1))
+            {
+                age--;
+            }
+            if (((birth_month - 1) == today_month) && (today_day < birth_day))
+            {
+                age--;
+            }
+        };
+        return age;
+    }
+
 }
