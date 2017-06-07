@@ -226,9 +226,9 @@ module.exports = {
 			.elements('css selector', coffeePage.elements.userEmailList.selector, function (elems) {
 				if (elems.value.length > 0) {	
 					userSize = elems.value.length - 1;
-					console.log(userSize);
+					// console.log(userSize);
 					if (parseInt(userSize) > 1) {
-						console.log("userSize > 1");
+						// console.log("userSize > 1");
 						var emailObject = elems.value[elems.value.length - 2];
 						browser.elementIdText(emailObject.ELEMENT, function (result) {
 							userEmail = result.value;

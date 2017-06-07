@@ -26,6 +26,22 @@ module.exports = {
 		var productName = shared_func.randomTextInput(6);
 		var productPrice = 50;
 		var productStock = 50;
+		var productType = 1;
+		var productTypeName = "";
+
+		switch (productType) {
+			case 1:
+				productTypeName = "Small";
+				break;
+			case 2:
+				productTypeName = "Middle";
+				break;
+			case 3:
+				productTypeName = "Large";
+				break;
+			default:
+				break;
+		};
 
 		browser
 			.pause(2000)
@@ -40,6 +56,8 @@ module.exports = {
 					.setProductName(productName)
 					.setProductPrice(productPrice)
 					.setProductStock(productStock)
+					.clickProductType()
+					.setProductType(productType)
 					.clickSaveAddProductButton();
 			})
 			.pause(2000)
@@ -54,7 +72,7 @@ module.exports = {
 				browser.elementIdText(productNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productName);
 					browser.assert.equal(result.value, productName);
-					console.log("End Update productNameListObject");
+					console.log("End Add productNameListObject");
 				});
 			})
 			.elements('css selector', coffeePage.elements.productPriceList.selector, function (elems) {
@@ -62,7 +80,7 @@ module.exports = {
 				browser.elementIdText(productPriceListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productPrice);
 					browser.assert.equal(result.value, productPrice);
-					console.log("End Update productPriceListObject");
+					console.log("End Add productPriceListObject");
 				});
 			})
 			.elements('css selector', coffeePage.elements.productStockList.selector, function (elems) {
@@ -70,7 +88,15 @@ module.exports = {
 				browser.elementIdText(productStockListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productStock);
 					browser.assert.equal(result.value, productStock);
-					console.log("End Update productStockListObject");
+					console.log("End Add productStockListObject");
+				});
+			})
+			.elements('css selector', coffeePage.elements.productTypeList.selector, function (elems) {
+				var productTypeListObject = elems.value[elems.value.length - 1];
+				browser.elementIdText(productTypeListObject.ELEMENT, function (result) {
+					console.log(":" + result.value + ":" + productTypeName);
+					browser.assert.equal(result.value, productTypeName);
+					console.log("End Add productStockListObject");
 				});
 			})
 			.pause(2000)
@@ -86,7 +112,7 @@ module.exports = {
 //TEST CASE UPDATE PRODUCT//
 ////////////////////////////
 
-	'test update product data' : function (browser){
+	/*'test update product data' : function (browser){
 			var coffeePage = browser.page.app.coffee_list();
 			var productName = shared_func.randomTextInput(6);
 			var productPrice = 100;
@@ -147,7 +173,7 @@ module.exports = {
 			})
 			.end();
 			
-	},
+	},*/
 
 ////////////////////////////////
 //END TEST CASE UPDATE PRODUCT//
@@ -160,7 +186,7 @@ module.exports = {
 
 	'test delete product data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
-
+		var productSize = 0;
 		var productName = "";
 
 		browser
@@ -171,18 +197,25 @@ module.exports = {
 					.clickProductListButton();
 			})
 			.pause(2000)
+			.elements('css selector', coffeePage.elements.productNameList.selector, function (elems) {
+				if (elems.value.length > 0) {	
+					productSize = elems.value.length - 1;
+					// console.log(productSize);
+					if (parseInt(productSize) > 1) {
+						// console.log("productSize > 1");
+						var productNameObject = elems.value[elems.value.length - 2];
+						browser.elementIdText(productNameObject.ELEMENT, function (result) {
+							productName = result.value;
+						});
+					};
+				};
+				
+			})
+			.pause(2000)
 			.perform(function() {
 				console.log("step 2");
 				coffeePage
-					.selectDeleteProductRecord();
-			})
-			.pause(2000)
-			.elements('css selector', coffeePage.elements.productNameList.selector, function (elems) {
-				var productNameObject = elems.value[elems.value.length - 1];
-				browser.elementIdText(productNameObject.ELEMENT, function (result) {
-					productName = result.value;
-				});
-				
+					.selectDeleteProductRecord(productSize);
 			})
 			.pause(2000)			
 			.perform(function(){
@@ -196,7 +229,7 @@ module.exports = {
 				if (productNameObject != null) {
 					browser.elementIdText(productNameObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + productName);
-						browser.assert.equal(result.value, "");
+						browser.assert.equal(result.value, productName);
 						console.log("End Delete Product Name Object");
 					});
 				};
@@ -204,6 +237,7 @@ module.exports = {
 			})
 			.end();
 	}
+
 /////////////////////////////
 //END TEST CASE DELETE USER//
 /////////////////////////////
