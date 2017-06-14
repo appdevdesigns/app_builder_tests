@@ -40,6 +40,11 @@ module.exports = {
 
 		webixCalendar: 'div[view_id="$suggest16_calendar"]',
 		webixTodayButton: 'div[view_id="$suggest16_calendar"] .webix_cal_footer .webix_cal_icons span:nth-of-type(1)',
+		webixCalendarMonthName: 'div[view_id="$suggest16_calendar"] .webix_cal_month_name',
+		webixCalendarPrevButton: 'div[view_id="$suggest16_calendar"] .webix_cal_prev_button',
+		webixCalendarNextButton: 'div[view_id="$suggest16_calendar"] .webix_cal_next_button',
+		webixCalendarJanButton: 'div[view_id="$suggest16_calendar"] .webix_cal_body div[data-value="0"]',
+		webixCalendarDay1Button: 'div[view_id="$suggest16_calendar"] .webix_cal_body .webix_cal_row:nth-of-type(1) div[day="0"]',
 
 		userDataList: 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll',
 		userEmailList: 'div[column="1"] .webix_cell',
@@ -67,7 +72,8 @@ module.exports = {
 		productName: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(1) .webix_el_box input',
 		productPrice: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(2) .webix_el_box input',
 		productStock: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(3) .webix_el_box input',
-		typeProduct: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(4) .webix_el_box .webix_inp_static',
+		productType: 'div[view_id="ab_live_item_16_35-columns"] .webix_layout_line .webix_view:nth-of-type(4) .webix_el_box .webix_inp_static',
+		productTypePopup: 'div[view_id="$suggest16"] .webix_win_content .webix_win_body',
 
 		saveAddProductButton: 'div[view_id="ab-form-save-button-ab_live_item_16_35#"] .webix_el_box button',
 		cancelAddProductButton: 'div[view_id="ab_live_item_16_35-form-cancel-button"] .webix_el_box button',
@@ -82,10 +88,15 @@ module.exports = {
 		productNameList: 'div[column="1"] .webix_cell',
 		productPriceList: 'div[column="2"] .webix_cell',
 		productStockList: 'div[column="3"] .webix_cell',
+		productTypeList: 'div[column="4"] .webix_cell',
 
 		deleteRecordProductListButton: 'div[view_id="ab_live_item_17_37-delete-items-button"] .webix_el_box .webix_img_btn',
 		deleteRecordPopup: 'div[view_id="ab-delete-records-popup"]',
 		deleteRecordButton: 'div[view_id="ab-delete-records-popup"] .webixtype_form',
+
+		filterButton: 'div[view_id="ab_live_item_15_33-filter-button"] .webix_el_box .webix_img_btn',
+		filterPopup: 'div[view_id="ab-filter-popup"]',
+
 	},
 	commands: [{
 		clickCoffeeShopButton: function () {
@@ -159,8 +170,19 @@ module.exports = {
 		setUserDateofBirth: function () {
 			this.waitForElementVisible('@userDateofBirth', 5000)
 				.click('@userDateofBirth')
-				.waitForElementVisible('@webixCalendar', 5000)
-				.click('@webixTodayButton');
+				.waitForElementVisible('@webixCalendar', 4000)
+				.waitForElementVisible('@webixCalendarMonthName', 4000)
+				.click('@webixCalendarMonthName')
+				.waitForElementVisible('@webixCalendarPrevButton', 4000)
+				.click('@webixCalendarPrevButton')
+				.click('@webixCalendarPrevButton')
+				.click('@webixCalendarPrevButton')
+				.click('@webixCalendarPrevButton')
+				.click('@webixCalendarPrevButton')
+				.waitForElementVisible('@webixCalendarJanButton', 4000)
+				.click('@webixCalendarJanButton')
+				.waitForElementVisible('@webixCalendarDay1Button', 4000)
+				.click('@webixCalendarDay1Button');
 
 			return this;
 		},
@@ -263,15 +285,29 @@ module.exports = {
 
 			return this;
 		},
-		setTypeProduct : function (typeProduct) {
+		clickProductType : function () {
 
-			this.waitForElementVisible('@updateProductTypeProduct', 4000)
-				.click('@updateProductTypeProduct');
+			this.waitForElementVisible('@productType', 4000)
+				.click('@productType')
+				.waitForElementVisible('@productTypePopup', 4000);
+
+			return this;
+		},
+		setProductType : function (index) {
+
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="$suggest16_list"] .webix_scroll_cont .webix_list_item:nth-of-type(#index#)';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 4000)
+				.click(itemSelector);
 
 			return this;
 		},
 		clickSaveAddProductButton: function () {
-			this.waitForElementVisible('@saveAddProductButton', 2000)
+			this.waitForElementVisible('@saveAddProductButton', 4000)
 				.click('@saveAddProductButton')
 
 			return this;
@@ -332,9 +368,15 @@ module.exports = {
 
 			return this;
 		},	
-		selectDeleteUserRecord : function () {
-			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
-				.click('div[aria-colindex="1"] .webix_table_checkbox');
+		selectDeleteUserRecord : function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[column="0"] .webix_cell:nth-of-type(#index#) .webix_table_checkbox';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
 
 			return this;
 		},
@@ -347,16 +389,21 @@ module.exports = {
 
 			return this;
 		},
-		selectDeleteProductRecord : function () {
-			this.waitForElementVisible('div[aria-colindex="1"] .webix_table_checkbox', 5000)
-				.click('div[aria-colindex="1"] .webix_table_checkbox');
+		selectDeleteProductRecord : function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[column="0"] .webix_cell:nth-of-type(#index#) .webix_table_checkbox';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
 
 			return this;
 		},
 
 		clickDeleteRecordProductListButton : function () {
 			this
-
 				.click('@deleteRecordProductListButton')
 				.waitForElementVisible('@deleteRecordPopup', 3000)
 				.waitForElementVisible('@deleteRecordButton', 3000)
@@ -364,6 +411,40 @@ module.exports = {
 
 			return this;
 		},
+		clickFilterUserButton : function () {
+			this
+				.waitForElementVisible('@filterButton', 3000)
+				.click('@filterButton')
+				.waitForElementVisible('@filterPopup', 4000);
+
+			return this;
+		},
+		setupDropdownFilter : function (index, combo_index) {
+
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-filter-popup"] div[role="form"] .webix_scroll_cont .webix_layout_line:nth-of-type(#index#) .webix_el_combo:nth-of-type(#combo_index#) .webix_el_box';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+			itemSelector = itemSelector.replace('#combo_index#', combo_index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
+		setupColumnFilter : function (index) {
+
+			return this;
+		},
+		setupExpressionFilter : function (index) {
+
+			return this;
+		},
+		setupInputFilter : function (index) {
+
+			return this;
+		}
 
 	}]
 };
