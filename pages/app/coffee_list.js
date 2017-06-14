@@ -93,9 +93,10 @@ module.exports = {
 		deleteRecordProductListButton: 'div[view_id="ab_live_item_17_37-delete-items-button"] .webix_el_box .webix_img_btn',
 		deleteRecordPopup: 'div[view_id="ab-delete-records-popup"]',
 		deleteRecordButton: 'div[view_id="ab-delete-records-popup"] .webixtype_form',
-
+		
 		filterButton: 'div[view_id="ab_live_item_15_33-filter-button"] .webix_el_box .webix_img_btn',
 		filterPopup: 'div[view_id="ab-filter-popup"]',
+		applySortButton: 'div[view_id="ab_live_item_15_33-sort-button"]',
 
 	},
 	commands: [{
@@ -444,6 +445,28 @@ module.exports = {
 		setupInputFilter : function (index) {
 
 			return this;
+		}
+
+		clickApplySortButton : function(){
+			this
+				.waitForElementVisible('@applySortButton', 3000)
+				.click('@applySortButton');
+				
+			return this;
+		},
+
+		clickSelectFieldSortButton : function(){
+			this
+				.waitForElementVisible('.webix_win_content .webix_view .webix_layout_line', 5000);
+				//.click('span[class="fa-angle-down"]');
+				
+			return this;
+		},
+
+		clickTabRedCardButton : function(){
+			this
+				.waitForElementVisible('.webix_item_tab:nth-of-type(3)',5000)
+				.click('.webix_item_tab:nth-of-type(3)');
 		}
 
 	}]

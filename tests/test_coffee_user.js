@@ -24,7 +24,7 @@ module.exports = {
 //TEST CASE ADD USER//////
 //////////////////////////
 
-	'test add male user data': function (browser) {
+/*	'test add male user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var email = shared_func.randomEmailInput();
 		var firstName = shared_func.randomTextInput(6);
@@ -118,7 +118,7 @@ module.exports = {
 			.end(); 
 		
 	},
-
+*/
 //////////////////////////
 //END TEST CASE ADD USER//
 //////////////////////////
@@ -210,7 +210,7 @@ module.exports = {
 //TEST CASE DELETE USER//
 /////////////////////////
 
-	'test delete user data': function (browser) {
+/*	'test delete user data': function (browser) {
 		var coffeePage = browser.page.app.coffee_list();
 		var userSize = 0;
 		var userEmail = "";
@@ -263,9 +263,60 @@ module.exports = {
 			})
 			.end();
 	}
-	
-/////////////////////////////
+	*/
+////////////////////////////
 //END TEST CASE DELETE USER//
-/////////////////////////////
+//////////////////////////////
+
+/////////////////////////
+//TEST CASE APPLY SORT//
+/////////////////////////
+
+	/*'test case apply sort': function (browser) {
+		var coffeePage = browser.page.app.coffee_list();
+
+			browser
+			.pause(2000)
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickUserListButton();
+			})
+			.pause(2000)
+			.perform(function() {
+				console.log("step 2");
+				coffeePage
+					.clickApplySortButton()
+					.clickSelectFieldSortButton();
+			})
+
+	}*/
+
+
+
+////////////////////////////
+//END TEST CASE APPLY SORT//
+//////////////////////////////
+
+/////////////////////////
+//TEST CASE Coffee Shop//
+/////////////////////////
+'test case Coffee Shop': function (browser) {
+		var coffeePage = browser.page.app.coffee_list();
+
+			browser
+			.pause(2000)
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickTabRedCardButton();
+			})
+			.pause(2000)
+}
+
+
+////////////////////////////
+//END TEST CASE Coffee Shop//
+//////////////////////////////
 
 };
