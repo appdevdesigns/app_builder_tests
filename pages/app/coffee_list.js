@@ -445,11 +445,11 @@ module.exports = {
 		setupInputFilter : function (index) {
 
 			return this;
-		}
+		},
 
 		clickApplySortButton : function(){
 			this
-				.waitForElementVisible('@applySortButton', 3000)
+				.waitForElementVisible('@applySortButton', 5000)
 				.click('@applySortButton');
 				
 			return this;
@@ -465,7 +465,7 @@ module.exports = {
 
 		clickTabRedCardButton : function(){
 			this
-				.waitForElementVisible('.webix_item_tab:nth-of-type(3)',5000)
+				.waitForElementVisible('.webix_item_tab:nth-of-type(3)', 5000)
 				.click('.webix_item_tab:nth-of-type(3)');
 		}
 
