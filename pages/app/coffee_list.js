@@ -483,7 +483,22 @@ module.exports = {
 			this
 				.waitForElementVisible('button[button_id="desc"]', 5000)
 				.click('button[button_id="desc"]');
-		}
+		},
+		getWebixUserEmailValue: function (index, interfaceId) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[column="1"] .webix_cell:nth-of-type(#index#)';
+			//global.interfaceId = interfaceId;
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.getText(itemSelector, function (result) {
+					console.log(result.text);
+					//var interfaceId = global.interfaceId;
+					//global.webixIdArray[interfaceId].push(result.value);
+				});
+			return this;
+		},
+
 
 	}]
 };

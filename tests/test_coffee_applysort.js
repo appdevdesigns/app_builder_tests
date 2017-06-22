@@ -50,13 +50,22 @@ module.exports = {
 			.perform(function() {
 				coffeePage
 					.clickDESCButton();
-
-				browser.elements('css selector', 'div[column="1"] .webix_cell', function (data) {
-					console.log(data.value.length);
-					for (var i = 1; i <= data.value.length; i++) {
-										console.log(data.value);
+					var counter = 0;
+				global.webixIdArray.push([]);
+							browser.pause(global.defaultwaittime);
+							browser.elements('css selector', 'div[column="1"] .webix_cell', function (eles) {
+								 console.log(eles.value.length);
+								if (eles.value.length > 0) {	
+									for (var j = 1; j <= eles.value.length; j++) {
+										coffeePage
+											.getWebixUserEmailValue(j, counter);
 									};
-				});
+								};
+
+								counter++;
+
+							});
+				
 						
 			});
 
