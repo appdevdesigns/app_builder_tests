@@ -38,7 +38,26 @@ module.exports = {
 					.moveToElement(".webix_layout_line .webix_el_combo .webix_el_box", 5, 5)
 					.mouseButtonDown(0)
 					.mouseButtonUp(0);
-					
+
+			})
+			.pause(2000)
+			.perform(function() {
+				coffeePage
+					.clickFillterUserEmail();
+						
+			})
+			.pause(2000)
+			.perform(function() {
+				coffeePage
+					.clickDESCButton();
+
+				browser.elements('css selector', 'div[column="1"] .webix_cell', function (data) {
+					console.log(data.value.length);
+					for (var i = 1; i <= data.value.length; i++) {
+										console.log(data.value);
+									};
+				});
+						
 			});
 
 	}

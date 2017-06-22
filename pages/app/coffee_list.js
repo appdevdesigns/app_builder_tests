@@ -467,6 +467,22 @@ module.exports = {
 			this
 				.waitForElementVisible('.webix_item_tab:nth-of-type(3)', 5000)
 				.click('.webix_item_tab:nth-of-type(3)');
+		},
+
+		clickFillterUserEmail : function(){
+			this
+				.waitForElementVisible('div[webix_l_id="UserEmail"]', 5000)
+				.click('div[webix_l_id="UserEmail"]');
+		},
+		clickASCButton : function(){
+			this
+				.waitForElementVisible('button[button_id="asc"]', 5000)
+				.click('button[button_id="asc"]');
+		},
+		clickDESCButton : function(){
+			this
+				.waitForElementVisible('button[button_id="desc"]', 5000)
+				.click('button[button_id="desc"]');
 		}
 
 	}]
