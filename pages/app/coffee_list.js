@@ -434,6 +434,18 @@ module.exports = {
 
 			return this;
 		},
+		setupFilterValue : function (index, value) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-filter-popup"] div[role="form"] .webix_scroll_cont .webix_layout_line:nth-of-type(#index#) .webix_el_text .webix_el_box input';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.setValue(itemSelector, value);
+
+			return this;
+		},
 		setupColumnFilter : function (index) {
 
 			return this;
@@ -484,18 +496,14 @@ module.exports = {
 				.waitForElementVisible('button[button_id="desc"]', 5000)
 				.click('button[button_id="desc"]');
 		},
-		getWebixUserEmailValue: function (index, interfaceId) {
+		getWebixUserEmailValue: function (index) {
 			var self = this,
-				// deferred = Q.defer(),
 				itemSelector = 'div[column="1"] .webix_cell:nth-of-type(#index#)';
-			//global.interfaceId = interfaceId;
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
 			self.getText(itemSelector, function (result) {
-					console.log(result.text);
-					//var interfaceId = global.interfaceId;
-					//global.webixIdArray[interfaceId].push(result.value);
-				});
+				global.userEmailArray.push(result.value);
+			});
 			return this;
 		},
 
