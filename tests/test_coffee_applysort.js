@@ -42,32 +42,38 @@ module.exports = {
 			})
 			.pause(2000)
 			.perform(function() {
+				console.log("step 3 Click Filter User email");
 				coffeePage
 					.clickFillterUserEmail();
 						
 			})
 			.pause(2000)
 			.perform(function() {
-				coffeePage
-					.clickDESCButton();
-					var counter = 0;
-				global.webixIdArray.push([]);
-							browser.pause(global.defaultwaittime);
-							browser.elements('css selector', 'div[column="1"] .webix_cell', function (eles) {
-								 console.log(eles.value.length);
-								if (eles.value.length > 0) {	
-									for (var j = 1; j <= eles.value.length; j++) {
-										coffeePage
-											.getWebixUserEmailValue(j, counter);
-									};
-								};
-
-								counter++;
-
-							});
+				console.log("step 4 Get Value User email");
+				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(1) .webix_cell', function (elems) {
+					// console.log(elems);
+					if (elems.value.length > 0) {	
+						max_rows = elems.value.length;
+						for (var j = 1; j <= elems.value.length; j++) {
+							console.log(j);
+							coffeePage
+								.getWebixUserEmailValue(j);
+						}	
+					};
+				});
 				
-						
+					
+			})			
+			.pause(2000)
+			.perform(function() {
+				console.log("step 5 Sorting Array");
+				var sortEmail = global.userEmailArray;
+				sortEmail = sortEmail.sort();
+				console.log(sortEmail);
+			})
+			.perform(function() {
+				console.log("step 6 verify");
+				console.log(global.userEmailArray);
 			});
-
-	}
+	},
 };

@@ -502,6 +502,7 @@ module.exports = {
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
 			self.getText(itemSelector, function (result) {
+				console.log(result.value);
 				global.userEmailArray.push(result.value);
 			});
 			return this;
