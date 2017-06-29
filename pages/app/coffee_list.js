@@ -498,11 +498,21 @@ module.exports = {
 		},
 		getWebixUserEmailValue: function (index) {
 			var self = this,
-				itemSelector = 'div[column="1"] .webix_cell:nth-of-type(#index#)';
+			itemSelector = 'div[column="1"] .webix_cell:nth-of-type(#index#)';
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
 			self.getText(itemSelector, function (result) {
 				global.userEmailArray.push(result.value);
+			});
+			return this;
+		},
+		getWebixUserFirstNameValue: function (index) {
+			var self = this,
+			itemSelector = 'div[column="2"] .webix_cell:nth-of-type(#index#)';
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.getText(itemSelector, function (result) {
+				global.userFirstNameArray.push(result.value);
 			});
 			return this;
 		},
