@@ -4,3 +4,5 @@ cache/
 reports/
 bin/
 selenium-debug.log
+
+*.log
