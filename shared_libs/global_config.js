@@ -7,3 +7,4 @@ global.userEmailArray = [];
 global.interfaceSize = 0;
 global.interfaceId = 0;
 global.userFirstNameArray = [];
+global.userLastnameArray = [];

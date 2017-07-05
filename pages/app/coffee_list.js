@@ -517,7 +517,25 @@ module.exports = {
 			});
 			return this;
 		},
+		clickFillterUserFirstname : function(){
+			this
+				.waitForElementVisible('div[webix_l_id="UserFirstname"]', 5000)
+				.click('div[webix_l_id="UserFirstname"]');
+		},
+		getWebixUserLastnameValue: function (index) {
+			var self = this,
+			itemSelector = 'div[column="3"] .webix_cell:nth-of-type(#index#)';
+			itemSelector = itemSelector.replace('#index#', index || 1);
 
-
+			self.getText(itemSelector, function (result) {
+				global.userLastnameArray.push(result.value);
+			});
+			return this;
+		},
+		clickFillterUserLastname : function(){
+			this
+				.waitForElementVisible('div[webix_l_id="UserLastname"]', 5000)
+				.click('div[webix_l_id="UserLastname"]');
+		},
 	}]
 };
