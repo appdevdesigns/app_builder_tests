@@ -67,7 +67,7 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var sortEmail = global.userEmailArray;
+				var sortEmail = [].concat(global.userEmailArray);
 				sortEmail = sortEmail.sort();
 				console.log(sortEmail);
 			})
