@@ -6,3 +6,5 @@ bin/
 selenium-debug.log
 
 *.log
+
+selenium-debug.log
