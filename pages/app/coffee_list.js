@@ -481,12 +481,14 @@ module.exports = {
 			itemSelector = '.webix_popup:nth-of-type(#lastindex#) .webix_win_content .webix_win_body .webix_calendar';
 			itemSelector = itemSelector.replace('#lastindex#', popupsize || 1);
 
-
-			console.log(itemSelector);
-			self.getAttribute(itemSelector, 'view_id', function(result) {
-					global.calendarSelector = result.value;
-					console.log(global.calendarSelector);
-				});
+			//Hot Fix
+			global.calendarSelector = "$suggest20_calendar";
+			// console.log("Popup SIze:" + popupsize);
+			// console.log(itemSelector);
+			// self.getAttribute(itemSelector, 'view_id', function(result) {
+			// 		// global.calendarSelector = result.value;
+			// 		console.log(global.calendarSelector);
+			// 	});
 
 			return this;
 
@@ -587,10 +589,23 @@ module.exports = {
 			itemSelector = itemSelector.replace('#index#', index || 1);
 			itemSelector = itemSelector.replace('#column#', column || 1);
 
-			self.getText(itemSelector, function (result) {
-				console.log(result.value);
-				global.userDataArray.push(result.value);
-			});
+			if (column == 7 || column == 8 ) {
+				itemSelector += " .ab-boolean-display .webix_icon";
+				self.getAttribute(itemSelector, 'class', function(result) {
+					console.log(result.value);
+					if (result.value.indexOf('fa-check-square-o') !== -1) {
+						global.userDataArray.push(true);
+					} else {
+						global.userDataArray.push(false);
+					};
+					
+				})
+			} else {
+				self.getText(itemSelector, function (result) {
+					console.log(result.value);
+					global.userDataArray.push(result.value);
+				});
+			}
 			return this;
 		},
 		getWebixUserData2Value: function (index, column) {

@@ -13,6 +13,11 @@ module.exports = {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
 
+		global.calendarSelector = "";
+		global.calendarDate = "";
+		global.userDataArray = [];
+		global.userDataArray2 = [];
+		
 		browser
 			.url(browser.launchUrl)
 			.maximizeWindow()
@@ -490,8 +495,9 @@ module.exports = {
 			.elements('css selector', ".webix_popup", function (elems) {
 				console.log("step 9 assign popup");
 				//Add max_rows to fix popup count bug
+				console.log(elems.value.length);
 				coffeePage
-					.getDateFilterValue(1, elems.value.length + max_rows)
+					.getDateFilterValue(1, elems.value.length)
 				
 			})
 			.pause(2000)
@@ -508,7 +514,15 @@ module.exports = {
 			})
 			.pause(1000)
 			.perform(function() {
-				console.log("step 12 Get after filter Data");
+				console.log("step 12 dismiss dropdown");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 200)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 13 Get after filter Data");
 				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(4) .webix_cell', function (elems) {
 					if (elems.value.length > 0) {	
 						max_rows = elems.value.length;
@@ -522,8 +536,8 @@ module.exports = {
 			})
 			.pause(1000)
 			.perform(function() {
-				console.log("step 13 Compare Date");
-				for (var i = 0; i < max_rows; i++) {
+				console.log("step 14 Compare Date");
+				for (var i = 0; i < global.userDataArray.length; i++) {
 					var isAfter = false;
 					var dataArray = global.userDataArray[i].split(/\//);
 					var dateString = new Date(dataArray[1]+"/"+dataArray[0]+"/"+dataArray[2]);
@@ -539,6 +553,7 @@ module.exports = {
 			})
 			.end();
 	},
+
 	'test filter Date After': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
@@ -623,7 +638,7 @@ module.exports = {
 				console.log("step 9 assign popup");
 				//Add max_rows to fix popup count bug
 				coffeePage
-					.getDateFilterValue(1, elems.value.length + max_rows)
+					.getDateFilterValue(1, elems.value.length)
 				
 			})
 			.pause(2000)
@@ -640,7 +655,15 @@ module.exports = {
 			})
 			.pause(1000)
 			.perform(function() {
-				console.log("step 12 Get after filter Data");
+				console.log("step 12 dismiss dropdown");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 200)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 13 Get after filter Data");
 				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(4) .webix_cell', function (elems) {
 					if (elems.value.length > 0) {	
 						max_rows = elems.value.length;
@@ -654,8 +677,8 @@ module.exports = {
 			})
 			.pause(1000)
 			.perform(function() {
-				console.log("step 13 Compare Date");
-				for (var i = 0; i < max_rows; i++) {
+				console.log("step 14 Compare Date");
+				for (var i = 0; i < global.userDataArray.length; i++) {
 					var isBefore = false;
 					var dataArray = global.userDataArray[i].split(/\//);
 					var dateString = new Date(dataArray[1]+"/"+dataArray[0]+"/"+dataArray[2]);
@@ -668,6 +691,185 @@ module.exports = {
 					};
 					browser.assert.equal(isBefore, false);
 				}
+			})
+			.end();
+	},
+
+	'test filter male isChecked' : function(browser) {
+
+		var coffeePage = browser.page.app.coffee_list();
+		var max_rows = 0;
+		browser
+			.pause(1000)
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickUserListButton()
+					.clickFilterUserButton();
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 2 call first dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 1);
+			})
+			.perform(function() {
+				console.log("step 3 select first combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(1) .webix_el_box", 5, 5)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 4 call second dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 2);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 5 select second combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(2) .webix_el_box", 5, 5)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0)
+					.pause(1000)
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(2) .webix_el_box", 20, 220)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 6 call third dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 3);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 7 select third combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 60)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 9 dismiss dropdown");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 200)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 10 Get Data from view");
+				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(1) .webix_cell', function (elems) {
+					if (elems.value.length > 0) {	
+						max_rows = elems.value.length;
+						for (var j = 1; j <= max_rows; j++) {
+							// console.log(j);
+							coffeePage
+								.getWebixUserDataValue(j, 7);
+						}	
+					};
+				});
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 11 verify");
+				for (var i = 0; i < global.userDataArray.length; i++) {
+					browser.assert.equal(global.userDataArray[i], true);
+				}
+
+			})
+			.end();
+	},
+	'test filter male isNotChecked' : function(browser) {
+
+		var coffeePage = browser.page.app.coffee_list();
+		var max_rows = 0;
+		browser
+			.pause(1000)
+			.perform(function() {
+				console.log("step 1");
+				coffeePage
+					.clickUserListButton()
+					.clickFilterUserButton();
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 2 call first dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 1);
+			})
+			.perform(function() {
+				console.log("step 3 select first combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(1) .webix_el_box", 5, 5)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 4 call second dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 2);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 5 select second combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(2) .webix_el_box", 5, 5)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0)
+					.pause(1000)
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(2) .webix_el_box", 20, 220)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 6 call third dropdown");
+				coffeePage
+					.setupDropdownFilter(1, 3);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 7 select third combo");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 80)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 9 dismiss dropdown");
+				browser
+					.moveToElement("div[view_id='ab-filter-popup'] div[role='form'] .webix_scroll_cont .webix_layout_line:nth-of-type(1) .webix_el_combo:nth-of-type(3) .webix_el_box", 20, 200)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 10 Get Data from view");
+				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(1) .webix_cell', function (elems) {
+					if (elems.value.length > 0) {	
+						max_rows = elems.value.length;
+						for (var j = 1; j <= max_rows; j++) {
+							// console.log(j);
+							coffeePage
+								.getWebixUserDataValue(j, 7);
+						}	
+					};
+				});
+			})
+			.pause(1000)
+			.perform(function() {
+				console.log("step 11 verify");
+				for (var i = 0; i < global.userDataArray.length; i++) {
+					browser.assert.equal(global.userDataArray[i], false);
+				}
+
 			})
 			.end();
 	},
