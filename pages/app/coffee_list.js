@@ -446,6 +446,91 @@ module.exports = {
 
 			return this;
 		},
+		clickDateCalendar : function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-filter-popup"] div[role="form"] .webix_scroll_cont .webix_layout_line:nth-of-type(#index#) .webix_el_datepicker .webix_el_box .webix_inp_static';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
+		setDateCalendarToGlobal : function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id="ab-filter-popup"] div[role="form"] .webix_scroll_cont .webix_layout_line:nth-of-type(#index#) .webix_el_datepicker .webix_el_box .webix_inp_static';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.getText(itemSelector, function(result) {
+					global.calendarDate = result.value;
+				});
+
+			return this;
+
+		},
+		getDateFilterValue : function (index, popupsize) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = '.webix_popup:nth-of-type(#lastindex#)';
+
+			itemSelector = '.webix_popup:nth-of-type(#lastindex#) .webix_win_content .webix_win_body .webix_calendar';
+			itemSelector = itemSelector.replace('#lastindex#', popupsize || 1);
+
+
+			console.log(itemSelector);
+			self.getAttribute(itemSelector, 'view_id', function(result) {
+					global.calendarSelector = result.value;
+					console.log(global.calendarSelector);
+				});
+
+			return this;
+
+		},
+		setDateFilterValue : function (month) {
+			var self = this;
+			console.log(global.calendarSelector);
+
+			var calendarToday = 'div[view_id="#calendar_selector#"] .webix_cal_footer .webix_cal_icons span:nth-of-type(1)';
+			var calendarMonthName = 'div[view_id="#calendar_selector#"] .webix_cal_month_name';
+			var calendarPrev = 'div[view_id="#calendar_selector#"] .webix_cal_prev_button';
+			var calendarNext = 'div[view_id="#calendar_selector#"] .webix_cal_next_button';
+			var calendarMonth = 'div[view_id="#calendar_selector#"] .webix_cal_body div[data-value="#month_number#"]';
+			var calendarDay = 'div[view_id="#calendar_selector#"] .webix_cal_body .webix_cal_row:nth-of-type(1) div[day="0"]';
+
+			calendarToday = calendarToday.replace('#calendar_selector#', global.calendarSelector || "");
+			calendarMonthName = calendarMonthName.replace('#calendar_selector#', global.calendarSelector || "");
+			calendarPrev = calendarPrev.replace('#calendar_selector#', global.calendarSelector || "");
+			calendarNext = calendarNext.replace('#calendar_selector#', global.calendarSelector || "");
+			calendarMonth = calendarMonth.replace('#calendar_selector#', global.calendarSelector || "");
+			calendarDay = calendarDay.replace('#calendar_selector#', global.calendarSelector || "");
+
+			console.log(calendarToday);
+
+			if (month != null) {
+				if (month >= 0 && month < 12) {
+					calendarMonth = calendarMonth.replace('#month_number#', month || 0);
+				} else {
+					calendarMonth = calendarMonth.replace('#month_number#', 0);
+				}
+				self
+					.click(calendarMonthName)
+					.click(calendarPrev)
+					.click(calendarPrev)
+					.click(calendarMonth)
+					.click(calendarDay);
+			} else {
+				self
+					.click(calendarToday);
+			}
+
+			return this;
+
+		},
 		setupColumnFilter : function (index) {
 
 			return this;
@@ -496,24 +581,27 @@ module.exports = {
 				.waitForElementVisible('button[button_id="desc"]', 5000)
 				.click('button[button_id="desc"]');
 		},
-		getWebixUserEmailValue: function (index) {
+		getWebixUserDataValue: function (index, column) {
 			var self = this,
-			itemSelector = 'div[column="1"] .webix_cell:nth-of-type(#index#)';
+			itemSelector = 'div[column="#column#"] .webix_cell:nth-of-type(#index#)';
 			itemSelector = itemSelector.replace('#index#', index || 1);
+			itemSelector = itemSelector.replace('#column#', column || 1);
 
 			self.getText(itemSelector, function (result) {
 				console.log(result.value);
-				global.userEmailArray.push(result.value);
+				global.userDataArray.push(result.value);
 			});
 			return this;
 		},
-		getWebixUserFirstNameValue: function (index) {
+		getWebixUserData2Value: function (index, column) {
 			var self = this,
-			itemSelector = 'div[column="2"] .webix_cell:nth-of-type(#index#)';
+			itemSelector = 'div[column="#column#"] .webix_cell:nth-of-type(#index#)';
 			itemSelector = itemSelector.replace('#index#', index || 1);
+			itemSelector = itemSelector.replace('#column#', column || 1);
 
 			self.getText(itemSelector, function (result) {
-				global.userFirstNameArray.push(result.value);
+				console.log(result.value);
+				global.userDataArray2.push(result.value);
 			});
 			return this;
 		},
@@ -521,16 +609,6 @@ module.exports = {
 			this
 				.waitForElementVisible('div[webix_l_id="UserFirstname"]', 5000)
 				.click('div[webix_l_id="UserFirstname"]');
-		},
-		getWebixUserLastnameValue: function (index) {
-			var self = this,
-			itemSelector = 'div[column="3"] .webix_cell:nth-of-type(#index#)';
-			itemSelector = itemSelector.replace('#index#', index || 1);
-
-			self.getText(itemSelector, function (result) {
-				global.userLastnameArray.push(result.value);
-			});
-			return this;
 		},
 		clickFillterUserLastname : function(){
 			this
