@@ -23,7 +23,7 @@ module.exports = {
 	'test apply sort User email  A --- > Z': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -55,9 +55,8 @@ module.exports = {
 					if (elems.value.length > 0) {	
 						max_rows = elems.value.length;
 						for (var j = 1; j <= elems.value.length; j++) {
-							console.log(j);
 							coffeePage
-								.getWebixUserEmailValue(j);
+								.getWebixUserDataValue(j, 1);	
 						}	
 					};
 				});
@@ -66,7 +65,7 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var sortEmail = [].concat(global.userEmailArray);
+				var sortEmail = [].concat(global.userDataArray);
 				sortEmail = sortEmail.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
@@ -74,13 +73,13 @@ module.exports = {
 				console.log(sortEmail);
 
 				for (var j = 1; j <= sortEmail.length; j++) {
-						console.log(sortEmail[j] + " : " + global.userEmailArray[j]);
-					//	browser.assert.equal(sortEmail[j], global.userEmailArray[j]);
+						console.log(sortEmail[j] + " : " + global.userDataArray[j]);
+						//browser.assert.equal(sortEmail[j], global.userDataArray[j]);
 				}	
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userEmailArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
@@ -88,7 +87,8 @@ module.exports = {
 	'test apply sort User email  Z --- > A': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
+		
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -120,9 +120,8 @@ module.exports = {
 					if (elems.value.length > 0) {	
 						max_rows = elems.value.length;
 						for (var j = 1; j <= elems.value.length; j++) {
-							console.log(j);
 							coffeePage
-								.getWebixUserEmailValue(j);
+								.getWebixUserDataValue(j, 1);	
 						}	
 					};
 				});
@@ -130,23 +129,24 @@ module.exports = {
 			})			
 			.pause(2000)
 			.perform(function() {
+
 				console.log("step 5 Sorting Array");
-				var sortEmail = [].concat(global.userEmailArray);
+				var sortEmail = [].concat(global.userDataArray);
 				sortEmail = sortEmail.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
-				
-				console.log(sortEmail);
+
 				sortEmail.reverse();
+				console.log(sortEmail);
 
 				for (var j = 1; j <= sortEmail.length; j++) {
-						console.log(sortEmail[j] + " : " + global.userEmailArray[j]);
-					//	browser.assert.equal(sortEmail[j], global.userEmailArray[j]);
+						console.log(sortEmail[j] + " : " + global.userDataArray[j]);
+						//browser.assert.equal(sortEmail[j], global.userDataArray[j]);
 				}	
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userEmailArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
@@ -154,7 +154,8 @@ module.exports = {
 	'test apply sort UserFirstname A --> Z': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
+		
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -188,7 +189,7 @@ module.exports = {
 						for (var j = 1; j <= elems.value.length; j++) {
 							console.log(j);
 							coffeePage
-								.getWebixUserFirstNameValue(j);
+								.getWebixUserDataValue(j, 2);	
 						}	
 					};
 				});
@@ -197,27 +198,28 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var FirstName = [].concat(global.userFirstNameArray);
+				var FirstName = [].concat(global.userDataArray);
 				FirstName = FirstName.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
 				console.log(FirstName);
 
 				for (var j = 1; j <= FirstName.length; j++) {
-						console.log(FirstName[j] + " : " + global.userFirstNameArray[j]);
+						console.log(FirstName[j] + " : " + global.userDataArray[j]);
 						//browser.assert.equal(FirstName[j], global.userFirstNameArray[j]);
 				}	
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userFirstNameArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
 	},
 	'test apply sort UserFirstname Z --> A': function(browser) {
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
+		
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -251,7 +253,7 @@ module.exports = {
 						for (var j = 1; j <= elems.value.length; j++) {
 							console.log(j);
 							coffeePage
-								.getWebixUserFirstNameValue(j);
+								.getWebixUserDataValue(j, 2);	
 						}	
 					};
 				});
@@ -260,7 +262,7 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var FirstName = [].concat(global.userFirstNameArray);
+				var FirstName = [].concat(global.userDataArray);
 				FirstName = FirstName.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
@@ -269,13 +271,13 @@ module.exports = {
 				console.log(FirstName);
 
 				for (var j = 1; j <= FirstName.length; j++) {
-						console.log(FirstName[j] + " : " + global.userFirstNameArray[j]);
+						console.log(FirstName[j] + " : " + global.userDataArray[j]);
 						//browser.assert.equal(FirstName[j], global.userFirstNameArray[j]);
 				}	
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userFirstNameArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
@@ -283,7 +285,8 @@ module.exports = {
 	'test apply sort UserLastname A --> Z': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
+		
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -317,7 +320,7 @@ module.exports = {
 						for (var j = 1; j <= elems.value.length; j++) {
 							console.log(j);
 							coffeePage
-								.getWebixUserLastnameValue(j);
+								.getWebixUserDataValue(j, 3);
 						}	
 					};
 				});
@@ -326,7 +329,7 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var userLastname = [].concat(global.userLastnameArray);
+				var userLastname = [].concat(global.userDataArray);
 				userLastname = userLastname.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
@@ -334,14 +337,14 @@ module.exports = {
 				console.log(userLastname);
 
 				for (var j = 1; j <= userLastname.length; j++) {
-						console.log(userLastname[j] + " : " + global.userLastnameArray[j]);
+						console.log(userLastname[j] + " : " + global.userDataArray[j]);
 						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
 				}	
 
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userLastnameArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
@@ -349,7 +352,8 @@ module.exports = {
 	'test apply sort UserLastname Z --> A': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
-
+		global.userDataArray = [];
+		
 		browser
 			.perform(function() {
 				console.log("step 1");
@@ -383,7 +387,7 @@ module.exports = {
 						for (var j = 1; j <= elems.value.length; j++) {
 							console.log(j);
 							coffeePage
-								.getWebixUserLastnameValue(j);
+								.getWebixUserDataValue(j, 3);
 						}	
 					};
 				});
@@ -392,7 +396,7 @@ module.exports = {
 			.pause(2000)
 			.perform(function() {
 				console.log("step 5 Sorting Array");
-				var userLastname = [].concat(global.userLastnameArray);
+				var userLastname = [].concat(global.userDataArray);
 				userLastname = userLastname.sort(function (a, b) {
 				    return a.toLowerCase().localeCompare(b.toLowerCase());
 				});
@@ -402,14 +406,14 @@ module.exports = {
 				console.log(userLastname);
 
 				for (var j = 1; j <= userLastname.length; j++) {
-						console.log(userLastname[j] + " : " + global.userLastnameArray[j]);
+						console.log(userLastname[j] + " : " + global.userDataArray[j]);
 						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
 				}	
 
 			})
 			.perform(function() {
 				console.log("step 6 verify");
-				console.log(global.userLastnameArray);
+				console.log(global.userDataArray);
 			})
 			.pause(2000)
 			.end(); 
