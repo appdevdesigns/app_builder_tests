@@ -2,6 +2,7 @@ var async = require('async');
 require('../shared_libs/global_config.js');
 
 module.exports = {
+  	'@disabled': true,
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu(),

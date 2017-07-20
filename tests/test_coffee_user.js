@@ -2,6 +2,7 @@ var async = require('async');
 var shared_func = require('../shared_libs/shared_function.js');
 
 module.exports = {
+	'@tags': ['CRUD'],
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
@@ -63,7 +64,7 @@ module.exports = {
 				var emailObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(emailObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + email);
-					browser.assert.equal(result.value, email);
+					browser.verify.equal(result.value, email);
 				});
 				
 			})
@@ -72,7 +73,7 @@ module.exports = {
 
 				browser.elementIdText(userFirstNameObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + firstName);
-					browser.assert.equal(result.value, firstName);
+					browser.verify.equal(result.value, firstName);
 				});
 				
 			})
@@ -80,7 +81,7 @@ module.exports = {
 				var userLastNameObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(userLastNameObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + lastName);
-					browser.assert.equal(result.value, lastName);
+					browser.verify.equal(result.value, lastName);
 				});
 				
 			})
@@ -88,7 +89,7 @@ module.exports = {
 				var userAddressObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(userAddressObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + userAddress);
-					browser.assert.equal(result.value, userAddress);
+					browser.verify.equal(result.value, userAddress);
 				});
 				
 			})
@@ -96,7 +97,7 @@ module.exports = {
 				var userDateofBirthObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(userDateofBirthObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + dateOfbirth);
-					browser.assert.equal(result.value, dateOfbirth);
+					browser.verify.equal(result.value, dateOfbirth);
 				});
 				
 			})
@@ -104,15 +105,15 @@ module.exports = {
 				var userAgeOfBirthObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(userAgeOfBirthObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + age);
-					browser.assert.equal(result.value, age);
+					browser.verify.equal(result.value, age);
 				});
 				
 			})
 			.elements('css selector', coffeePage.elements.userMaleList.selector, function (elems) {
-				browser.assert.cssClassPresent('div[column="7"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
+				browser.verify.cssClassPresent('div[column="7"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
 			})
 			.elements('css selector', coffeePage.elements.userFemaleList.selector, function (elems) {
-				browser.assert.cssClassNotPresent('div[column="8"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
+				browser.verify.cssClassNotPresent('div[column="8"] .webix_cell:nth-of-type(' + elems.value.length + ') .ab-boolean-display .webix_icon', 'fa-check-square-o');	
 			})
 			.pause(3000)
 			.end(); 
@@ -161,7 +162,7 @@ module.exports = {
 				console.log("Length:" + elems.value.length);
 				browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + email);
-					browser.assert.equal(result.value, email);
+					browser.verify.equal(result.value, email);
 					console.log("End Update UserEmail");
 				});
 			})
@@ -169,7 +170,7 @@ module.exports = {
 				var userFirstNameListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userFirstNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + firstName);
-					browser.assert.equal(result.value, firstName);
+					browser.verify.equal(result.value, firstName);
 					console.log("End Update userFirstNameListObject");
 				});
 			})
@@ -177,7 +178,7 @@ module.exports = {
 				var userLastNameListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userLastNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + lastName);
-					browser.assert.equal(result.value, lastName);
+					browser.verify.equal(result.value, lastName);
 					console.log("End Update userLastNameListObject");
 				});
 			})
@@ -185,7 +186,7 @@ module.exports = {
 				var userDateOfBirthListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userDateOfBirthListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + "1/01/2009");
-					browser.assert.equal(result.value, "1/01/2009");
+					browser.verify.equal(result.value, "1/01/2009");
 					console.log("End Update userDateOfBirthListObject");
 				});
 			})
@@ -193,7 +194,7 @@ module.exports = {
 				var userAgeOfBirthListObject = elems.value[elems.value.length - 2];
 				browser.elementIdText(userAgeOfBirthListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + 8);
-					browser.assert.equal(result.value, 8);
+					browser.verify.equal(result.value, 8);
 					console.log("End Update userAgeOfBirthListObject");
 				});
 			})
@@ -255,7 +256,7 @@ module.exports = {
 				if (userEmailListObject != null) {
 					browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + userEmail);
-						browser.assert.equal(result.value, userEmail);
+						browser.verify.equal(result.value, userEmail);
 						console.log("End Delete userEmailListObject");
 					});
 				};

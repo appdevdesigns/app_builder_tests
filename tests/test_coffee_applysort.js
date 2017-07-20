@@ -2,6 +2,7 @@ var async = require('async');
 var shared_func = require('../shared_libs/shared_function.js');
 
 module.exports = {
+	'@tags': ['SEARCH'],
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
@@ -20,7 +21,7 @@ module.exports = {
 
 	},	
 
-	/*'test apply sort User email  A --- > Z': function(browser) {
+	'test apply sort User email  A --- > Z': function(browser) {
 
 		var coffeePage = browser.page.app.coffee_list();
 		global.userDataArray = [];
@@ -74,7 +75,7 @@ module.exports = {
 
 				for (var j = 1; j <= sortEmail.length; j++) {
 						console.log(sortEmail[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(sortEmail[j], global.userDataArray[j]);
+						//browser.verify.equal(sortEmail[j], global.userDataArray[j]);
 				}	
 			})
 			.perform(function() {
@@ -141,7 +142,7 @@ module.exports = {
 
 				for (var j = 1; j <= sortEmail.length; j++) {
 						console.log(sortEmail[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(sortEmail[j], global.userDataArray[j]);
+						//browser.verify.equal(sortEmail[j], global.userDataArray[j]);
 				}	
 			})
 			.perform(function() {
@@ -206,7 +207,7 @@ module.exports = {
 
 				for (var j = 1; j <= FirstName.length; j++) {
 						console.log(FirstName[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(FirstName[j], global.userFirstNameArray[j]);
+						//browser.verify.equal(FirstName[j], global.userFirstNameArray[j]);
 				}	
 			})
 			.perform(function() {
@@ -272,7 +273,7 @@ module.exports = {
 
 				for (var j = 1; j <= FirstName.length; j++) {
 						console.log(FirstName[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(FirstName[j], global.userFirstNameArray[j]);
+						//browser.verify.equal(FirstName[j], global.userFirstNameArray[j]);
 				}	
 			})
 			.perform(function() {
@@ -338,7 +339,7 @@ module.exports = {
 
 				for (var j = 1; j <= userLastname.length; j++) {
 						console.log(userLastname[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
+						//browser.verify.equal(userLastname[j], global.userLastnameArray[j]);
 				}	
 
 			})
@@ -407,76 +408,7 @@ module.exports = {
 
 				for (var j = 1; j <= userLastname.length; j++) {
 						console.log(userLastname[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
-				}	
-
-			})
-			.perform(function() {
-				console.log("step 6 verify");
-				console.log(global.userDataArray);
-			})
-			.pause(2000)
-			.end(); 
-	},*/
-	'test apply sort DateofBirth A --> Z': function(browser) {
-
-		var coffeePage = browser.page.app.coffee_list();
-		global.userDataArray = [];
-		
-		browser
-			.perform(function() {
-				console.log("step 1");
-				coffeePage
-					.clickUserListButton()
-					.clickApplySortButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2");
-				browser
-					.moveToElement(".webix_layout_line .webix_el_combo .webix_el_box", 5, 5)
-					.mouseButtonDown(0)
-					.mouseButtonUp(0);
-
-			})
-			.pause(2000)
-			.perform(function() {
-				console.log("step 3 Click Filter DateofBirth");
-				coffeePage
-					.clickFillterDateofBirth();
-						
-			})
-			.pause(2000)
-			.perform(function() {
-				console.log("step 4 Get Value DateofBirth");
-				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(1) .webix_cell', function (elems) {
-					// console.log(elems);
-					if (elems.value.length > 0) {	
-						max_rows = elems.value.length;
-						for (var j = 1; j <= elems.value.length; j++) {
-							console.log(j);
-							coffeePage
-								.getWebixUserDataValue(j, 4);
-						}	
-					};
-				});
-					
-			})			
-			.pause(2000)
-			.perform(function() {
-				console.log("step 5 Sorting Array");
-				var userDateofBirth = [].concat(global.userDataArray);
-				userDateofBirth = userDateofBirth.sort(function (a, b) {
-				    return a.toLowerCase().localeCompare(b.toLowerCase());
-				});
-				
-
-				//userDateofBirth.reverse();
-				console.log(userDateofBirth);
-
-				for (var j = 1; j <= userDateofBirth.length; j++) {
-						console.log(userDateofBirth[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
+						//browser.verify.equal(userLastname[j], global.userLastnameArray[j]);
 				}	
 
 			})
@@ -487,75 +419,4 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 	},
-		'test apply sort DateofBirth A --> Z': function(browser) {
-
-		var coffeePage = browser.page.app.coffee_list();
-		global.userDataArray = [];
-		
-		browser
-			.perform(function() {
-				console.log("step 1");
-				coffeePage
-					.clickUserListButton()
-					.clickApplySortButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2");
-				browser
-					.moveToElement(".webix_layout_line .webix_el_combo .webix_el_box", 5, 5)
-					.mouseButtonDown(0)
-					.mouseButtonUp(0);
-
-			})
-			.pause(2000)
-			.perform(function() {
-				console.log("step 3 Click Filter DateofBirth");
-				coffeePage
-					.clickFillterDateofBirth();
-						
-			})
-			.pause(2000)
-			.perform(function() {
-				console.log("step 4 Get Value DateofBirth");
-				browser.elements('css selector', 'div[view_id="ab_live_item_15_33"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column:nth-of-type(1) .webix_cell', function (elems) {
-					// console.log(elems);
-					if (elems.value.length > 0) {	
-						max_rows = elems.value.length;
-						for (var j = 1; j <= elems.value.length; j++) {
-							console.log(j);
-							coffeePage
-								.getWebixUserDataValue(j, 4);
-						}	
-					};
-				});
-					
-			})			
-			.pause(2000)
-			.perform(function() {
-				console.log("step 5 Sorting Array");
-				var userDateofBirth = [].concat(global.userDataArray);
-				userDateofBirth = userDateofBirth.sort(function (a, b) {
-				    return a.toLowerCase().localeCompare(b.toLowerCase());
-				});
-				
-
-				userDateofBirth.reverse();
-				console.log(userDateofBirth);
-
-				for (var j = 1; j <= userDateofBirth.length; j++) {
-						console.log(userDateofBirth[j] + " : " + global.userDataArray[j]);
-						//browser.assert.equal(userLastname[j], global.userLastnameArray[j]);
-				}	
-
-			})
-			.perform(function() {
-				console.log("step 6 verify");
-				console.log(global.userDataArray);
-			})
-			.pause(2000)
-			.end(); 
-	},
-
-
 };

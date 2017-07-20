@@ -2,6 +2,7 @@ var async = require('async');
 var shared_func = require('../shared_libs/shared_function.js');
 
 module.exports = {
+	'@tags': ['CRUD'],
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
@@ -71,7 +72,7 @@ module.exports = {
 				var productNameListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productName);
-					browser.assert.equal(result.value, productName);
+					browser.verify.equal(result.value, productName);
 					console.log("End Add productNameListObject");
 				});
 			})
@@ -79,7 +80,7 @@ module.exports = {
 				var productPriceListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productPriceListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productPrice);
-					browser.assert.equal(result.value, productPrice);
+					browser.verify.equal(result.value, productPrice);
 					console.log("End Add productPriceListObject");
 				});
 			})
@@ -87,7 +88,7 @@ module.exports = {
 				var productStockListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productStockListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productStock);
-					browser.assert.equal(result.value, productStock);
+					browser.verify.equal(result.value, productStock);
 					console.log("End Add productStockListObject");
 				});
 			})
@@ -95,7 +96,7 @@ module.exports = {
 				var productTypeListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productTypeListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productTypeName);
-					browser.assert.equal(result.value, productTypeName);
+					browser.verify.equal(result.value, productTypeName);
 					console.log("End Add productStockListObject");
 				});
 			})
@@ -151,7 +152,7 @@ module.exports = {
 				var productNameListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productNameListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productName);
-					browser.assert.equal(result.value, productName);
+					browser.verify.equal(result.value, productName);
 					console.log("End Update productNameListObject");
 				});
 			})
@@ -159,7 +160,7 @@ module.exports = {
 				var productPriceListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productPriceListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productPrice);
-					browser.assert.equal(result.value, productPrice);
+					browser.verify.equal(result.value, productPrice);
 					console.log("End Update productPriceListObject");
 				});
 			})
@@ -167,7 +168,7 @@ module.exports = {
 				var productStockListObject = elems.value[elems.value.length - 1];
 				browser.elementIdText(productStockListObject.ELEMENT, function (result) {
 					console.log(":" + result.value + ":" + productStock);
-					browser.assert.equal(result.value, productStock);
+					browser.verify.equal(result.value, productStock);
 					console.log("End Update productStockListObject");
 				});
 			})
@@ -229,7 +230,7 @@ module.exports = {
 				if (productNameObject != null) {
 					browser.elementIdText(productNameObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + productName);
-						browser.assert.equal(result.value, productName);
+						browser.verify.equal(result.value, productName);
 						console.log("End Delete Product Name Object");
 					});
 				};

@@ -1,6 +1,7 @@
 var async = require('async');
 
 module.exports = {
+  	'@disabled': true,
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
@@ -25,23 +26,23 @@ module.exports = {
 			.enterAppDescription(newAppDescription)
 			.save();
 
-		// Assert new application is in list
+		// verify new application is in list
 		browser
 			.waitForElementVisible(appListPage.elements.appItemName.selector, 10000)
 			.elements('css selector', appListPage.elements.appItemName.selector, function (elems) {
 				var lastAppItem = elems.value[elems.value.length - 1];
 
 				browser.elementIdText(lastAppItem.ELEMENT, function (result) {
-					// Assert application name
-					browser.assert.equal(result.value, newAppName);
+					// verify application name
+					browser.verify.equal(result.value, newAppName);
 				});
 			})
 			.elements('css selector', appListPage.elements.appItemDescription.selector, function (elems) {
 				var lastAppItem = elems.value[elems.value.length - 1];
 
 				browser.elementIdText(lastAppItem.ELEMENT, function (result) {
-					// Assert application description
-					browser.assert.equal(result.value, newAppDescription);
+					// verify application description
+					browser.verify.equal(result.value, newAppDescription);
 				});
 			})
 			.pause(45000) // Wait until create app files complete
@@ -73,7 +74,7 @@ module.exports = {
 
 				next();
 			},
-			// Assert: an application is updated
+			// verify: an application is updated
 			function (next) {
 				browser
 					.waitForElementVisible(appListPage.elements.appItemName.selector, 10000)
@@ -81,16 +82,16 @@ module.exports = {
 						var lastAppItem = elems.value[elems.value.length - 1];
 
 						browser.elementIdText(lastAppItem.ELEMENT, function (result) {
-							// Assert application name
-							browser.assert.equal(result.value, newAppName);
+							// verify application name
+							browser.verify.equal(result.value, newAppName);
 						});
 					})
 					.elements('css selector', appListPage.elements.appItemDescription.selector, function (elems) {
 						var lastAppItem = elems.value[elems.value.length - 1];
 
 						browser.elementIdText(lastAppItem.ELEMENT, function (result) {
-							// Assert application description
-							browser.assert.equal(result.value, newAppDescription);
+							// verify application description
+							browser.verify.equal(result.value, newAppDescription);
 						});
 					});
 
@@ -148,21 +149,21 @@ module.exports = {
 
 				next();
 			},
-			// Assert: an application is deleted
+			// verify: an application is deleted
 			function (next) {
 				browser
 					.waitForElementVisible(appListPage.elements.appItemName.selector, 10000)
 					.elements('css selector', appListPage.elements.appItemName.selector, function (elems) {
 						elems.value.forEach(function (val) {
 							browser.elementIdText(val.ELEMENT, function (result) {
-								browser.assert.notEqual(result.value, appName);
+								browser.verify.notEqual(result.value, appName);
 							});
 						});
 					})
 					.elements('css selector', appListPage.elements.appItemDescription.selector, function (elems) {
 						elems.value.forEach(function (val) {
 							browser.elementIdText(val.ELEMENT, function (result) {
-								browser.assert.notEqual(result.value, appDescription);
+								browser.verify.notEqual(result.value, appDescription);
 							});
 						});
 					});

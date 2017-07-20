@@ -2,6 +2,7 @@ var async = require('async');
 var shared_func = require('../shared_libs/shared_function.js');
 
 module.exports = {
+	'@tags': ['CRUD', 'WORST'],
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu();
@@ -63,7 +64,7 @@ module.exports = {
 			// 	var emailObject = elems.value[elems.value.length - 1];
 			// 	browser.elementIdText(emailObject.ELEMENT, function (result) {
 			// 		console.log(":" + result.value + ":" + email);
-			// 		browser.assert.equal(result.value, email);
+			// 		browser.verify.equal(result.value, email);
 			// 	});
 				
 			// })
@@ -111,7 +112,7 @@ module.exports = {
 			// 	var emailObject = elems.value[elems.value.length - 1];
 			// 	browser.elementIdText(emailObject.ELEMENT, function (result) {
 			// 		console.log(":" + result.value + ":" + email);
-			// 		browser.assert.equal(result.value, email);
+			// 		browser.verify.equal(result.value, email);
 			// 	});
 				
 			// })
@@ -160,7 +161,7 @@ module.exports = {
 			// 	var emailObject = elems.value[elems.value.length - 1];
 			// 	browser.elementIdText(emailObject.ELEMENT, function (result) {
 			// 		console.log(":" + result.value + ":" + email);
-			// 		browser.assert.equal(result.value, email);
+			// 		browser.verify.equal(result.value, email);
 			// 	});
 				
 			// })
@@ -207,7 +208,7 @@ module.exports = {
 			// 	var emailObject = elems.value[elems.value.length - 1];
 			// 	browser.elementIdText(emailObject.ELEMENT, function (result) {
 			// 		console.log(":" + result.value + ":" + email);
-			// 		browser.assert.equal(result.value, email);
+			// 		browser.verify.equal(result.value, email);
 			// 	});
 				
 			// })
@@ -254,7 +255,7 @@ module.exports = {
 			// 	var emailObject = elems.value[elems.value.length - 1];
 			// 	browser.elementIdText(emailObject.ELEMENT, function (result) {
 			// 		console.log(":" + result.value + ":" + email);
-			// 		browser.assert.equal(result.value, email);
+			// 		browser.verify.equal(result.value, email);
 			// 	});
 				
 			// })
@@ -309,7 +310,7 @@ module.exports = {
 				if (userEmailListObject != null) {
 					browser.elementIdText(userEmailListObject.ELEMENT, function (result) {
 						console.log(":" + result.value + ":" + userEmail);
-						browser.assert.equal(result.value, "");
+						browser.verify.equal(result.value, "");
 						console.log("End Delete userEmailListObject");
 					});
 				};

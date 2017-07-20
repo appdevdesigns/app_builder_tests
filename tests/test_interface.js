@@ -1,6 +1,7 @@
 var async = require('async');
 
 module.exports = {
+  	'@disabled': true,
 	beforeEach: function (browser) {
 		var loginPage = browser.page.opsportal.login(),
 			menuSection = browser.page.opsportal.menu(),
