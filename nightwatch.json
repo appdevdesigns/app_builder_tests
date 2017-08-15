@@ -20,7 +20,7 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://139.59.109.30:1337/page/opsportal",
+      "launch_url" : "http://localhost:1337/page/opsportal",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,

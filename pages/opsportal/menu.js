@@ -3,7 +3,10 @@ module.exports = {
 	elements: {
 		menuItem: 'span[app-label-key="opp.menu"]',
 		appBuilderItem: 'li[area="app-builder"]',
-		coffeeShopItem: 'li[area="ab-app-coffee-shop"]'
+		coffeeShopItem: 'li[area="ab-app-coffee-shop"]',
+
+		testCoffeeshopApp : 'div[webix_l_id="1"]',
+
 	},
 	commands: [{
 		selectAppBuilder: function () {
@@ -25,6 +28,15 @@ module.exports = {
 				.click('@coffeeShopItem')
 				.click('@menuItem');
 			return this;
+		},
+
+		selectTestCoffeeShop : function (){
+			this
+				.waitForElementVisible('@testCoffeeshopApp', 99999)
+				.click('@testCoffeeshopApp');
+			return this;
 		}
+
+
 	}]
 };

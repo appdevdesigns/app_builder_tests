@@ -27,6 +27,10 @@ module.exports = {
 
 		objectAlertDialog: 'div[class="webix_modal_box webix_confirm"]',
 		objectAlertDialogButton: 'div[class="webix_modal_box webix_confirm"] button',
+
+		testObjectTestList: 'div[class="ab-object-list-item"]',
+		
+
 	},
 	commands: [{
 		// Add new object
@@ -125,7 +129,14 @@ module.exports = {
 				.click(itemSelector);
 
 			return this;
-		}
+		},
+
+		selectObjectTest: function(){
+				this.waitForElementVisible('@testObjectTestList', 10000)
+					.click('@testObjectTestList');
+
+			return this;
+		},
 
 
 	}]
