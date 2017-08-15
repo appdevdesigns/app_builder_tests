@@ -17,12 +17,78 @@ module.exports = {
 		menuSection.selectTestCoffeeShop();
 	},
 
-	'test create new application': function (browser) {
+	'test single line text': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 
-			coffeeObject.selectObjectTest();
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectsingleLineTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterLabelName("testLabel")
+						.enterName("testName")
+						.clickShowIcon()
+						.enterDefaultName("testdefaultname")
+						.clickSupportMultilingual();
 
-			
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
 
-	}
+			})
+			.pause(2000)
+			.end(); 
+	},
+
+	'test long  text': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectlongTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterlongTextLabelName("testlongTextLabel")
+						.enterlongTextName("testlongTextName")
+						.clicklongTextShowIcon()
+						.enterlongTextDefaultName("testlongTextdefaultname")
+						.clicklongTextSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+	},
+
 };
