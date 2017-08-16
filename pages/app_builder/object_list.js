@@ -1,16 +1,19 @@
 module.exports = {
 	url: 'http://localhost:1337/page/opsportal',
 	elements: {
-		objectList: 'div[view_id="ab-object-list"] .ab-object-list-item',
+		objectList: 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item .ab-object-list-item',
+		objectListSelected: 'div[view_id^="ab_work_object_list_editlist"] .webix_selected .ab-object-list-item',
+		objectListSelectedEdit: 'div[view_id^="ab_work_object_list_editlist"] .webix_selected .ab-object-list-item .ab-object-list-edit',
+		objectListFilter: '.ab-object-list-filter',
 
-		addNewObjectButton: 'div[view_id="ab-object-add-new-button"] button',
-		addNewObjectPopup: 'div[view_id="ab-object-add-new-popup"]',
+		addNewObjectButton: 'div[view_id^="ab_work_object_list_buttonNew"] button',
+		addNewObjectPopup: 'div[view_id^="ab_work_object_list_newObject_component"]',
 
 		blankObjectTab: 'div[button_id="ab-object-add-new-form"]',
 		blankObjectPanel: 'div[view_id="ab-object-blank-object-form"]',
-		blankObjectNameTextbox: 'div[view_id="ab-object-blank-object-form"] input[type="text"]',
-		blankObjectSaveButton: 'div[view_id="ab-object-blank-object-save"] button',
-		blankObjectCancelButton: 'div[view_id="ab-object-blank-object-cancel"] button',
+		blankObjectNameTextbox: 'div[view_id^="ab_work_object_list_newObject_blank_blank"] input[type="text"]',
+		blankObjectSaveButton: 'div[view_id^="ab_work_object_list_newObject_blank_save"] button',
+		blankObjectCancelButton: 'div[view_id^="ab_work_object_list_newObject_blank_cancel"] button',
 
 		existsObjectTab: 'div[button_id="ab-object-import-model-form"]',
 		existsObjectPanel: 'div[view_id="ab-object-import-model-form"]',
@@ -53,9 +56,15 @@ module.exports = {
 		longTextStringDefaultTextBox: 'div[view_id^="LongText_textDefault"] input',
 		longTextSupportmultilingualCheckBox : 'div[view_id^="LongText_supportMultilingual"] .webix_inp_checkbox_border button',
 
+		objectSearch: 'div[view_id^="ab_work_object_list_searchText"] .webix_el_box input',
+		objectSortAsc: 'div[view_id^="ab_work_object_list_sort"] .webix_all_segments .webix_segment_0',
+		objectSortDsc: 'div[view_id^="ab_work_object_list_sort"] .webix_all_segments .webix_segment_N',
+		objectGroupUnChecked: 'div[view_id^="ab_work_object_list_group"] .webix_el_box .webix_checkbox_0 button',
+		objectGroupChecked: 'div[view_id^="ab_work_object_list_group"] .webix_el_box .webix_checkbox_1 button',
 
-
-		
+		alertPopUp: '.webix_alert',
+		alertOk: '.webix_alert .webix_popup_controls div[aria-label="* yes"]',
+		alertCancel: '.webix_alert .webix_popup_controls div[aria-label="* no"]',
 
 	},
 	commands: [{
@@ -147,7 +156,7 @@ module.exports = {
 		selectObject: function (index) {
 			var self = this,
 				// deferred = Q.defer(),
-				itemSelector = 'div[view_id="ab-object-list"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+				itemSelector = 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
 
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
@@ -292,7 +301,115 @@ module.exports = {
 
 			return this;
 		},
+		clearSortSeachValue: function() {
+			this.waitForElementVisible('@objectSearch', 500)
+				.clearValue('@objectSearch')
+				.waitForElementVisible('@objectListFilter', 500, true, function(){
+					this
+						.element('css selector', 'div[view_id^="ab_work_object_list_group"] .webix_el_box .webix_checkbox_1 button', function(result){
+						    if(result.status != -1){
+						        //Element exists, do something
+						        this.click('div[view_id^="ab_work_object_list_group"] .webix_el_box .webix_checkbox_1 button');
+						    } else {
+						        //Element does not exist, do something else
+						    }
+						});
+				}, "Just Clear Value Please ignore this error message")
 
+			return this;
+		},
+		searchObject: function (objectName) {
+			this.waitForElementVisible('@objectSearch', 500)
+				.clearValue('@objectSearch')
+				.setValue('@objectSearch', objectName);	
 
+			return this;
+		},
+		sortObjectAscending: function () {
+			this.waitForElementVisible('@objectSortAsc', 500)
+				.click('@objectSortAsc');
+							
+			return this;
+		},
+		sortObjectDescending: function () {
+			this.waitForElementVisible('@objectSortDsc', 500)
+				.click('@objectSortDsc');
+							
+			return this;
+		},
+		groupObject: function () {
+			this.waitForElementVisible('@objectGroupUnChecked', 500)
+				.click('@objectGroupUnChecked');
+							
+			return this;
+		},
+		unGroupObject: function () {
+			this.waitForElementVisible('@objectGroupChecked', 500)
+				.click('@objectGroupChecked');
+							
+			return this;
+		},
+		deleteObject: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item .ab-object-list-edit';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
+		clickObjectInList: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+
+			itemSelector = itemSelector.replace('#index#', (index+1) || 2);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
+		getObjectNameToArray: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+
+			itemSelector = itemSelector.replace('#index#', (index+1) || 2);
+
+			self.getText(itemSelector, function (result) {
+				global.objectNameArray.push(result.value);
+			});
+
+			return this;
+		},
+		getObjectNameToArray2: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id^="ab_work_object_list_editlist"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+
+			itemSelector = itemSelector.replace('#index#', (index+1) || 2);
+
+			self.getText(itemSelector, function (result) {
+				global.objectNameArray2.push(result.value);
+			});
+
+			return this;
+		},
+		alertOk: function() {
+			this.waitForElementVisible('@alertOk', 500)
+				.click('@alertOk');
+							
+			return this;
+		},
+		alertCancel: function() {
+			this.waitForElementVisible('@alertCancel', 500)
+				.click('@alertCancel');
+							
+			return this;
+		}
 	}]
 };

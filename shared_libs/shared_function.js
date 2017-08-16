@@ -52,7 +52,7 @@ module.exports = {
         var possible = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         if (length == null ) {
-            length = 6;
+            length = 8;
         };
 
         for( var i=0; i < length; i++ ) {

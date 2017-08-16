@@ -2,7 +2,8 @@ module.exports = {
 	url: 'http://localhost:1337/page/opsportal',
 	elements: {
 		menuItem: 'span[app-label-key="opp.menu"]',
-		appBuilderItem: 'li[area="app-builder"]',
+
+		appBuilderItem: 'li[area="appbuilder"]',
 		coffeeShopItem: 'li[area="ab-app-coffee-shop"]',
 
 		testCoffeeshopApp : 'div[webix_l_id="1"]',

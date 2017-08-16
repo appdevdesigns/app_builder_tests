@@ -9,3 +9,5 @@ global.calendarSelector = "";
 global.calendarDate = "";
 global.userDataArray = [];
 global.userDataArray2 = [];
+global.objectNameArray = [];
+global.objectNameArray2 = [];

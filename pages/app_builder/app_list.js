@@ -28,7 +28,7 @@ module.exports = {
 		selectApp: function (index) {
 			var self = this,
 				// deferred = Q.defer(),
-				itemSelector = 'div[view_id="ab-app-list"] .webix_list_item:nth-of-type(#index#) .ab-app-list-item';
+				itemSelector = '.ab-app-select-list .webix_list_item:nth-of-type(#index#) .ab-app-list-item';
 
 			itemSelector = itemSelector.replace('#index#', index || 1);
 
