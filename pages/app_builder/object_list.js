@@ -66,6 +66,24 @@ module.exports = {
 		alertOk: '.webix_alert .webix_popup_controls div[aria-label="* yes"]',
 		alertCancel: '.webix_alert .webix_popup_controls div[aria-label="* no"]',
 
+		numberLabelNameTextBox: 'div[view_id^="number_label"] input',
+		numberNameTextBox : 'div[view_id^="number_columnName"] input',
+		numbershowIconCheckBox : 'div[view_id^="number_showIcon"] .webix_inp_checkbox_border button',
+		numbershowIconCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
+		numberDefaultTextBox: 'div[view_id^="number_numberDefault"] input',
+		numberFormatSelect:'div[view_id^="number_typeFormat"] .webix_inp_static',
+		numberFormatSelectNone: 'div[webix_l_id="none"]',
+		numberFormatSelectDollar: 'div[webix_l_id="dollar"]',
+		numberFormatSelectPound: 'div[webix_l_id="pound"]',
+		numberFormatSelectEuroBefore: 'div[webix_l_id="euroBefore"]',
+		numberFormatSelectEuroAfter: 'div[webix_l_id="euroAfter"]',
+		numberFormatSelectPercent: 'div[webix_l_id="percent"]',
+		numberDecimalSelect: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
+		numberThousands:'div[view_id^="number_typeThousands"] .webix_inp_static',
+		numberValidateCheckBox: 'div[view_id^="number_validate"] .webix_inp_checkbox_border button',
+		numberValidateMinimum: 'div[view_id^="number_validateMinimum"] input',
+		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input'
+
 	},
 	commands: [{
 		// Add new object
@@ -322,9 +340,22 @@ module.exports = {
 			this.waitForElementVisible('@objectSearch', 500)
 				.clearValue('@objectSearch')
 				.setValue('@objectSearch', objectName);	
+			return this;
+		},
+
+		enterNumberLabelName: function (labelName) {
+			this.waitForElementVisible('@numberLabelNameTextBox', 1200)
+				.setValue('@numberLabelNameTextBox', labelName);
 
 			return this;
 		},
+		enterNumberName: function (Name) {
+			this.waitForElementVisible('@numberNameTextBox', 1200)
+				.setValue('@numberNameTextBox', Name);
+
+			return this;
+		},
+
 		sortObjectAscending: function () {
 			this.waitForElementVisible('@objectSortAsc', 500)
 				.click('@objectSortAsc');
