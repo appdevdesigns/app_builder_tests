@@ -3,7 +3,7 @@ module.exports = {
 	elements: {
 		menuItem: 'span[app-label-key="opp.menu"]',
 
-		appBuilderItem: 'li[area="appbuilder"]',
+		appBuilderItem: 'li[area="app-builder"]',
 		coffeeShopItem: 'li[area="ab-app-coffee-shop"]',
 
 		testCoffeeshopApp : 'div[webix_l_id="1"]',
