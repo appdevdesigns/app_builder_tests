@@ -79,10 +79,21 @@ module.exports = {
 		numberFormatSelectEuroAfter: 'div[webix_l_id="euroAfter"]',
 		numberFormatSelectPercent: 'div[webix_l_id="percent"]',
 		numberDecimalSelect: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
-		numberThousands:'div[view_id^="number_typeThousands"] .webix_inp_static',
+		numberDecimalSelectNone: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
+		numberDecimalSelectComma: 'div[webix_l_id="comma"]',
+		numberDecimalSelectPeriod: 'div[webix_l_id="period"]',
+		numberDecimalSelectSpace: 'div[webix_l_id="space"]',
+		numberThousandsSelect: 'div[view_id^="number_typeThousands"] .webix_inp_static',
+		numberThousandsSelectNone : 'div[webix_l_id="comma"]',
+		numberThousandsSelectComma: 'div[webix_l_id="comma"]',
+		numberThousandsSelectPeriod: 'div[webix_l_id="period"]',
+		numberThousandsSelectSpace: 'div[webix_l_id="space"]',
 		numberValidateCheckBox: 'div[view_id^="number_validate"] .webix_inp_checkbox_border button',
 		numberValidateMinimum: 'div[view_id^="number_validateMinimum"] input',
-		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input'
+		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input',
+
+		calcelAddNewColumnButton : 'div[class="ab-cancel-button"]',
+
 
 	},
 	commands: [{
@@ -441,6 +452,14 @@ module.exports = {
 				.click('@alertCancel');
 							
 			return this;
-		}
+		},
+
+		cancelAddNewColumnButton: function() {
+			this.waitForElementVisible('@calcelAddNewColumnButton', 1000)
+				.click('@calcelAddNewColumnButton');
+							
+			return this;
+		},
+
 	}]
 };
