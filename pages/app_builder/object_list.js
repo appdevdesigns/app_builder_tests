@@ -69,7 +69,7 @@ module.exports = {
 		numberLabelNameTextBox: 'div[view_id^="number_label"] input',
 		numberNameTextBox : 'div[view_id^="number_columnName"] input',
 		numbershowIconCheckBox : 'div[view_id^="number_showIcon"] .webix_inp_checkbox_border button',
-		numbershowIconCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
+		numberRequiredCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
 		numberDefaultTextBox: 'div[view_id^="number_numberDefault"] input',
 		numberFormatSelect:'div[view_id^="number_typeFormat"] .webix_inp_static',
 		numberFormatSelectNone: 'div[webix_l_id="none"]',
@@ -460,6 +460,23 @@ module.exports = {
 							
 			return this;
 		},
+		clickNumbershowIconCheckBox : function() {
+			this.waitForElementVisible('@numbershowIconCheckBox', 1000)
+				.click('@numbershowIconCheckBox');
+							
+			return this;
+		},
+		clickNumberRequiredCheckBox : function() {
+			this.waitForElementVisible('@numberRequiredCheckBox', 1000)
+				.click('@numberRequiredCheckBox');
+							
+			return this;
+		},
+		enterNumberDefaultValue: function (DefaultValue) {
+			this.waitForElementVisible('@numberDefaultTextBox', 1200)
+				.setValue('@numberDefaultTextBox', DefaultValue);
 
+			return this;
+		},
 	}]
 };
