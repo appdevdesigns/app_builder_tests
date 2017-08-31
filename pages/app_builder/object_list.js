@@ -99,8 +99,8 @@ module.exports = {
 		calcelAddNewColumnButton : 'div[class="ab-cancel-button"]',
 
 		//date
-		dateLabelNameTextBox: 'div[view_id^="boolean_label"] input',
-		dateNameTextBox : 'div[view_id^="boolean_columnName"] input',
+		dateLabelNameTextBox: 'div[view_id^="date_label"] input',
+		dateNameTextBox : 'div[view_id^="date_columnName"] input',
 		dateShowIconCheckBox : 'div[view_id^="date_showIcon"] .webix_inp_checkbox_border button',
 		dateIncludeTimeCheckBox : 'div[view_id^="date_ab-date-include-time"] .webix_inp_checkbox_border button',
 		dateSetCurrentdateDefaultValue : 'div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button',
@@ -110,6 +110,20 @@ module.exports = {
 		checkboxNameTextBox : 'div[view_id^="boolean_columnName"] input',
 		checkboxshowIconCheckBox : 'div[view_id^="boolean_showIcon"] .webix_inp_checkbox_border button',
 		checkboxDefault : 'div[view_id^="boolean_default"] .webix_inp_checkbox_border button',
+
+		//select List
+		selectlistLabelNameTextBox: 'div[view_id^="list_label"] input',
+		selectlistNameTextBox : 'div[view_id^="list_columnName"] input', 
+		selectlistshowIconCheckBox : 'div[view_id^="list_showIcon"] .webix_inp_checkbox_border button',
+
+		//imageAttachment
+		imageAttachmentLabelNameTextBox: 'div[view_id^="image_label"] input',
+		imageAttachmentNameTextBox : 'div[view_id^="image_columnName"] input', 
+		imageAttachmenthowIconCheckBox : 'div[view_id^="image_showIcon"] .webix_inp_checkbox_border button',
+		imageAttachmentWidthCheckBox : 'div[view_id^="image_useWidth"] .webix_inp_checkbox_border button',
+		imageAttachmentHeightCheckBox : 'div[view_id^="image_useHeight"] .webix_inp_checkbox_border button',
+		imageAttachmentWidthInput : 'div[view_id^="image_imageWidth"] input',
+		imageAttachmentHeightInput : 'div[view_id^="image_imageHeight"] input'
 
 	},
 	commands: [{
@@ -594,16 +608,48 @@ module.exports = {
 			return this;
 		},
 
+		//date
+		enterDateLabelNameTextBox: function (dateLabelName) {
+			this.waitForElementVisible('@dateLabelNameTextBox', 1200)
+				.setValue('@dateLabelNameTextBox', dateLabelName);
+
+			return this;
+		},
+		enterdateNameTextBox: function (dateName) {
+			this.waitForElementVisible('@dateNameTextBox', 1200)
+				.setValue('@dateNameTextBox', dateName);
+
+			return this;
+		},		
+		dateShowIconCheckBox : function(){
+			this.waitForElementVisible('@dateShowIconCheckBox', 1000)
+				.click('@dateShowIconCheckBox');
+							
+			return this;
+		},
+		dateIncludeTimeCheckBox : function(){
+			this.waitForElementVisible('@dateIncludeTimeCheckBox', 1000)
+				.click('@dateIncludeTimeCheckBox');
+							
+			return this;
+		},
+		dateIncludeTimeCheckBox : function(){
+			this.waitForElementVisible('@dateSetCurrentdateDefaultValue', 1000)
+				.click('@dateSetCurrentdateDefaultValue');
+							
+			return this;
+		},
+
 		//Checkbox
 		enterCheckboxLabelNameTextBox: function (checkboxLabelName) {
 			this.waitForElementVisible('@checkboxLabelNameTextBox', 1200)
-				.setValue('@checkboxLabelNameTextBox', DefaultValue);
+				.setValue('@checkboxLabelNameTextBox', checkboxLabelName);
 
 			return this;
 		},
 		entercheckboxNameTextBox: function (checkboxName) {
 			this.waitForElementVisible('@checkboxNameTextBox', 1200)
-				.setValue('@checkboxNameTextBox', DefaultValue);
+				.setValue('@checkboxNameTextBox', checkboxName);
 
 			return this;
 		},
@@ -617,6 +663,70 @@ module.exports = {
 			this.waitForElementVisible('@checkboxDefault', 1000)
 				.click('@checkboxDefault');
 							
+			return this;
+		},
+
+		//selectselectListFieldType
+		enterselectlistLabelNameTextBox: function (selectlistLabelName) {
+			this.waitForElementVisible('@selectlistLabelNameTextBox', 1200)
+				.setValue('@selectlistLabelNameTextBox', selectlistLabelName);
+
+			return this;
+		},
+		enterselectlistNameTextBox: function (selectlistName) {
+			this.waitForElementVisible('@selectlistNameTextBox', 1200)
+				.setValue('@selectlistNameTextBox', selectlistName);
+
+			return this;
+		},
+		selectlistshowIconCheckBox : function(){
+			this.waitForElementVisible('@selectlistshowIconCheckBox', 1000)
+				.click('@selectlistshowIconCheckBox');
+							
+			return this;
+		},
+
+		//selectimageAttachmentFieldType
+		enterimageAttachmentLabelNameTextBox: function (imageAttachmentLabelName) {
+			this.waitForElementVisible('@imageAttachmentLabelNameTextBox', 1200)
+				.setValue('@imageAttachmentLabelNameTextBox', imageAttachmentLabelName);
+
+			return this;
+		},
+		enterimageAttachmentNameTextBox: function (imageAttachmentName) {
+			this.waitForElementVisible('@imageAttachmentNameTextBox', 1200)
+				.setValue('@imageAttachmentNameTextBox', imageAttachmentName);
+
+			return this;
+		},
+		imageAttachmenthowIconCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmenthowIconCheckBox', 1000)
+				.click('@imageAttachmenthowIconCheckBox');
+							
+			return this;
+		},
+		imageAttachmentWidthCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmentWidthCheckBox', 1000)
+				.click('@imageAttachmentWidthCheckBox');
+							
+			return this;
+		},
+		imageAttachmentHeightCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmentHeightCheckBox', 1000)
+				.click('@imageAttachmentHeightCheckBox');
+							
+			return this;
+		},
+		imageAttachmentWidthInput: function (imageAttachmentWidth) {
+			this.waitForElementVisible('@imageAttachmentWidthInput', 1200)
+				.setValue('@imageAttachmentWidthInput', imageAttachmentWidth);
+
+			return this;
+		},
+		imageAttachmentHeightInput: function (imageAttachmentHeight) {
+			this.waitForElementVisible('@imageAttachmentHeightInput', 1200)
+				.setValue('@imageAttachmentHeightInput', imageAttachmentHeight);
+
 			return this;
 		},
 

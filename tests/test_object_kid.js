@@ -1162,7 +1162,7 @@ module.exports = {
 			})
 			.pause(3000)
 			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
+				console.log("step 2 checkboxFieldType");
 					coffeeObject
 						.checkboxFieldType();
 			})
@@ -1185,5 +1185,441 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 		},*/
+		/*'test date Case 1 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name)
+						.dateShowIconCheckBox()
+						.dateIncludeTimeCheckBox()
+						.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 2 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name)
+						//.dateShowIconCheckBox()
+						.dateIncludeTimeCheckBox()
+						.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 3 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name)
+						//.dateShowIconCheckBox()
+						//.dateIncludeTimeCheckBox()
+						.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 4 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name);
+						//.dateShowIconCheckBox()
+						//.dateIncludeTimeCheckBox()
+						//.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 5 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name)
+						.dateShowIconCheckBox()
+						.dateIncludeTimeCheckBox();
+						//.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 6 date': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 dateFieldType");
+					coffeeObject
+						.selectdateFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterDateLabelNameTextBox(labelname)
+						.enterdateNameTextBox(Name)
+						//.dateShowIconCheckBox()
+						//.dateIncludeTimeCheckBox()
+						.dateIncludeTimeCheckBox();
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},*/
+		/*'test date Case  selectselectListFieldType': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 selectselectListFieldType");
+					coffeeObject
+						.selectselectListFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterselectlistLabelNameTextBox(labelname)
+						.enterselectlistNameTextBox(Name)
+						.selectlistshowIconCheckBox();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},	
+		'test date Case  selectselectListFieldType': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 selectselectListFieldType");
+					coffeeObject
+						.selectselectListFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterselectlistLabelNameTextBox(labelname)
+						.enterselectlistNameTextBox(Name);
+						//.selectlistshowIconCheckBox();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},*/
+
+	'test date Case 1 selectimageAttachmentFieldType': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 selectselectListFieldType");
+					coffeeObject
+						.selectimageAttachmentFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterimageAttachmentLabelNameTextBox(labelname)
+						.enterimageAttachmentNameTextBox(Name)
+						.imageAttachmenthowIconCheckBox()
+						.imageAttachmentWidthCheckBox()
+						.imageAttachmentHeightCheckBox()
+						.imageAttachmentWidthInput(480)
+						.imageAttachmentHeightInput(240);
+						//.selectlistshowIconCheckBox();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},		
+		'test date Case 2 selectimageAttachmentFieldType': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 selectselectListFieldType");
+					coffeeObject
+						.selectimageAttachmentFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterimageAttachmentLabelNameTextBox(labelname)
+						.enterimageAttachmentNameTextBox(Name)
+						.imageAttachmenthowIconCheckBox();
+						//.imageAttachmentWidthCheckBox();
+						//.imageAttachmentHeightCheckBox()
+						//.imageAttachmentWidthInput(480)
+						//.imageAttachmentHeightInput(240);
+						//.selectlistshowIconCheckBox();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test date Case 3 selectimageAttachmentFieldType': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 selectselectListFieldType");
+					coffeeObject
+						.selectimageAttachmentFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterimageAttachmentLabelNameTextBox(labelname)
+						.enterimageAttachmentNameTextBox(Name)
+						//.imageAttachmenthowIconCheckBox();
+						.imageAttachmentWidthCheckBox()
+						.imageAttachmentHeightCheckBox()
+						.imageAttachmentWidthInput(480)
+						.imageAttachmentHeightInput(240);
+						
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 		
+	},
 
 };
