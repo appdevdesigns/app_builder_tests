@@ -17,7 +17,7 @@ module.exports = {
 		menuSection.selectTestCoffeeShop();
 	},
 
-	'test single line text Case 1 All Data': function (browser) {
+	/*'test single line text Case 1 All Data': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
@@ -193,7 +193,7 @@ module.exports = {
 			})
 			.pause(2000)
 			.end(); 
-	},
+	},/*
 	/*'test single line text Case 6 Cancel': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 
@@ -222,7 +222,7 @@ module.exports = {
 	},*/
 
 
-	'test long  text Case 1 All Data': function (browser) {
+	/*'test long  text Case 1 All Data': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
@@ -400,7 +400,7 @@ module.exports = {
 			})
 			.pause(2000)
 			.end(); 
-	},
+	},*/
 
 	/*'test long  text Case 6 cancel  ': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
@@ -429,7 +429,7 @@ module.exports = {
 			.end(); 
 	},*/
 
-	'test number Case 1 No format': function (browser) {
+	/*'test number Case 1 No format': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
@@ -650,6 +650,540 @@ module.exports = {
 			})
 			.pause(2000)
 			.end(); 
-	},
+	},*/
+	/*'test number Case 7 selectNumberFormatSelectDollar': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect()
+						.selectNumberFormatSelectDollar();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 8 selectNumberFormatSelectPound': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect()
+						.selectNumberFormatSelectPound();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 9 selectNumberFormatSelectEuroBefore': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect()
+						.selectNumberFormatSelectEuroBefore();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 10 selectNumberFormatSelectEuroAfter': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect()
+						.selectNumberFormatSelectEuroAfter();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 11 selectNumberFormatSelectPercent': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect()
+						.selectNumberFormatSelectPercent();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},*/
+		/*'test number Case 12 selectNumberDecimalSelectComma': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberFormatSelect();
+
+							browser
+					.moveToElement('div[view_id^="number_typeDecimals"]', 5, 65)
+					.mouseButtonDown(0)
+					.mouseButtonUp(0);
+
+						
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 13 selectNumberDecimalSelectPeriod': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.selectNumberDecimalSelect()
+						.selectNumberDecimalSelectPeriod();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 14 selectNumberDecimalSelectSpace': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.selectNumberDecimalSelect()
+						.selectNumberDecimalSelectSpace();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 15 numberThousandsSelectComma': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberThousandsSelect();
+						
+			
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 16 numberThousandsSelectPeriod': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberThousandsSelect()
+						.numberThousandsSelectPeriod();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 17 numberThousandsSelectSpace': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectnumberFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterNumberLabelName(labelname)
+						.enterNumberName(Name)
+						.enterNumberDefaultValue(5)
+						.numberThousandsSelect()
+						.numberThousandsSelectSpace();
+						//.clickNumberRequiredCheckBox();
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},*/
+		/*'test number Case 1 Checkbox': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.checkboxFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterCheckboxLabelNameTextBox(labelname)
+						.entercheckboxNameTextBox(Name)
+						.checkboxshowIconCheckBox()
+						.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 2 Checkbox': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.checkboxFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterCheckboxLabelNameTextBox(labelname)
+						.entercheckboxNameTextBox(Name)
+						//.checkboxshowIconCheckBox()
+						.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+		'test number Case 3 Checkbox': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.checkboxFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterCheckboxLabelNameTextBox(labelname)
+						.entercheckboxNameTextBox(Name);
+						//.checkboxshowIconCheckBox()
+						//.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},*/
 
 };

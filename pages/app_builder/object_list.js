@@ -71,6 +71,7 @@ module.exports = {
 		numbershowIconCheckBox : 'div[view_id^="number_showIcon"] .webix_inp_checkbox_border button',
 		numberRequiredCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
 		numberDefaultTextBox: 'div[view_id^="number_numberDefault"] input',
+
 		numberFormatSelect:'div[view_id^="number_typeFormat"] .webix_inp_static',
 		numberFormatSelectNone: 'div[webix_l_id="none"]',
 		numberFormatSelectDollar: 'div[webix_l_id="dollar"]',
@@ -78,22 +79,37 @@ module.exports = {
 		numberFormatSelectEuroBefore: 'div[webix_l_id="euroBefore"]',
 		numberFormatSelectEuroAfter: 'div[webix_l_id="euroAfter"]',
 		numberFormatSelectPercent: 'div[webix_l_id="percent"]',
+
 		numberDecimalSelect: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
 		numberDecimalSelectNone: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
 		numberDecimalSelectComma: 'div[webix_l_id="comma"]',
 		numberDecimalSelectPeriod: 'div[webix_l_id="period"]',
 		numberDecimalSelectSpace: 'div[webix_l_id="space"]',
+
 		numberThousandsSelect: 'div[view_id^="number_typeThousands"] .webix_inp_static',
 		numberThousandsSelectNone : 'div[webix_l_id="comma"]',
 		numberThousandsSelectComma: 'div[webix_l_id="comma"]',
 		numberThousandsSelectPeriod: 'div[webix_l_id="period"]',
 		numberThousandsSelectSpace: 'div[webix_l_id="space"]',
+
 		numberValidateCheckBox: 'div[view_id^="number_validate"] .webix_inp_checkbox_border button',
 		numberValidateMinimum: 'div[view_id^="number_validateMinimum"] input',
 		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input',
 
 		calcelAddNewColumnButton : 'div[class="ab-cancel-button"]',
 
+		//date
+		dateLabelNameTextBox: 'div[view_id^="boolean_label"] input',
+		dateNameTextBox : 'div[view_id^="boolean_columnName"] input',
+		dateShowIconCheckBox : 'div[view_id^="date_showIcon"] .webix_inp_checkbox_border button',
+		dateIncludeTimeCheckBox : 'div[view_id^="date_ab-date-include-time"] .webix_inp_checkbox_border button',
+		dateSetCurrentdateDefaultValue : 'div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button',
+
+		//checkbox
+		checkboxLabelNameTextBox: 'div[view_id^="boolean_label"] input',
+		checkboxNameTextBox : 'div[view_id^="boolean_columnName"] input',
+		checkboxshowIconCheckBox : 'div[view_id^="boolean_showIcon"] .webix_inp_checkbox_border button',
+		checkboxDefault : 'div[view_id^="boolean_default"] .webix_inp_checkbox_border button',
 
 	},
 	commands: [{
@@ -453,7 +469,7 @@ module.exports = {
 							
 			return this;
 		},
-
+		//Number
 		cancelAddNewColumnButton: function() {
 			this.waitForElementVisible('@calcelAddNewColumnButton', 1000)
 				.click('@calcelAddNewColumnButton');
@@ -478,5 +494,132 @@ module.exports = {
 
 			return this;
 		},
+		numberFormatSelect : function(){
+			this.waitForElementVisible('@numberFormatSelect', 1000)
+				.click('@numberFormatSelect');
+							
+			return this;
+		},
+		selectNumberFormatSelectNone : function(){
+			this.waitForElementVisible('@numberFormatSelectNone', 1000)
+				.click('@numberFormatSelectNone');
+							
+			return this;
+		},
+		selectNumberFormatSelectDollar : function(){
+			this.waitForElementVisible('@numberFormatSelectDollar', 1000)
+				.click('@numberFormatSelectDollar');
+							
+			return this;
+		},
+		selectNumberFormatSelectPound : function(){
+			this.waitForElementVisible('@numberFormatSelectPound', 1000)
+				.click('@numberFormatSelectPound');
+							
+			return this;
+		},
+		selectNumberFormatSelectEuroBefore : function(){
+			this.waitForElementVisible('@numberFormatSelectEuroBefore', 1000)
+				.click('@numberFormatSelectEuroBefore');
+							
+			return this;
+		},
+		selectNumberFormatSelectEuroAfter : function(){
+			this.waitForElementVisible('@numberFormatSelectEuroAfter', 1000)
+				.click('@numberFormatSelectEuroAfter');
+							
+			return this;
+		},
+		selectNumberFormatSelectPercent : function(){
+			this.waitForElementVisible('@numberFormatSelectPercent', 1000)
+				.click('@numberFormatSelectPercent');
+							
+			return this;
+		},
+
+		selectNumberDecimalSelect : function(){
+			this.waitForElementVisible('@numberDecimalSelect', 1000)
+				.click('@numberDecimalSelect');
+							
+			return this;
+		},
+		selectNumberDecimalSelectComma : function(){
+			this.waitForElementVisible('@numberDecimalSelectComma: ', 1000)
+				.click('@numberDecimalSelectComma: ');
+							
+			return this;
+		},
+		selectNumberDecimalSelectPeriod : function(){
+			this.waitForElementVisible('@numberDecimalSelectPeriod: ', 1000)
+				.click('@numberDecimalSelectPeriod: ');
+							
+			return this;
+		},
+		selectNumberDecimalSelectSpace : function(){
+			this.waitForElementVisible('@numberDecimalSelectSpace: ', 1000)
+				.click('@numberDecimalSelectSpace: ');
+							
+			return this;
+		},
+
+		selectNumberThousandsSelect : function(){
+			this.waitForElementVisible('@numberThousandsSelect', 1000)
+				.click('@numberThousandsSelect');
+							
+			return this;
+		},
+		numberThousandsSelectComma : function(){
+			this.waitForElementVisible('@numberThousandsSelectComma', 1000)
+				.click('@numberThousandsSelectComma');
+							
+			return this;
+		},
+		numberThousandsSelectPeriod : function(){
+			this.waitForElementVisible('@numberThousandsSelectPeriod', 1000)
+				.click('@numberThousandsSelectPeriod');
+							
+			return this;
+		},
+		numberThousandsSelectSpace : function(){
+			this.waitForElementVisible('@numberThousandsSelectSpace', 1000)
+				.click('@numberThousandsSelectSpace');
+							
+			return this;
+		},
+
+		enterNumberDefaultValue: function (DefaultValue) {
+			this.waitForElementVisible('@numberDefaultTextBox', 1200)
+				.setValue('@numberDefaultTextBox', DefaultValue);
+
+			return this;
+		},
+
+		//Checkbox
+		enterCheckboxLabelNameTextBox: function (checkboxLabelName) {
+			this.waitForElementVisible('@checkboxLabelNameTextBox', 1200)
+				.setValue('@checkboxLabelNameTextBox', DefaultValue);
+
+			return this;
+		},
+		entercheckboxNameTextBox: function (checkboxName) {
+			this.waitForElementVisible('@checkboxNameTextBox', 1200)
+				.setValue('@checkboxNameTextBox', DefaultValue);
+
+			return this;
+		},
+		checkboxshowIconCheckBox : function(){
+			this.waitForElementVisible('@checkboxshowIconCheckBox', 1000)
+				.click('@checkboxshowIconCheckBox');
+							
+			return this;
+		},
+		checkboxDefault : function(){
+			this.waitForElementVisible('@checkboxDefault', 1000)
+				.click('@checkboxDefault');
+							
+			return this;
+		},
+
+
 	}]
 };
