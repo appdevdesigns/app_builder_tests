@@ -71,8 +71,9 @@ module.exports = {
 		numberLabelNameTextBox: 'div[view_id^="number_label"] input',
 		numberNameTextBox : 'div[view_id^="number_columnName"] input',
 		numbershowIconCheckBox : 'div[view_id^="number_showIcon"] .webix_inp_checkbox_border button',
-		numbershowIconCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
+		numberRequiredCheckBox : 'div[view_id^="number_allowRequired"] .webix_inp_checkbox_border button',
 		numberDefaultTextBox: 'div[view_id^="number_numberDefault"] input',
+
 		numberFormatSelect:'div[view_id^="number_typeFormat"] .webix_inp_static',
 		numberFormatSelectNone: 'div[webix_l_id="none"]',
 		numberFormatSelectDollar: 'div[webix_l_id="dollar"]',
@@ -80,11 +81,51 @@ module.exports = {
 		numberFormatSelectEuroBefore: 'div[webix_l_id="euroBefore"]',
 		numberFormatSelectEuroAfter: 'div[webix_l_id="euroAfter"]',
 		numberFormatSelectPercent: 'div[webix_l_id="percent"]',
+
 		numberDecimalSelect: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
-		numberThousands:'div[view_id^="number_typeThousands"] .webix_inp_static',
+		numberDecimalSelectNone: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
+		numberDecimalSelectComma: 'div[webix_l_id="comma"]',
+		numberDecimalSelectPeriod: 'div[webix_l_id="period"]',
+		numberDecimalSelectSpace: 'div[webix_l_id="space"]',
+
+		numberThousandsSelect: 'div[view_id^="number_typeThousands"] .webix_inp_static',
+		numberThousandsSelectNone : 'div[webix_l_id="comma"]',
+		numberThousandsSelectComma: 'div[webix_l_id="comma"]',
+		numberThousandsSelectPeriod: 'div[webix_l_id="period"]',
+		numberThousandsSelectSpace: 'div[webix_l_id="space"]',
+
 		numberValidateCheckBox: 'div[view_id^="number_validate"] .webix_inp_checkbox_border button',
 		numberValidateMinimum: 'div[view_id^="number_validateMinimum"] input',
-		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input'
+		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input',
+
+		calcelAddNewColumnButton : 'div[class="ab-cancel-button"]',
+
+		//date
+		dateLabelNameTextBox: 'div[view_id^="date_label"] input',
+		dateNameTextBox : 'div[view_id^="date_columnName"] input',
+		dateShowIconCheckBox : 'div[view_id^="date_showIcon"] .webix_inp_checkbox_border button',
+		dateIncludeTimeCheckBox : 'div[view_id^="date_ab-date-include-time"] .webix_inp_checkbox_border button',
+		dateSetCurrentdateDefaultValue : 'div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button',
+
+		//checkbox
+		checkboxLabelNameTextBox: 'div[view_id^="boolean_label"] input',
+		checkboxNameTextBox : 'div[view_id^="boolean_columnName"] input',
+		checkboxshowIconCheckBox : 'div[view_id^="boolean_showIcon"] .webix_inp_checkbox_border button',
+		checkboxDefault : 'div[view_id^="boolean_default"] .webix_inp_checkbox_border button',
+
+		//select List
+		selectlistLabelNameTextBox: 'div[view_id^="list_label"] input',
+		selectlistNameTextBox : 'div[view_id^="list_columnName"] input', 
+		selectlistshowIconCheckBox : 'div[view_id^="list_showIcon"] .webix_inp_checkbox_border button',
+
+		//imageAttachment
+		imageAttachmentLabelNameTextBox: 'div[view_id^="image_label"] input',
+		imageAttachmentNameTextBox : 'div[view_id^="image_columnName"] input', 
+		imageAttachmenthowIconCheckBox : 'div[view_id^="image_showIcon"] .webix_inp_checkbox_border button',
+		imageAttachmentWidthCheckBox : 'div[view_id^="image_useWidth"] .webix_inp_checkbox_border button',
+		imageAttachmentHeightCheckBox : 'div[view_id^="image_useHeight"] .webix_inp_checkbox_border button',
+		imageAttachmentWidthInput : 'div[view_id^="image_imageWidth"] input',
+		imageAttachmentHeightInput : 'div[view_id^="image_imageHeight"] input'
 
 	},
 	commands: [{
@@ -469,6 +510,255 @@ module.exports = {
 						});
 				}, "Check Object Setting is Expanded!")
 			return this;
-		}
+		},
+		//Number
+		cancelAddNewColumnButton: function() {
+			this.waitForElementVisible('@calcelAddNewColumnButton', 1000)
+				.click('@calcelAddNewColumnButton');
+							
+			return this;
+		},
+		clickNumbershowIconCheckBox : function() {
+			this.waitForElementVisible('@numbershowIconCheckBox', 1000)
+				.click('@numbershowIconCheckBox');
+							
+			return this;
+		},
+		clickNumberRequiredCheckBox : function() {
+			this.waitForElementVisible('@numberRequiredCheckBox', 1000)
+				.click('@numberRequiredCheckBox');
+							
+			return this;
+		},
+		enterNumberDefaultValue: function (DefaultValue) {
+			this.waitForElementVisible('@numberDefaultTextBox', 1200)
+				.setValue('@numberDefaultTextBox', DefaultValue);
+
+			return this;
+		},
+		numberFormatSelect : function(){
+			this.waitForElementVisible('@numberFormatSelect', 1000)
+				.click('@numberFormatSelect');
+							
+			return this;
+		},
+		selectNumberFormatSelectNone : function(){
+			this.waitForElementVisible('@numberFormatSelectNone', 1000)
+				.click('@numberFormatSelectNone');
+							
+			return this;
+		},
+		selectNumberFormatSelectDollar : function(){
+			this.waitForElementVisible('@numberFormatSelectDollar', 1000)
+				.click('@numberFormatSelectDollar');
+							
+			return this;
+		},
+		selectNumberFormatSelectPound : function(){
+			this.waitForElementVisible('@numberFormatSelectPound', 1000)
+				.click('@numberFormatSelectPound');
+							
+			return this;
+		},
+		selectNumberFormatSelectEuroBefore : function(){
+			this.waitForElementVisible('@numberFormatSelectEuroBefore', 1000)
+				.click('@numberFormatSelectEuroBefore');
+							
+			return this;
+		},
+		selectNumberFormatSelectEuroAfter : function(){
+			this.waitForElementVisible('@numberFormatSelectEuroAfter', 1000)
+				.click('@numberFormatSelectEuroAfter');
+							
+			return this;
+		},
+		selectNumberFormatSelectPercent : function(){
+			this.waitForElementVisible('@numberFormatSelectPercent', 1000)
+				.click('@numberFormatSelectPercent');
+							
+			return this;
+		},
+
+		selectNumberDecimalSelect : function(){
+			this.waitForElementVisible('@numberDecimalSelect', 1000)
+				.click('@numberDecimalSelect');
+							
+			return this;
+		},
+		selectNumberDecimalSelectComma : function(){
+			this.waitForElementVisible('@numberDecimalSelectComma: ', 1000)
+				.click('@numberDecimalSelectComma: ');
+							
+			return this;
+		},
+		selectNumberDecimalSelectPeriod : function(){
+			this.waitForElementVisible('@numberDecimalSelectPeriod: ', 1000)
+				.click('@numberDecimalSelectPeriod: ');
+							
+			return this;
+		},
+		selectNumberDecimalSelectSpace : function(){
+			this.waitForElementVisible('@numberDecimalSelectSpace: ', 1000)
+				.click('@numberDecimalSelectSpace: ');
+							
+			return this;
+		},
+
+		selectNumberThousandsSelect : function(){
+			this.waitForElementVisible('@numberThousandsSelect', 1000)
+				.click('@numberThousandsSelect');
+							
+			return this;
+		},
+		numberThousandsSelectComma : function(){
+			this.waitForElementVisible('@numberThousandsSelectComma', 1000)
+				.click('@numberThousandsSelectComma');
+							
+			return this;
+		},
+		numberThousandsSelectPeriod : function(){
+			this.waitForElementVisible('@numberThousandsSelectPeriod', 1000)
+				.click('@numberThousandsSelectPeriod');
+							
+			return this;
+		},
+		numberThousandsSelectSpace : function(){
+			this.waitForElementVisible('@numberThousandsSelectSpace', 1000)
+				.click('@numberThousandsSelectSpace');
+							
+			return this;
+		},
+
+		enterNumberDefaultValue: function (DefaultValue) {
+			this.waitForElementVisible('@numberDefaultTextBox', 1200)
+				.setValue('@numberDefaultTextBox', DefaultValue);
+
+			return this;
+		},
+
+		//date
+		enterDateLabelNameTextBox: function (dateLabelName) {
+			this.waitForElementVisible('@dateLabelNameTextBox', 1200)
+				.setValue('@dateLabelNameTextBox', dateLabelName);
+
+			return this;
+		},
+		enterdateNameTextBox: function (dateName) {
+			this.waitForElementVisible('@dateNameTextBox', 1200)
+				.setValue('@dateNameTextBox', dateName);
+
+			return this;
+		},		
+		dateShowIconCheckBox : function(){
+			this.waitForElementVisible('@dateShowIconCheckBox', 1000)
+				.click('@dateShowIconCheckBox');
+							
+			return this;
+		},
+		dateIncludeTimeCheckBox : function(){
+			this.waitForElementVisible('@dateIncludeTimeCheckBox', 1000)
+				.click('@dateIncludeTimeCheckBox');
+							
+			return this;
+		},
+		dateIncludeTimeCheckBox : function(){
+			this.waitForElementVisible('@dateSetCurrentdateDefaultValue', 1000)
+				.click('@dateSetCurrentdateDefaultValue');
+							
+			return this;
+		},
+
+		//Checkbox
+		enterCheckboxLabelNameTextBox: function (checkboxLabelName) {
+			this.waitForElementVisible('@checkboxLabelNameTextBox', 1200)
+				.setValue('@checkboxLabelNameTextBox', checkboxLabelName);
+
+			return this;
+		},
+		entercheckboxNameTextBox: function (checkboxName) {
+			this.waitForElementVisible('@checkboxNameTextBox', 1200)
+				.setValue('@checkboxNameTextBox', checkboxName);
+
+			return this;
+		},
+		checkboxshowIconCheckBox : function(){
+			this.waitForElementVisible('@checkboxshowIconCheckBox', 1000)
+				.click('@checkboxshowIconCheckBox');
+							
+			return this;
+		},
+		checkboxDefault : function(){
+			this.waitForElementVisible('@checkboxDefault', 1000)
+				.click('@checkboxDefault');
+							
+			return this;
+		},
+
+		//selectselectListFieldType
+		enterselectlistLabelNameTextBox: function (selectlistLabelName) {
+			this.waitForElementVisible('@selectlistLabelNameTextBox', 1200)
+				.setValue('@selectlistLabelNameTextBox', selectlistLabelName);
+
+			return this;
+		},
+		enterselectlistNameTextBox: function (selectlistName) {
+			this.waitForElementVisible('@selectlistNameTextBox', 1200)
+				.setValue('@selectlistNameTextBox', selectlistName);
+
+			return this;
+		},
+		selectlistshowIconCheckBox : function(){
+			this.waitForElementVisible('@selectlistshowIconCheckBox', 1000)
+				.click('@selectlistshowIconCheckBox');
+							
+			return this;
+		},
+
+		//selectimageAttachmentFieldType
+		enterimageAttachmentLabelNameTextBox: function (imageAttachmentLabelName) {
+			this.waitForElementVisible('@imageAttachmentLabelNameTextBox', 1200)
+				.setValue('@imageAttachmentLabelNameTextBox', imageAttachmentLabelName);
+
+			return this;
+		},
+		enterimageAttachmentNameTextBox: function (imageAttachmentName) {
+			this.waitForElementVisible('@imageAttachmentNameTextBox', 1200)
+				.setValue('@imageAttachmentNameTextBox', imageAttachmentName);
+
+			return this;
+		},
+		imageAttachmenthowIconCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmenthowIconCheckBox', 1000)
+				.click('@imageAttachmenthowIconCheckBox');
+							
+			return this;
+		},
+		imageAttachmentWidthCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmentWidthCheckBox', 1000)
+				.click('@imageAttachmentWidthCheckBox');
+							
+			return this;
+		},
+		imageAttachmentHeightCheckBox : function(){
+			this.waitForElementVisible('@imageAttachmentHeightCheckBox', 1000)
+				.click('@imageAttachmentHeightCheckBox');
+							
+			return this;
+		},
+		imageAttachmentWidthInput: function (imageAttachmentWidth) {
+			this.waitForElementVisible('@imageAttachmentWidthInput', 1200)
+				.setValue('@imageAttachmentWidthInput', imageAttachmentWidth);
+
+			return this;
+		},
+		imageAttachmentHeightInput: function (imageAttachmentHeight) {
+			this.waitForElementVisible('@imageAttachmentHeightInput', 1200)
+				.setValue('@imageAttachmentHeightInput', imageAttachmentHeight);
+
+			return this;
+		},
+
+
+>>>>>>> origin/master
 	}]
 };
