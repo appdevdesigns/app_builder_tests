@@ -75,6 +75,58 @@ module.exports = {
 			.pause(global.defaultwaittime * global.delaytime)
 			.end();
 
+	},
+
+	'test create a new object with 100 length': function (browser) {
+		
+		var objectListElement = browser.page.app_builder.object_list();
+		var newObjectName = shared_func.randomTextInput(1000); //'TEST ' + Math.random().toString(10).substring(12);
+
+	// 	// Now Object Name Accept all 1000 Character?
+		browser
+			.perform(function() {
+				objectListElement
+					.clickAddNewObject()
+					.enterBlankObjectName(newObjectName)
+					.saveBlankObject();	
+			})
+			.pause(global.defaultwaittime * global.delaytime)
+			.elements('css selector', objectListElement.elements.objectList.selector, function (elems) {
+				var lastObjItem = elems.value[elems.value.length - 1];
+
+				browser.elementIdText(lastObjItem.ELEMENT, function (result) {
+					// Assert
+					browser.assert.equal(result.value, newObjectName);
+				});
+			})
+			.pause(global.defaultwaittime * global.delaytime)
+			.end();
+
+	},
+	'test create a new object with string and special' : function(browser) {
+		var objectListElement = browser.page.app_builder.object_list();
+		var newObjectName = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput(); //'TEST ' + Math.random().toString(10).substring(12);
+		// Now Object Name Accept all Special Character?
+		browser
+			.perform(function() {
+				objectListElement
+					.clickAddNewObject()
+					.enterBlankObjectName(newObjectName)	
+					.saveBlankObject();	
+			})
+			.pause(global.defaultwaittime * global.delaytime)
+			.waitForElementNotVisible(objectListElement.elements.addNewObjectPopup.selector, global.querywaittime)
+			.elements('css selector', objectListElement.elements.objectList.selector, function (elems) {
+				var lastObjItem = elems.value[elems.value.length - 1];
+
+				browser.elementIdText(lastObjItem.ELEMENT, function (result) {
+						// Assert
+					browser.assert.equal(result.value, newObjectName);
+				});
+			})
+			.pause(global.defaultwaittime * global.delaytime)
+			.end();
+
 	}
 
 };

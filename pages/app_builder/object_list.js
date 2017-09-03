@@ -5,7 +5,8 @@ module.exports = {
 		objectListSelected: 'div[view_id^="ab_work_object_list_editlist"] .webix_selected .ab-object-list-item',
 		objectListSelectedEdit: 'div[view_id^="ab_work_object_list_editlist"] .webix_selected .ab-object-list-item .ab-object-list-edit',
 		objectListFilter: '.ab-object-list-filter',
-
+		objectEditInput: '.webix_dt_editor input',
+		objectSetting: 'div[view_id^="ab_work_object_list_listsetting"]',
 		addNewObjectButton: 'div[view_id^="ab_work_object_list_buttonNew"] button',
 		addNewObjectPopup: 'div[view_id^="ab_work_object_list_newObject_component"]',
 
@@ -63,8 +64,9 @@ module.exports = {
 		objectGroupChecked: 'div[view_id^="ab_work_object_list_group"] .webix_el_box .webix_checkbox_1 button',
 
 		alertPopUp: '.webix_alert',
-		alertOk: '.webix_alert .webix_popup_controls div[aria-label="* yes"]',
+		alertYes: '.webix_alert .webix_popup_controls div[aria-label="* yes"]',
 		alertCancel: '.webix_alert .webix_popup_controls div[aria-label="* no"]',
+		confirmOk: '.webix_confirm .webix_popup_controls div[aria-label="*OK"]',
 
 		numberLabelNameTextBox: 'div[view_id^="number_label"] input',
 		numberNameTextBox : 'div[view_id^="number_columnName"] input',
@@ -430,9 +432,9 @@ module.exports = {
 
 			return this;
 		},
-		alertOk: function() {
-			this.waitForElementVisible('@alertOk', 500)
-				.click('@alertOk');
+		alertYes: function() {
+			this.waitForElementVisible('@alertYes', 500)
+				.click('@alertYes');
 							
 			return this;
 		},
@@ -440,6 +442,32 @@ module.exports = {
 			this.waitForElementVisible('@alertCancel', 500)
 				.click('@alertCancel');
 							
+			return this;
+		},
+		confirmOk: function() {
+			this.waitForElementVisible('@confirmOk', 500)
+				.click('@confirmOk');
+							
+			return this;
+		},
+		editRenameInput: function(value) {
+			this.waitForElementVisible('@objectEditInput', 500)
+				.setValue('@objectEditInput', value);
+
+			return this;
+		},
+		objectSettingsClick: function() {
+			this.waitForElementVisible('@objectSetting', 500, true, function(){
+					this
+						.element('css selector', '.webix_accordionitem_body', function(result){
+						    if(result.status != -1){
+						        //Element exists, do something
+						        this.click('div[view_id^="ab_work_object_list_listsetting"]');
+						    } else {
+						        //Element does not exist, do something else
+						    }
+						});
+				}, "Check Object Setting is Expanded!")
 			return this;
 		}
 	}]
