@@ -125,7 +125,15 @@ module.exports = {
 		imageAttachmentWidthCheckBox : 'div[view_id^="image_useWidth"] .webix_inp_checkbox_border button',
 		imageAttachmentHeightCheckBox : 'div[view_id^="image_useHeight"] .webix_inp_checkbox_border button',
 		imageAttachmentWidthInput : 'div[view_id^="image_imageWidth"] input',
-		imageAttachmentHeightInput : 'div[view_id^="image_imageHeight"] input'
+		imageAttachmentHeightInput : 'div[view_id^="image_imageHeight"] input',
+
+		//User
+		userLabelNameTextBox: 'div[view_id^="user_label"] input',
+		userNameTextBox : 'div[view_id^="user_columnName"] input', 	
+		usershowIconCheckBox : 'div[view_id^="user_showIcon"] .webix_inp_checkbox_border button',
+		useruserabusermultipleoptionCheckBox : 'div[view_id^="user_ab-user-multiple-option"] .webix_inp_checkbox_border button',
+		userDefaultValueCheckBox : 'div[view_id^="user_ab-user-current-user-option"] .webix_inp_checkbox_border button',
+		userEditTableCheckBox : 'div[view_id^="user_ab-user-editable"] .webix_inp_checkbox_border button',
 
 	},
 	commands: [{
@@ -635,6 +643,18 @@ module.exports = {
 
 			return this;
 		},
+		selectNumberDecimals: function (index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[view_id^="number_typeDecimals"] .webix_list_item:nth-of-type(#index#) .ab-object-list-item';
+
+			itemSelector = itemSelector.replace('#index#', index || 1);
+
+			self.waitForElementVisible(itemSelector, 10000)
+				.click(itemSelector);
+
+			return this;
+		},
 
 		//date
 		enterDateLabelNameTextBox: function (dateLabelName) {
@@ -758,7 +778,44 @@ module.exports = {
 			return this;
 		},
 
+		//User
+		enterUserLabelNameTextBox: function (userLabelName) {
+			this.waitForElementVisible('@userLabelNameTextBox', 1200)
+				.setValue('@userLabelNameTextBox', userLabelName);
 
->>>>>>> origin/master
+			return this;
+		},
+		enterUserNameTextBox: function (userName) {
+			this.waitForElementVisible('@userNameTextBox', 1200)
+				.setValue('@userNameTextBox', userName);
+
+			return this;
+		},
+		usershowIconCheckBox : function(){
+			this.waitForElementVisible('@usershowIconCheckBox', 1000)
+				.click('@usershowIconCheckBox');
+							
+			return this;
+		},
+		useruserabusermultipleoptionCheckBox : function(){
+			this.waitForElementVisible('@useruserabusermultipleoptionCheckBox', 1000)
+				.click('@useruserabusermultipleoptionCheckBox');
+							
+			return this;
+		},
+		userDefaultValueCheckBox : function(){
+			this.waitForElementVisible('@userDefaultValueCheckBox', 1000)
+				.click('@userDefaultValueCheckBox');
+							
+			return this;
+		},
+		userEditTableCheckBox : function(){
+			this.waitForElementVisible('@userEditTableCheckBox', 1000)
+				.click('@userEditTableCheckBox');
+							
+			return this;
+		},
+
+
 	}]
 };
