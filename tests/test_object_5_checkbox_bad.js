@@ -21,10 +21,11 @@ module.exports = {
 
 
 
-		/*'test number Case 1 Checkbox': function (browser) {
+		'test number Case 1 with string': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
+			var labelname = shared_func.randomTextInput();
+			var Name = shared_func.randomTextInput();
+			
 			browser
 			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
@@ -58,10 +59,11 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 		},
-		'test number Case 2 Checkbox': function (browser) {
+		'test number Case  2 with string and Number': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
+			var labelname = shared_func.randomTextInput() + shared_func.randomNumberInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomNumberInput();
+
 			browser
 			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
@@ -81,7 +83,7 @@ module.exports = {
 					coffeeObject
 						.enterCheckboxLabelNameTextBox(labelname)
 						.entercheckboxNameTextBox(Name)
-						//.checkboxshowIconCheckBox()
+						.checkboxshowIconCheckBox()
 						.checkboxDefault();
 
 					
@@ -95,10 +97,11 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 		},
-		'test number Case 3 Checkbox': function (browser) {
+		'test number Case 3 with 100 length': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
+			var labelname = shared_func.randomTextInput(1000);
+			var Name = shared_func.randomTextInput(1000);
+
 			browser
 			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
@@ -109,7 +112,7 @@ module.exports = {
 			})
 			.pause(3000)
 			.perform(function() {
-				console.log("step 2 checkboxFieldType");
+				console.log("step 2 singleLineTextFieldType");
 					coffeeObject
 						.checkboxFieldType();
 			})
@@ -117,9 +120,9 @@ module.exports = {
 				console.log("step 3 selectFieldType");
 					coffeeObject
 						.enterCheckboxLabelNameTextBox(labelname)
-						.entercheckboxNameTextBox(Name);
-						//.checkboxshowIconCheckBox()
-						//.checkboxDefault();
+						.entercheckboxNameTextBox(Name)
+						.checkboxshowIconCheckBox()
+						.checkboxDefault();
 
 					
 			})
@@ -131,5 +134,44 @@ module.exports = {
 			})
 			.pause(2000)
 			.end(); 
-		},*/
+		},
+		'test number Case 4 string and special': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.checkboxFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterCheckboxLabelNameTextBox(labelname)
+						.entercheckboxNameTextBox(Name)
+						.checkboxshowIconCheckBox()
+						.checkboxDefault();
+
+					
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+		},
+
 };

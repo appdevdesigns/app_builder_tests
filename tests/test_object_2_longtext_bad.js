@@ -20,7 +20,7 @@ module.exports = {
 	
 
 
-	/*'test long  text Case 1 All Data': function (browser) {
+	'test long  text Case 1 with string': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
@@ -57,115 +57,11 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 	},
-
-	'test long  text Case 2 No Data': function (browser) {
+	'test long  text Case 2 with string and Number': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectlongTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-
-	'test long  text Case 3 No Show Icon Checkbox': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectlongTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterlongTextLabelName(labelname)
-						.enterlongTextName(Name)
-						.clicklongTextShowIcon()
-						.enterlongTextDefaultName("testlongTextdefaultname")
-						//.clicklongTextSupportMultilingual();
-
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-
-	'test long  text Case 4 No Mulltilingual Checkbox': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectlongTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterlongTextLabelName(labelname)
-						.enterlongTextName(Name)
-						//.clicklongTextShowIcon()
-						.enterlongTextDefaultName("testlongTextdefaultname")
-						.clicklongTextSupportMultilingual();
-
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-
-	'test long  text Case 5 No Mulltilingual and  ShowIcon Checkbox  ': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
+			var labelname = shared_func.randomTextInput() + shared_func.randomNumberInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomNumberInput();
+			
 			browser
 			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
@@ -198,10 +94,11 @@ module.exports = {
 			})
 			.pause(2000)
 			.end(); 
-	},*/
-
-	/*'test long  text Case 6 cancel  ': function (browser) {
+	},
+	'test long  text Case 3 with 100 length': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(1000);
+			var Name = shared_func.randomTextInput(1000);
 
 			browser
 			.perform(function() {
@@ -218,14 +115,63 @@ module.exports = {
 						.selectlongTextFieldType();
 			})
 			.perform(function() {
-				console.log("step 4 cancelAddNewColumnButton");
+				console.log("step 3 selectFieldType");
 					coffeeObject
-						.cancelAddNewColumnButton();
+						.enterlongTextLabelName(labelname)
+						.enterlongTextName(Name)
+						//.clicklongTextShowIcon()
+						.enterlongTextDefaultName("testlongTextdefaultname")
+						//.clicklongTextSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
 
 			})
 			.pause(2000)
 			.end(); 
-	},*/
+	},
+	'test long  text Case 4 string and special': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectlongTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterlongTextLabelName(labelname)
+						.enterlongTextName(Name)
+						//.clicklongTextShowIcon()
+						.enterlongTextDefaultName("testlongTextdefaultname")
+						//.clicklongTextSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+	},
+
 
 	
 };

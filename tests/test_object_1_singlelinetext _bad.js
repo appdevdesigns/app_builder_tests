@@ -17,10 +17,124 @@ module.exports = {
 		menuSection.selectTestCoffeeShop();
 	},
 
-	/*'test single line text Case 1 All Data': function (browser) {
+	'test single line text Bad Case 1 with string': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
+			var labelname = shared_func.randomTextInput();;
+			var Name = shared_func.randomTextInput();;
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectsingleLineTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterLabelName(labelname)
+						.enterName(Name)
+						//.clickShowIcon()
+						.enterDefaultName("testdefaultname")
+						//.clickSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+	},
+	'test single line text Bad Case 2 with string and Number': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput() + shared_func.randomNumberInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomNumberInput();
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectsingleLineTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterLabelName(labelname)
+						.enterName(Name)
+						//.clickShowIcon()
+						.enterDefaultName("testdefaultname")
+						//.clickSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+	},
+	'test single line text Bad Case 3 with 100 length': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(1000);
+			var Name = shared_func.randomTextInput(1000);
+
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton()
+						.selectFieldTypeButton();
+			})
+			.pause(3000)
+			.perform(function() {
+				console.log("step 2 singleLineTextFieldType");
+					coffeeObject
+						.selectsingleLineTextFieldType();
+			})
+			.perform(function() {
+				console.log("step 3 selectFieldType");
+					coffeeObject
+						.enterLabelName(labelname)
+						.enterName(Name)
+						//.clickShowIcon()
+						.enterDefaultName("testdefaultname")
+						//.clickSupportMultilingual();
+
+			})
+			.perform(function() {
+				console.log("step 4 addColumn");
+					coffeeObject
+						.addColumnButton();
+
+			})
+			.pause(2000)
+			.end(); 
+	},
+	'test single line text Bad Case 4 string and special': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
+			var Name = shared_func.randomTextInput() + shared_func.randomSpecialCharacterInput();
 
 			browser
 			.perform(function() {
@@ -56,171 +170,7 @@ module.exports = {
 			.end(); 
 	},
 
-	'test single line text Case 2 No All Data': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectsingleLineTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-	'test single line text Case 3 No Multiligual Checkbox': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectsingleLineTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterLabelName(labelname)
-						.enterName(Name)
-						.clickShowIcon()
-						.enterDefaultName("testdefaultname")
-						//.clickSupportMultilingual();
-
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-	'test single line text Case 4 No Show Icon Checkbox': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectsingleLineTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterLabelName(labelname)
-						.enterName(Name)
-						//.clickShowIcon()
-						.enterDefaultName("testdefaultname")
-						.clickSupportMultilingual();
-
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},
-	'test single line text Case 5 No Show Icon and SupportMultilingual  Checkbox': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectsingleLineTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterLabelName(labelname)
-						.enterName(Name)
-						.clickShowIcon()
-						.enterDefaultName("testdefaultname")
-						.clickSupportMultilingual();
-
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},/*
-	/*'test single line text Case 6 Cancel': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-
-			browser
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						.selectObjectTest()
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 singleLineTextFieldType");
-					coffeeObject
-						.selectsingleLineTextFieldType();
-			})
-			.perform(function() {
-				console.log("step 4 cancelAddNewColumnButton");
-					coffeeObject
-						.cancelAddNewColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-	},*/
-
+	
 
 	
 };
