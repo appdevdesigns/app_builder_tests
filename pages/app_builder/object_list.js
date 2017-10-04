@@ -106,6 +106,63 @@ module.exports = {
 		dateShowIconCheckBox : 'div[view_id^="date_showIcon"] .webix_inp_checkbox_border button',
 		dateIncludeTimeCheckBox : 'div[view_id^="date_ab-date-include-time"] .webix_inp_checkbox_border button',
 		dateSetCurrentdateDefaultValue : 'div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button',
+		
+		dateDayItem : 'div[view_id="$accordionitem1"]',
+		dateMonthItem : 'div[view_id="$accordionitem2"]',
+		dateYearItem : 'div[view_id="$accordionitem3"]',
+
+		dateDayFormat : 'div[view_id^="date_ab-date-day-format"] .webix_inp_static',
+		dateDayPlaces : 'div[view_id^="date_ab-date-day-order"] .webix_inp_static',
+
+		dateDayFormatPercentJ : 'div[webix_l_id="%j"]',
+		dateDayFormatPercentd : 'div[webix_l_id="%d"]',
+		dateDayFormatPercentD : 'div[webix_l_id="%D"]',
+		dateDayFormatPercentl : 'div[webix_l_id="%l"]',
+
+		dateMonthFormat : 'div[view_id^="date_ab-date-month-format"] .webix_inp_static',
+		dateMonthPlaces : 'div[view_id^="date_ab-date-month-order"] .webix_inp_static',
+
+		dateMonthFormatPercentn : 'div[webix_l_id="%n"]',
+		dateMonthFormatPercentm : 'div[webix_l_id="%m"]',
+		dateMonthFormatPercentM : 'div[webix_l_id="%M"]',
+		dateMonthFormatPercentF : 'div[webix_l_id="%F"]',
+
+		dateYearFormat : 'div[view_id^="date_ab-date-year-format"] .webix_inp_static',
+		dateYearPlaces : 'div[view_id^="date_ab-date-year-order"] .webix_inp_static',
+
+		dateYearFormatPercenty : 'div[webix_l_id="%y"]',
+		dateYearFormatPercentY : 'div[webix_l_id="%Y"]',
+
+		dateDayPlaces1 :'div[view_id="$suggest10"] .webix_list_item:nth-of-type(1)',
+		dateDayPlaces2 :'div[view_id="$suggest10"] .webix_list_item:nth-of-type(2)',
+		dateDayPlaces3 :'div[view_id="$suggest10"] .webix_list_item:nth-of-type(3)',
+
+		dateMonthPlaces1 :'div[view_id="$suggest12"] .webix_list_item:nth-of-type(1)',
+		dateMonthPlaces2 :'div[view_id="$suggest12"] .webix_list_item:nth-of-type(2)',
+		dateMonthPlaces3 :'div[view_id="$suggest12"] .webix_list_item:nth-of-type(3)',
+
+		dateYearPlaces1 :'div[view_id="$suggest14"] .webix_list_item:nth-of-type(1)',
+		dateYearPlaces2 :'div[view_id="$suggest14"] .webix_list_item:nth-of-type(2)',
+		dateYearPlaces3 :'div[view_id="$suggest14"] .webix_list_item:nth-of-type(3)',
+
+		dateDayFormatCommaRadio : 'div[radio_id="comma"]',
+		dateDayFormatSlashdio : 'div[radio_id="slash"]',
+		dateDayFormatSpaceRadio : 'div[radio_id="space"]',
+		dateDayFormatDashRadio : 'div[radio_id="dash"]',
+		dateDayFormatColonRadio : 'div[radio_id="colon"]',
+
+		validateCondition : 'div[view_id^="date_ab-date-validate-condition"] select',
+		dateRangeCondition : 'option[value="dateRange"]',
+		betweenCondition : 'option[value="between"]',
+		notBetweenCondition : 'option[value="notBetween"]',
+		equalCondition : 'option[value="="]',
+		notEqualCondition : 'option[value="<>"]',
+		morethanCondition : 'option[value=">"]',
+		lessthanCondition : 'option[value="<"]',
+		morethanequalCondition : 'option[value=">="]',
+		lessthanequalCondition : 'option[value="<="]',
+
+
 
 		//checkbox
 		checkboxLabelNameTextBox: 'div[view_id^="boolean_label"] input',
@@ -687,6 +744,211 @@ module.exports = {
 							
 			return this;
 		},
+		dateDayItem : function(){
+			this.waitForElementVisible('@dateDayItem', 1000)
+				.click('@dateDayItem');
+							
+			return this;
+		},
+		dateMonthItem : function(){
+			this.waitForElementVisible('@dateMonthItem', 1000)
+				.click('@dateMonthItem');
+							
+			return this;
+		},
+		dateYearItem : function(){
+			this.waitForElementVisible('@dateYearItem', 1000)
+				.click('@dateYearItem');
+							
+			return this;
+		},
+
+		dateDayFormat  : function(){
+			this.waitForElementVisible('@dateDayFormat', 1000)
+				.click('@dateDayFormat');
+							
+			return this;
+		},
+		dateMonthFormat  : function(){
+			this.waitForElementVisible('@dateMonthFormat', 5000)
+				.click('@dateMonthFormat ');
+							
+			return this;
+		},
+		dateYearFormat  : function(){
+			this.waitForElementVisible('@dateYearFormat', 1000)
+				.click('@dateYearFormat ');
+							
+			return this;
+		},
+
+		dateDayPlaces  : function(){
+			this.waitForElementVisible('@dateDayPlaces', 1000)
+				.click('@dateDayPlaces ');
+							
+			return this;
+		},
+		dateMonthPlaces  : function(){
+			this.waitForElementVisible('@dateMonthPlaces', 1000)
+				.click('@dateMonthPlaces ');
+							
+			return this;
+		},
+		dateYearPlaces   : function(){
+			this.waitForElementVisible('@dateYearPlaces ', 1000)
+				.click('@dateYearPlaces  ');
+							
+			return this;
+		},
+
+		dateDayFormatPercentJ : function(){
+			this.waitForElementVisible('@dateDayFormatPercentJ', 1000)
+				.click('@dateDayFormatPercentJ');
+							
+			return this;
+		},
+		dateDayFormatPercentd : function(){
+			this.waitForElementVisible('@dateDayFormatPercentd', 1000)
+				.click('@dateDayFormatPercentd');
+							
+			return this;
+		},
+		dateDayFormatPercentD : function(){
+			this.waitForElementVisible('@dateDayFormatPercentD', 1000)
+				.click('@dateDayFormatPercentD');
+							
+			return this;
+		},
+		dateDayFormatPercentl : function(){
+			this.waitForElementVisible('@dateDayFormatPercentl', 1000)
+				.click('@dateDayFormatPercentl');
+							
+			return this;
+		},
+		dateMonthFormatPercentn : function(){
+			this.waitForElementVisible('@dateMonthFormatPercentn', 1000)
+				.click('@dateMonthFormatPercentn');
+							
+			return this;
+		},
+		dateMonthFormatPercentm : function(){
+			this.waitForElementVisible('@dateMonthFormatPercentm', 1000)
+				.click('@dateMonthFormatPercentm');
+							
+			return this;
+		},
+		dateMonthFormatPercentM : function(){
+			this.waitForElementVisible('@dateMonthFormatPercentM', 1000)
+				.click('@dateMonthFormatPercentM');
+							
+			return this;
+		},
+		dateMonthFormatPercentF : function(){
+			this.waitForElementVisible('@dateMonthFormatPercentF', 1000)
+				.click('@dateMonthFormatPercentF');
+							
+			return this;
+		},
+		dateYearFormatPercenty : function(){
+			this.waitForElementVisible('@dateYearFormatPercenty', 1000)
+				.click('@dateYearFormatPercenty');
+							
+			return this;
+		},
+		dateYearFormatPercentY : function(){
+			this.waitForElementVisible('@dateYearFormatPercentY', 1000)
+				.click('@dateYearFormatPercentY');
+							
+			return this;
+		},
+
+		dateDayPlaces1 : function(){
+			this.waitForElementVisible('@dateDayPlaces1', 1000)
+				.click('@dateDayPlaces1');
+							
+			return this;
+		},
+		dateDayPlaces2 : function(){
+			this.waitForElementVisible('@dateDayPlaces2', 1000)
+				.click('@dateDayPlaces2');
+							
+			return this;
+		},
+		dateDayPlaces3 : function(){
+			this.waitForElementVisible('@dateDayPlaces3', 1000)
+				.click('@dateDayPlaces3');
+							
+			return this;
+		},
+
+		dateMonthPlaces1 : function(){
+			this.waitForElementVisible('@dateMonthPlaces1', 1000)
+				.click('@dateMonthPlaces1');
+							
+			return this;
+		},
+		dateMonthPlaces2 : function(){
+			this.waitForElementVisible('@dateMonthPlaces2', 1000)
+				.click('@dateMonthPlaces2');
+							
+			return this;
+		},
+		dateMonthPlaces3 : function(){
+			this.waitForElementVisible('@dateMonthPlaces3', 1000)
+				.click('@dateMonthPlaces3');
+							
+			return this;
+		},
+		dateYearPlaces1 : function(){
+			this.waitForElementVisible('@dateYearPlaces1', 1000)
+				.click('@dateYearPlaces1');
+							
+			return this;
+		},
+		dateYearPlaces2 : function(){
+			this.waitForElementVisible('@dateYearPlaces2', 1000)
+				.click('@dateYearPlaces2');
+							
+			return this;
+		},
+		dateYearPlaces3 : function(){
+			this.waitForElementVisible('@dateYearPlaces3', 1000)
+				.click('@dateYearPlaces3');
+							
+			return this;
+		},
+
+		dateDayFormatCommaRadio : function(){
+			this.waitForElementVisible('@dateDayFormatCommaRadio', 1000)
+				.click('@dateDayFormatCommaRadio');
+							
+			return this;
+		},
+		dateDayFormatSlashdio : function(){
+			this.waitForElementVisible('@dateDayFormatSlashdio', 1000)
+				.click('@dateDayFormatSlashdio');
+							
+			return this;
+		},
+		dateDayFormatSpaceRadio : function(){
+			this.waitForElementVisible('@dateDayFormatSpaceRadio', 1000)
+				.click('@dateDayFormatSpaceRadio');
+							
+			return this;
+		},
+		dateDayFormatDashRadio : function(){
+			this.waitForElementVisible('@dateDayFormatDashRadio', 1000)
+				.click('@dateDayFormatDashRadio');
+							
+			return this;
+		},
+		dateDayFormatColonRadio : function(){
+			this.waitForElementVisible('@dateDayFormatColonRadio', 1000)
+				.click('@dateDayFormatColonRadio');
+							
+			return this;
+		},
+
 
 		//Checkbox
 		enterCheckboxLabelNameTextBox: function (checkboxLabelName) {
@@ -815,7 +1077,80 @@ module.exports = {
 							
 			return this;
 		},
-
+		validateCondition  : function(){
+			this.waitForElementVisible('@validateCondition', 1000)
+				.click('@validateCondition');
+							
+			return this;
+		},
+		dateRangeCondition : function(){
+			this.waitForElementVisible('@dateRangeCondition', 1000)
+				.click('@dateRangeCondition');
+							
+			return this;
+		},
+		betweenCondition : function(){
+			this.waitForElementVisible('@betweenCondition', 1000)
+				.click('@betweenCondition');
+							
+			return this;
+		},
+		notBetweenCondition : function(){
+			this.waitForElementVisible('@notBetweenCondition', 1000)
+				.click('@notBetweenCondition');
+							
+			return this;
+		},
+		equalCondition : function(){
+			this.waitForElementVisible('@equalCondition', 1000)
+				.click('@equalCondition');
+							
+			return this;
+		},
+		notEqualCondition : function(){
+			this.waitForElementVisible('@notEqualCondition', 1000)
+				.click('@notEqualCondition');
+							
+			return this;
+		},
+		morethanCondition : function(){
+			this.waitForElementVisible('@morethanCondition', 1000)
+				.click('@morethanCondition');
+							
+			return this;
+		},
+		lessthanCondition : function(){
+			this.waitForElementVisible('@lessthanCondition', 1000)
+				.click('@lessthanCondition');
+							
+			return this;
+		},
+		morethanequalCondition : function(){
+			this.waitForElementVisible('@morethanequalCondition', 1000)
+				.click('@morethanequalCondition');
+							
+			return this;
+		},
+		lessthanequalCondition : function(){
+			this.waitForElementVisible('@lessthanequalCondition', 1000)
+				.click('@lessthanequalCondition');
+							
+			return this;
+		},
+		testclickdate : function(){
+			this.waitForElementVisible('div[view_id="$suggest18"] .webix_cal_month_name', 1000)
+				.click('div[view_id="$suggest18"] .webix_cal_month_name')
+				.waitForElementVisible('div[view_id="$suggest18"] .webix_cal_month_name', 1000)
+				.click('div[view_id="$suggest18"] .webix_cal_month_name')
+				.waitForElementVisible('div[data-value="7"]')
+				.click('div[data-value="7"]')
+				.waitForElementVisible('div[data-value="11"]')
+				.click('div[data-value="11"]')
+				.waitForElementVisible('div[aria-label="31 December 2016"]')
+				.click('div[aria-label="31 December 2016"]');
+							
+			return this;
+		}
 
 	}]
 };

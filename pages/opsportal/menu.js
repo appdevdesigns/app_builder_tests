@@ -6,7 +6,7 @@ module.exports = {
 		appBuilderItem: 'li[area="app-builder"]',
 		coffeeShopItem: 'li[area="ab-app-coffee-shop"]',
 
-		testCoffeeshopApp : 'div[webix_l_id="2"]',
+		testCoffeeshopApp : 'div[webix_l_id="4"]',
 
 	},
 	commands: [{
