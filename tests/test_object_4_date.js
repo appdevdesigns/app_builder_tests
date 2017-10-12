@@ -2348,5 +2348,47 @@ module.exports = {
 			.pause(2000)
 			.end(); 
 		},*/
+		'test date Case lessthanequalCondition 6 date dateDayFormatPercentl': function (browser) {
+			var coffeeObject = browser.page.app_builder.object_list();
+			var labelname = shared_func.randomTextInput(20);
+			var Name = shared_func.randomTextInput(20);
+			browser
+			.perform(function() {
+				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+					coffeeObject
+						.selectObjectTest()
+						.selectAddNewColumnButton();
+			})
+			.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header', function (elems) {
+				console.log("Step 3 Verify");
+				//var lastObjItem = elems.value[elems.value.length - 1];
+				var lastObjItem = elems.value[0];
+
+				console.log("objectsize:"+ lastObjItem) ;
+				coffeeObject.getColumnHeaderValue(0);
+				
+
+				//browser.elementIdText(lastObjItem.ELEMENT, function (result) {
+					// Assert
+				//	console.log("value:"+ result.value) ;
+					//browser.verify.equal(result.value, newObjectName);
+				//});
+			})			
+			.elements('css selector', '.webix_ss_center_scroll .webix_column', function (elems) {
+				console.log("Step 4 Verify");
+				//var lastObjItem = elems.value[elems.value.length - 1];
+				var lastObjItem = elems.value[0];
+				//console.log("getColumnValuesize:"+ elems.value.length) ;
+				coffeeObject.getColumnValue(0);
+
+				//browser.elementIdText(lastObjItem.ELEMENT, function (result) {
+					// Assert
+				//	console.log("value:"+ result.value) ;
+					//browser.verify.equal(result.value, newObjectName);
+				//});
+			})			
+			.pause(2000)
+			.end(); 
+		},
 
 };

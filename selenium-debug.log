@@ -1,327 +1,214 @@
-15:31:23.405 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
-15:31:23.406 INFO - Launching a standalone Selenium Server
-2560-10-04 15:31:23.446:INFO::main: Logging initialized @445ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:31:23.551 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-15:31:23.553 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+16:08:44.320 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+16:08:44.322 INFO - Launching a standalone Selenium Server
+2560-10-12 16:08:44.347:INFO::main: Logging initialized @357ms to org.seleniumhq.jetty9.util.log.StdErrLog
+16:08:44.422 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+16:08:44.423 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-15:31:23.553 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-15:31:23.553 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-15:31:23.563 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+16:08:44.423 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+16:08:44.423 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+16:08:44.431 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN8_1
-2560-10-04 15:31:23.658:INFO:osjs.Server:main: jetty-9.2.20.v20161216
-2560-10-04 15:31:23.716:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@4883b407{/,null,AVAILABLE}
-2560-10-04 15:31:23.841:INFO:osjs.AbstractConnector:main: Started ServerConnector@57d0d188{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2560-10-04 15:31:23.841:INFO:osjs.Server:main: Started @841ms
-15:31:23.842 INFO - Selenium Server is up and running
-15:31:24.290 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-15:31:24.334 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 4 Date, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-15:31:24.347 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 4 Date, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 26269
+2560-10-12 16:08:44.493:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2560-10-12 16:08:44.540:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@4883b407{/,null,AVAILABLE}
+2560-10-12 16:08:44.630:INFO:osjs.AbstractConnector:main: Started ServerConnector@122b5270{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2560-10-12 16:08:44.631:INFO:osjs.Server:main: Started @642ms
+16:08:44.631 INFO - Selenium Server is up and running
+16:08:45.009 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+16:08:45.044 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 2 Longtext, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+16:08:45.054 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 2 Longtext, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 20387
 Only local connections are allowed.
-15:31:27.361 INFO - Detected dialect: OSS
-15:31:27.392 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 4 Date, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-15:31:27.422 INFO - Executing: [get: http://localhost:1337/page/opsportal])
-15:31:31.016 INFO - Done: [get: http://localhost:1337/page/opsportal]
-15:31:31.029 INFO - Executing: [find elements: By.cssSelector: body])
-15:31:31.111 INFO - Done: [find elements: By.cssSelector: body]
-15:31:31.122 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: body]])
-15:31:31.172 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: body]]
-15:31:31.182 INFO - Executing: [maximise window])
-15:31:32.374 INFO - Done: [maximise window]
-15:31:32.385 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
-15:31:32.426 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
-15:31:32.438 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
-15:31:32.536 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
-15:31:32.542 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
-15:31:32.572 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
-15:31:32.577 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
-15:31:32.657 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
-15:31:32.662 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
-15:31:32.694 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
-15:31:32.700 INFO - Executing: [click: 3 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: button[type="submit"]]])
-15:31:36.210 INFO - Done: [click: 3 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: button[type="submit"]]]
-15:31:36.223 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:36.263 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:36.773 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:36.788 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:37.294 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:37.307 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:37.812 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:37.824 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:38.329 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:38.340 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:38.846 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:38.859 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:39.364 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:39.374 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:39.879 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:39.890 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:40.398 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:40.408 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:40.917 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:40.929 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:41.443 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:41.456 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:41.964 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:41.975 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:42.484 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:42.496 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:43.004 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:43.017 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:43.522 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:43.538 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:44.042 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:44.054 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:44.558 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:44.571 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:45.079 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:45.095 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:45.602 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:45.615 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:46.119 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:46.131 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:46.636 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:46.649 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:47.156 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:47.170 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:47.674 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:47.690 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:48.196 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:48.211 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:48.717 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:49.329 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:49.834 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:49.849 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:50.355 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:50.366 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:50.871 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:50.886 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:51.393 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:51.406 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:51.915 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:51.927 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:52.433 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:53.837 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:54.344 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:54.366 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:54.872 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:54.902 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:55.410 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:55.452 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:55.959 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:55.971 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:56.479 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:56.500 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:57.005 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
-15:31:58.057 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
-15:31:58.062 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]])
-15:31:58.091 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]]
-15:31:58.594 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]])
-15:31:58.607 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]]
-15:31:59.114 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]])
-15:32:00.802 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]]
-15:32:00.818 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
-15:32:00.908 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
-15:32:00.912 INFO - Executing: [click: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]])
-15:32:01.049 INFO - Done: [click: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]]
-15:32:01.058 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
-15:32:01.312 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
-15:32:01.320 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: li[area="app-builder"]]])
-15:32:01.372 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: li[area="app-builder"]]]
-15:32:01.382 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
-15:32:01.430 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
-15:32:01.435 INFO - Executing: [click: 5 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: li[area="app-builder"]]])
-15:32:01.578 INFO - Done: [click: 5 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: li[area="app-builder"]]]
-15:32:01.588 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
-15:32:01.621 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
-15:32:01.628 INFO - Executing: [click: 4 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: span[app-label-key="opp.menu"]]])
-15:32:02.376 WARN - Exception thrown
-org.openqa.selenium.WebDriverException: unknown error: Element <span app-label-key="opp.menu" class="app-label" app-label-lang="en">...</span> is not clickable at point (91, 30). Other element would receive the click: <div class="col-sm-12 hidden-xs" id="op-masthead-sublinks">...</div>
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 174 milliseconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'KID', ip: '172.16.152.71', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\kidnaja\AppData\Local\Temp\scoped_dir5312_31557}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: fe22c8e5dfd1f343d6904b9b9c4fbc50
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:332)
-	at com.sun.proxy.$Proxy5.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:345)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
-	at com.sun.proxy.$Proxy6.click(Unknown Source)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:30)
-	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:22)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-15:32:02.381 WARN - Exception: unknown error: Element <span app-label-key="opp.menu" class="app-label" app-label-lang="en">...</span> is not clickable at point (91, 30). Other element would receive the click: <div class="col-sm-12 hidden-xs" id="op-masthead-sublinks">...</div>
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 174 milliseconds
-Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
-System info: host: 'KID', ip: '172.16.152.71', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\kidnaja\AppData\Local\Temp\scoped_dir5312_31557}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: fe22c8e5dfd1f343d6904b9b9c4fbc50
-15:32:02.436 INFO - Executing: [find elements: By.cssSelector: div[webix_l_id="4"]])
-15:32:02.483 INFO - Done: [find elements: By.cssSelector: div[webix_l_id="4"]]
-15:32:02.493 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="4"]]])
-15:32:02.527 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="4"]]]
-15:32:02.534 INFO - Executing: [find element: By.cssSelector: div[webix_l_id="4"]])
-15:32:02.574 INFO - Done: [find element: By.cssSelector: div[webix_l_id="4"]]
-15:32:02.578 INFO - Executing: [click: 6 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="4"]]])
-15:32:02.701 INFO - Done: [click: 6 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="4"]]]
-15:32:02.721 INFO - Executing: [find elements: By.cssSelector: div[class="ab-object-list-item"]])
-15:32:02.757 INFO - Done: [find elements: By.cssSelector: div[class="ab-object-list-item"]]
-15:32:02.765 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[class="ab-object-list-item"]]])
-15:32:02.793 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[class="ab-object-list-item"]]]
-15:32:02.802 INFO - Executing: [find element: By.cssSelector: div[class="ab-object-list-item"]])
-15:32:02.847 INFO - Done: [find element: By.cssSelector: div[class="ab-object-list-item"]]
-15:32:02.853 INFO - Executing: [click: 8 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[class="ab-object-list-item"]]])
-15:32:03.034 INFO - Done: [click: 8 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[class="ab-object-list-item"]]]
-15:32:03.043 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button])
-15:32:03.174 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]
-15:32:03.183 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
-15:32:03.252 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
-15:32:03.757 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
-15:32:03.768 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
-15:32:03.773 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button])
-15:32:03.803 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]
-15:32:03.807 INFO - Executing: [click: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
-15:32:03.930 INFO - Done: [click: 10 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
-15:32:03.939 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static])
-15:32:03.991 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]
-15:32:03.997 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]])
-15:32:04.032 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]]
-15:32:04.041 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static])
-15:32:04.086 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]
-15:32:04.090 INFO - Executing: [click: 11 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]])
-15:32:04.207 INFO - Done: [click: 11 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]]
-15:32:07.222 INFO - Executing: [find elements: By.cssSelector: div[webix_l_id="*Date"]])
-15:32:07.255 INFO - Done: [find elements: By.cssSelector: div[webix_l_id="*Date"]]
-15:32:07.261 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="*Date"]]])
-15:32:07.289 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="*Date"]]]
-15:32:07.293 INFO - Executing: [find element: By.cssSelector: div[webix_l_id="*Date"]])
-15:32:07.326 INFO - Done: [find element: By.cssSelector: div[webix_l_id="*Date"]]
-15:32:07.330 INFO - Executing: [click: 12 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="*Date"]]])
-15:32:07.453 INFO - Done: [click: 12 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[webix_l_id="*Date"]]]
-15:32:07.471 INFO - Executing: [find elements: By.cssSelector: div[view_id^="date_label"] input])
-15:32:07.521 INFO - Done: [find elements: By.cssSelector: div[view_id^="date_label"] input]
-15:32:07.524 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input]])
-15:32:07.558 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input]]
-15:32:08.064 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input]])
-15:32:08.075 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input]]
-15:32:08.080 INFO - Executing: [find element: By.cssSelector: div[view_id^="date_label"] input])
-15:32:08.109 INFO - Done: [find element: By.cssSelector: div[view_id^="date_label"] input]
-15:32:08.115 INFO - Executing: [send keys: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input], [n, k, b, k, A, Z, L, l, K, P, I, r, j, P, c, O, u, O, h, y]])
-15:32:08.399 INFO - Done: [send keys: 13 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_label"] input], [n, k, b, k, A, Z, L, l, K, P, I, r, j, P, c, O, u, O, h, y]]
-15:32:08.407 INFO - Executing: [find elements: By.cssSelector: div[view_id^="date_columnName"] input])
-15:32:08.451 INFO - Done: [find elements: By.cssSelector: div[view_id^="date_columnName"] input]
-15:32:08.456 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_columnName"] input]])
-15:32:08.498 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_columnName"] input]]
-15:32:08.505 INFO - Executing: [find element: By.cssSelector: div[view_id^="date_columnName"] input])
-15:32:08.543 INFO - Done: [find element: By.cssSelector: div[view_id^="date_columnName"] input]
-15:32:08.551 INFO - Executing: [send keys: 14 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_columnName"] input], [X, R, J, j, E, v, p, L, m, f, y, n, z, m, O, P, i, L, Z, W]])
-15:32:08.858 INFO - Done: [send keys: 14 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_columnName"] input], [X, R, J, j, E, v, p, L, m, f, y, n, z, m, O, P, i, L, Z, W]]
-15:32:08.862 INFO - Executing: [find elements: By.cssSelector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button])
-15:32:08.899 INFO - Done: [find elements: By.cssSelector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]
-15:32:08.904 INFO - Executing: [is displayed: 15 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]])
-15:32:08.937 INFO - Done: [is displayed: 15 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]]
-15:32:08.946 INFO - Executing: [find element: By.cssSelector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button])
-15:32:08.984 INFO - Done: [find element: By.cssSelector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]
-15:32:08.988 INFO - Executing: [click: 15 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]])
-15:32:09.109 INFO - Done: [click: 15 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-current-to-default"] .webix_inp_checkbox_border button]]
-15:32:09.113 INFO - Executing: [find elements: By.cssSelector: div[view_id^="date_ab-date-validate-condition"] select])
-15:32:09.147 INFO - Done: [find elements: By.cssSelector: div[view_id^="date_ab-date-validate-condition"] select]
-15:32:09.150 INFO - Executing: [is displayed: 16 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-validate-condition"] select]])
-15:32:09.190 INFO - Done: [is displayed: 16 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-validate-condition"] select]]
-15:32:09.194 INFO - Executing: [find element: By.cssSelector: div[view_id^="date_ab-date-validate-condition"] select])
-15:32:09.231 INFO - Done: [find element: By.cssSelector: div[view_id^="date_ab-date-validate-condition"] select]
-15:32:09.238 INFO - Executing: [click: 16 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-validate-condition"] select]])
-15:32:09.416 INFO - Done: [click: 16 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="date_ab-date-validate-condition"] select]]
-15:32:09.426 INFO - Executing: [find elements: By.cssSelector: option[value="<="]])
-15:32:09.484 INFO - Done: [find elements: By.cssSelector: option[value="<="]]
-15:32:09.489 INFO - Executing: [is displayed: 17 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: option[value="<="]]])
-15:32:09.528 INFO - Done: [is displayed: 17 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: option[value="<="]]]
-15:32:09.534 INFO - Executing: [find element: By.cssSelector: option[value="<="]])
-15:32:09.570 INFO - Done: [find element: By.cssSelector: option[value="<="]]
-15:32:09.572 INFO - Executing: [click: 17 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: option[value="<="]]])
-15:32:09.648 INFO - Done: [click: 17 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: option[value="<="]]]
-15:32:10.656 INFO - Executing: [find element: By.cssSelector: div[view_id^="date_ab-date-validate-start-date"] .webix_inp_static])
-15:32:10.685 INFO - Done: [find element: By.cssSelector: div[view_id^="date_ab-date-validate-start-date"] .webix_inp_static]
-15:32:10.690 INFO - Executing: [mousemove: 18 true])
-15:32:10.734 INFO - Done: [mousemove: 18 true]
-15:32:10.738 INFO - Executing: [mousedown: no args])
-15:32:10.753 INFO - Done: [mousedown: no args]
-15:32:10.758 INFO - Executing: [mouseup: nothing])
-15:32:10.798 INFO - Done: [mouseup: nothing]
-15:32:12.804 INFO - Executing: [find element: By.cssSelector: span[class="webix_cal_month_name"]])
-15:32:12.836 INFO - Done: [find element: By.cssSelector: span[class="webix_cal_month_name"]]
-15:32:12.840 INFO - Executing: [mousemove: 19 true])
-15:32:12.867 INFO - Done: [mousemove: 19 true]
-15:32:12.873 INFO - Executing: [mousedown: no args])
-15:32:12.886 INFO - Done: [mousedown: no args]
-15:32:12.890 INFO - Executing: [mouseup: nothing])
-15:32:12.911 INFO - Done: [mouseup: nothing]
-15:32:14.916 INFO - Executing: [find element: By.cssSelector: span[class="webix_cal_month_name"]])
-15:32:14.932 INFO - Done: [find element: By.cssSelector: span[class="webix_cal_month_name"]]
-15:32:14.936 INFO - Executing: [mousemove: 19 true])
-15:32:14.961 INFO - Done: [mousemove: 19 true]
-15:32:14.966 INFO - Executing: [mousedown: no args])
-15:32:14.972 INFO - Done: [mousedown: no args]
-15:32:14.975 INFO - Executing: [mouseup: nothing])
-15:32:14.988 INFO - Done: [mouseup: nothing]
-15:32:16.991 INFO - Executing: [find element: By.cssSelector: div[data-value="7"]])
-15:32:17.031 INFO - Done: [find element: By.cssSelector: div[data-value="7"]]
-15:32:17.036 INFO - Executing: [mousemove: 20 true])
-15:32:17.068 INFO - Done: [mousemove: 20 true]
-15:32:17.073 INFO - Executing: [mousedown: no args])
-15:32:17.084 INFO - Done: [mousedown: no args]
-15:32:17.088 INFO - Executing: [mouseup: nothing])
-15:32:17.108 INFO - Done: [mouseup: nothing]
-15:32:19.112 INFO - Executing: [find element: By.cssSelector: div[data-value="0"]])
-15:32:19.143 INFO - Done: [find element: By.cssSelector: div[data-value="0"]]
-15:32:19.147 INFO - Executing: [mousemove: 21 true])
-15:32:19.176 INFO - Done: [mousemove: 21 true]
-15:32:19.180 INFO - Executing: [mousedown: no args])
-15:32:19.186 INFO - Done: [mousedown: no args]
-15:32:19.190 INFO - Executing: [mouseup: nothing])
-15:32:19.213 INFO - Done: [mouseup: nothing]
-15:32:21.217 INFO - Executing: [find element: By.cssSelector: div[aria-label="01 January 2016"]])
-15:32:21.253 INFO - Done: [find element: By.cssSelector: div[aria-label="01 January 2016"]]
-15:32:21.257 INFO - Executing: [mousemove: 22 true])
-15:32:21.292 INFO - Done: [mousemove: 22 true]
-15:32:21.297 INFO - Executing: [mousedown: no args])
-15:32:21.305 INFO - Done: [mousedown: no args]
-15:32:21.311 INFO - Executing: [mouseup: nothing])
-15:32:21.336 INFO - Done: [mouseup: nothing]
-15:32:24.351 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button])
-15:32:24.380 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]
-15:32:24.388 INFO - Executing: [is displayed: 23 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]])
-15:32:24.419 INFO - Done: [is displayed: 23 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]]
-15:32:24.441 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button])
-15:32:24.468 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]
-15:32:24.473 INFO - Executing: [click: 23 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]])
-15:32:24.590 INFO - Done: [click: 23 [[ChromeDriver: chrome on WIN8_1 (fe22c8e5dfd1f343d6904b9b9c4fbc50)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]]
-15:32:26.602 INFO - Executing: [delete session: adbaa45a-7f1f-44b7-aa43-3041024ab00a])
-15:32:27.750 INFO - Done: [delete session: adbaa45a-7f1f-44b7-aa43-3041024ab00a]
+16:08:47.782 INFO - Detected dialect: OSS
+16:08:47.806 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test Object 2 Longtext, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+16:08:47.832 INFO - Executing: [get: http://localhost:1337/page/opsportal])
+16:08:50.738 INFO - Done: [get: http://localhost:1337/page/opsportal]
+16:08:50.753 INFO - Executing: [find elements: By.cssSelector: body])
+16:08:50.809 INFO - Done: [find elements: By.cssSelector: body]
+16:08:50.817 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: body]])
+16:08:50.861 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: body]]
+16:08:50.871 INFO - Executing: [find element: By.cssSelector: input[id="user-name"]])
+16:08:50.899 INFO - Done: [find element: By.cssSelector: input[id="user-name"]]
+16:08:50.907 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: input[id="user-name"]], [a, d, m, i, n]])
+16:08:50.978 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: input[id="user-name"]], [a, d, m, i, n]]
+16:08:50.987 INFO - Executing: [find element: By.cssSelector: input[id="user-pw"]])
+16:08:51.015 INFO - Done: [find element: By.cssSelector: input[id="user-pw"]]
+16:08:51.020 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]])
+16:08:51.086 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: input[id="user-pw"]], [a, d, m, i, n]]
+16:08:51.091 INFO - Executing: [find element: By.cssSelector: button[type="submit"]])
+16:08:51.120 INFO - Done: [find element: By.cssSelector: button[type="submit"]]
+16:08:51.126 INFO - Executing: [click: 3 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: button[type="submit"]]])
+16:08:53.577 INFO - Done: [click: 3 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: button[type="submit"]]]
+16:08:53.591 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:53.658 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:54.164 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:54.177 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:54.684 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:54.696 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:55.199 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:55.211 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:55.716 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:55.728 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:56.232 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:56.244 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:56.749 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:56.760 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:57.265 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:57.278 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:57.782 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:57.795 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:58.298 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:58.311 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:58.815 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:58.825 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:59.332 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:59.346 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:08:59.851 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:08:59.864 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:00.367 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:00.377 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:00.882 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:00.897 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:01.401 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:01.413 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:01.918 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:01.931 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:02.434 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:02.444 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:02.947 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:02.961 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:03.470 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:03.479 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:03.983 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:04.366 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:04.870 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:04.880 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:05.389 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:05.400 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:05.906 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:05.916 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:06.421 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:06.432 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:06.936 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:06.948 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:07.454 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:07.464 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:07.980 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:07.991 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:08.496 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:08.524 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:09.033 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:09.044 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:09.549 INFO - Executing: [find elements: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:10.478 INFO - Done: [find elements: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:10.485 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]])
+16:09:10.513 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]]
+16:09:11.018 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]])
+16:09:11.032 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]]
+16:09:11.537 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]])
+16:09:12.381 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]]
+16:09:12.391 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:12.445 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:12.449 INFO - Executing: [click: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]])
+16:09:12.546 INFO - Done: [click: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]]
+16:09:12.554 INFO - Executing: [find elements: By.cssSelector: li[area="app-builder"]])
+16:09:12.626 INFO - Done: [find elements: By.cssSelector: li[area="app-builder"]]
+16:09:12.633 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: li[area="app-builder"]]])
+16:09:12.704 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: li[area="app-builder"]]]
+16:09:12.714 INFO - Executing: [find element: By.cssSelector: li[area="app-builder"]])
+16:09:12.770 INFO - Done: [find element: By.cssSelector: li[area="app-builder"]]
+16:09:12.787 INFO - Executing: [click: 5 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: li[area="app-builder"]]])
+16:09:12.898 INFO - Done: [click: 5 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: li[area="app-builder"]]]
+16:09:12.907 INFO - Executing: [find element: By.cssSelector: span[app-label-key="opp.menu"]])
+16:09:12.941 INFO - Done: [find element: By.cssSelector: span[app-label-key="opp.menu"]]
+16:09:12.949 INFO - Executing: [click: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]])
+16:09:13.054 INFO - Done: [click: 4 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: span[app-label-key="opp.menu"]]]
+16:09:13.059 INFO - Executing: [find elements: By.cssSelector: div[webix_l_id="4"]])
+16:09:13.105 INFO - Done: [find elements: By.cssSelector: div[webix_l_id="4"]]
+16:09:13.112 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="4"]]])
+16:09:13.150 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="4"]]]
+16:09:13.159 INFO - Executing: [find element: By.cssSelector: div[webix_l_id="4"]])
+16:09:13.193 INFO - Done: [find element: By.cssSelector: div[webix_l_id="4"]]
+16:09:13.197 INFO - Executing: [click: 6 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="4"]]])
+16:09:13.316 INFO - Done: [click: 6 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="4"]]]
+16:09:13.332 INFO - Executing: [find elements: By.cssSelector: div[class="ab-object-list-item"]])
+16:09:13.363 INFO - Done: [find elements: By.cssSelector: div[class="ab-object-list-item"]]
+16:09:13.368 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[class="ab-object-list-item"]]])
+16:09:13.396 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[class="ab-object-list-item"]]]
+16:09:13.423 INFO - Executing: [find element: By.cssSelector: div[class="ab-object-list-item"]])
+16:09:13.458 INFO - Done: [find element: By.cssSelector: div[class="ab-object-list-item"]]
+16:09:13.462 INFO - Executing: [click: 8 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[class="ab-object-list-item"]]])
+16:09:13.587 INFO - Done: [click: 8 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[class="ab-object-list-item"]]]
+16:09:13.595 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button])
+16:09:13.644 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]
+16:09:13.649 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
+16:09:13.672 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
+16:09:14.176 INFO - Executing: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
+16:09:14.188 INFO - Done: [is displayed: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
+16:09:14.192 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button])
+16:09:14.220 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]
+16:09:14.224 INFO - Executing: [click: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]])
+16:09:14.317 INFO - Done: [click: 10 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_buttonAddField"] button]]
+16:09:14.328 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static])
+16:09:14.375 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]
+16:09:14.378 INFO - Executing: [is displayed: 11 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]])
+16:09:14.407 INFO - Done: [is displayed: 11 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]]
+16:09:14.412 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static])
+16:09:14.434 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]
+16:09:14.439 INFO - Executing: [click: 11 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]])
+16:09:14.514 INFO - Done: [click: 11 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static]]
+16:09:17.522 INFO - Executing: [find elements: By.cssSelector: div[webix_l_id="*Long text"]])
+16:09:17.547 INFO - Done: [find elements: By.cssSelector: div[webix_l_id="*Long text"]]
+16:09:17.550 INFO - Executing: [is displayed: 12 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="*Long text"]]])
+16:09:17.575 INFO - Done: [is displayed: 12 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="*Long text"]]]
+16:09:17.580 INFO - Executing: [find element: By.cssSelector: div[webix_l_id="*Long text"]])
+16:09:17.610 INFO - Done: [find element: By.cssSelector: div[webix_l_id="*Long text"]]
+16:09:17.614 INFO - Executing: [click: 12 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="*Long text"]]])
+16:09:17.685 INFO - Done: [click: 12 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[webix_l_id="*Long text"]]]
+16:09:17.704 INFO - Executing: [find elements: By.cssSelector: div[view_id^="LongText_label"] input])
+16:09:17.742 INFO - Done: [find elements: By.cssSelector: div[view_id^="LongText_label"] input]
+16:09:17.745 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input]])
+16:09:17.768 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input]]
+16:09:18.276 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input]])
+16:09:18.286 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input]]
+16:09:18.291 INFO - Executing: [find element: By.cssSelector: div[view_id^="LongText_label"] input])
+16:09:18.316 INFO - Done: [find element: By.cssSelector: div[view_id^="LongText_label"] input]
+16:09:18.319 INFO - Executing: [send keys: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input], [q, W, q, M, h, t, A, y, H, j, A, L, L, O, y, a, P, g, r, z]])
+16:09:18.483 INFO - Done: [send keys: 13 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_label"] input], [q, W, q, M, h, t, A, y, H, j, A, L, L, O, y, a, P, g, r, z]]
+16:09:18.487 INFO - Executing: [find elements: By.cssSelector: div[view_id^="LongText_columnName"] input])
+16:09:18.514 INFO - Done: [find elements: By.cssSelector: div[view_id^="LongText_columnName"] input]
+16:09:18.517 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_columnName"] input]])
+16:09:18.539 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_columnName"] input]]
+16:09:18.543 INFO - Executing: [find element: By.cssSelector: div[view_id^="LongText_columnName"] input])
+16:09:18.569 INFO - Done: [find element: By.cssSelector: div[view_id^="LongText_columnName"] input]
+16:09:18.574 INFO - Executing: [send keys: 14 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_columnName"] input], [M, I, b, x, J, z, D, d, q, W, Z, H, o, u, a, J, Z, L, Q, g]])
+16:09:18.780 INFO - Done: [send keys: 14 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_columnName"] input], [M, I, b, x, J, z, D, d, q, W, Z, H, o, u, a, J, Z, L, Q, g]]
+16:09:18.784 INFO - Executing: [find elements: By.cssSelector: div[view_id^="LongText_textDefault"] input])
+16:09:18.811 INFO - Done: [find elements: By.cssSelector: div[view_id^="LongText_textDefault"] input]
+16:09:18.814 INFO - Executing: [is displayed: 15 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_textDefault"] input]])
+16:09:18.834 INFO - Done: [is displayed: 15 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_textDefault"] input]]
+16:09:18.841 INFO - Executing: [find element: By.cssSelector: div[view_id^="LongText_textDefault"] input])
+16:09:18.868 INFO - Done: [find element: By.cssSelector: div[view_id^="LongText_textDefault"] input]
+16:09:18.871 INFO - Executing: [send keys: 15 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_textDefault"] input], [t, e, s, t, l, o, n, g, T, e, x, t, d, e, f, a, u, l, t, n, a, m, e]])
+16:09:19.043 INFO - Done: [send keys: 15 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="LongText_textDefault"] input], [t, e, s, t, l, o, n, g, T, e, x, t, d, e, f, a, u, l, t, n, a, m, e]]
+16:09:19.049 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button])
+16:09:19.073 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]
+16:09:19.077 INFO - Executing: [is displayed: 16 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]])
+16:09:19.099 INFO - Done: [is displayed: 16 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]]
+16:09:19.106 INFO - Executing: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button])
+16:09:19.131 INFO - Done: [find element: By.cssSelector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]
+16:09:19.135 INFO - Executing: [click: 16 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]])
+16:09:19.222 INFO - Done: [click: 16 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button]]
+16:09:21.229 INFO - Executing: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell])
+16:09:21.250 INFO - Done: [find elements: By.cssSelector: div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell]
+16:09:21.256 INFO - Executing: [find element: By.cssSelector: td[column="0"] .webix_hcell])
+16:09:21.279 INFO - Done: [find element: By.cssSelector: td[column="0"] .webix_hcell]
+16:09:21.283 INFO - Executing: [get text: 17 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell]])
+16:09:21.310 INFO - Done: [get text: 17 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell]]
+16:09:23.324 INFO - Executing: [find elements: By.cssSelector: .webix_ss_center_scroll .webix_column])
+16:09:23.346 INFO - Done: [find elements: By.cssSelector: .webix_ss_center_scroll .webix_column]
+16:09:23.350 INFO - Executing: [find element: By.cssSelector: div[column="0"] .webix_cell])
+16:09:23.378 INFO - Done: [find element: By.cssSelector: div[column="0"] .webix_cell]
+16:09:23.381 INFO - Executing: [get text: 21 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[column="0"] .webix_cell]])
+16:09:23.408 INFO - Done: [get text: 21 [[ChromeDriver: chrome on WIN8_1 (c54065bf4c1537917cd0312c249db967)] -> css selector: div[column="0"] .webix_cell]]
+16:09:23.417 INFO - Executing: [delete session: 5737fad8-bea1-48df-8886-0aa3a90c70df])
+16:09:24.365 INFO - Done: [delete session: 5737fad8-bea1-48df-8886-0aa3a90c70df]

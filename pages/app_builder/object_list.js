@@ -1137,20 +1137,35 @@ module.exports = {
 							
 			return this;
 		},
-		testclickdate : function(){
-			this.waitForElementVisible('div[view_id="$suggest18"] .webix_cal_month_name', 1000)
-				.click('div[view_id="$suggest18"] .webix_cal_month_name')
-				.waitForElementVisible('div[view_id="$suggest18"] .webix_cal_month_name', 1000)
-				.click('div[view_id="$suggest18"] .webix_cal_month_name')
-				.waitForElementVisible('div[data-value="7"]')
-				.click('div[data-value="7"]')
-				.waitForElementVisible('div[data-value="11"]')
-				.click('div[data-value="11"]')
-				.waitForElementVisible('div[aria-label="31 December 2016"]')
-				.click('div[aria-label="31 December 2016"]');
-							
+		getColumnHeaderValue: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'td[column="#index#"] .webix_hcell';
+
+			itemSelector = itemSelector.replace('#index#', 0);
+
+			self.getText(itemSelector, function (result) {
+				//console.log("getColumnHeaderValue:" + result.value);
+				return result.value;
+			});
+
 			return this;
-		}
+		},
+		getColumnValue: function(index) {
+			var self = this,
+				// deferred = Q.defer(),
+				itemSelector = 'div[column="#index#"] .webix_cell';
+
+			itemSelector = itemSelector.replace('#index#', 0);
+
+			self.getText(itemSelector, function (result) {
+				//console.log("getColumnValue:" + result.value);
+				return result.value;
+			});
+
+			
+		},
+
 
 	}]
 };
