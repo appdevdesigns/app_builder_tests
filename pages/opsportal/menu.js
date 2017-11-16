@@ -6,7 +6,7 @@ module.exports = {
 		appBuilderItem: 'li[area="app-builder"]',
 		coffeeShopItem: 'li[area="ab-app-coffee-shop"]',
 
-		testCoffeeshopApp : 'div[webix_l_id="4"]',
+		testCoffeeshopApp : 'div[webix_l_id="1"]',
 
 	},
 	commands: [{
@@ -14,7 +14,7 @@ module.exports = {
 			this
 				.waitForElementVisible('@menuItem', 99999)
 				.click('@menuItem')
-				.waitForElementVisible('@appBuilderItem', 500)
+				.waitForElementVisible('@appBuilderItem', 5000)
 				.click('@appBuilderItem')
 				.click('@menuItem');
 
@@ -25,7 +25,7 @@ module.exports = {
 			this
 				.waitForElementVisible('@menuItem', 99999)
 				.click('@menuItem')
-				.waitForElementVisible('@coffeeShopItem', 500)
+				.waitForElementVisible('@coffeeShopItem', 5000)
 				.click('@coffeeShopItem')
 				.click('@menuItem');
 			return this;

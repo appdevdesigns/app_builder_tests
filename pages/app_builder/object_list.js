@@ -33,8 +33,8 @@ module.exports = {
 		objectAlertDialogButton: 'div[class="webix_modal_box webix_confirm"] button',
 
 		testObjectTestList: 'div[class="ab-object-list-item"]',
-		addNewColumnButton: 'div[view_id^="ab_work_object_workspace_buttonAddField"] button',
-		selectFieldType: 'div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_inp_static',
+		addNewColumnButton: 'div[view_id^="ab_work_object_workspace_buttonAddField"] .webix_el_box button',
+		selectFieldType: 'div[view_id^="ab_work_object_workspace_popupNewDataField_types"] .webix_el_box .webix_inp_static',
 		singleLineTextFieldType: 'div[webix_l_id="*Single line text"]',
 		longTextFieldType: 'div[webix_l_id="*Long text"]',
 		numberFieldType: 'div[webix_l_id="*Number"]',
@@ -192,6 +192,8 @@ module.exports = {
 		userDefaultValueCheckBox : 'div[view_id^="user_ab-user-current-user-option"] .webix_inp_checkbox_border button',
 		userEditTableCheckBox : 'div[view_id^="user_ab-user-editable"] .webix_inp_checkbox_border button',
 
+		addNewRowButton : 'div[view_id^="ab_work_object_workspace_buttonRowNew"] button',
+
 	},
 	commands: [{
 		// Add new object
@@ -209,6 +211,15 @@ module.exports = {
 
 			return this;
 		},
+
+		//add new row
+		clickAddNewRowButton: function () {
+			this.waitForElementVisible('@addNewRowButton', 1200)
+				.click('@addNewRowButton') // Click add new object
+
+			return this;
+		},
+
 		enterBlankObjectName: function (objectName) {
 			this.waitForElementVisible('@blankObjectNameTextbox', 1200)
 				.setValue('@blankObjectNameTextbox', objectName);
@@ -300,7 +311,7 @@ module.exports = {
 		},
 
 		selectAddNewColumnButton: function(){
-			this.waitForElementVisible('@addNewColumnButton', 10000)
+			this.waitForElementVisible('@addNewColumnButton', 1000)
 					.click('@addNewColumnButton');
 
 			return this;

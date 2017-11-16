@@ -7,6 +7,7 @@ module.exports = {
 		menuSection = browser.page.opsportal.menu();
 
 		browser
+			.maximizeWindow()
 			.url(browser.launchUrl) // Go to http://localhost:1337/page/opsportal
 			.waitForElementVisible('body', 1000); // Wait for the login page
 
@@ -16,27 +17,59 @@ module.exports = {
 
 		menuSection.selectTestCoffeeShop();
 	},
-
-	
-
-
-	'test long  text Case 1 All Data': function (browser) {
+	'test add new object': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
-		var labelname = shared_func.randomTextInput(20);
-		var Name = shared_func.randomTextInput(20);
+		var enternamenewobject = shared_func.randomTextInput(10);
+
+		browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				enternamenewobject = lastObjItem + 1;
+
+	})
+
 		browser
 		.perform(function() {
-			console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 			coffeeObject
-			.selectObjectTest()
-			.selectAddNewColumnButton()
-			.selectFieldTypeButton();
+				.clickAddNewObject()
+				.enterBlankObjectName(enternamenewobject)
+				.saveBlankObject();
+
+		})
+		.pause(2000)
+		.end(); 
+
+	},
+	'test long  text Case 1 All Data': function (browser) {
+		var coffeeObject = browser.page.app_builder.object_list();
+		var labelname = shared_func.randomTextInput(5);
+		var Name = shared_func.randomTextInput(5);
+		var testdefaultvalue = "testdefaultvalue";
+
+		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(2000)
+		.perform(function() {
+			console.log("step 1.1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
+			coffeeObject
+				.selectAddNewColumnButton()
+				.selectFieldTypeButton();
 		})
 		.pause(3000)
 		.perform(function() {
 			console.log("step 2 singleLineTextFieldType");
 			coffeeObject
-			.selectlongTextFieldType();
+				.selectlongTextFieldType();
 		})
 		.perform(function() {
 			console.log("step 3 selectFieldType");
@@ -44,7 +77,7 @@ module.exports = {
 			.enterlongTextLabelName(labelname)
 			.enterlongTextName(Name)
 						//.clicklongTextShowIcon()
-						.enterlongTextDefaultName("testlongTextdefaultname");
+						.enterlongTextDefaultName(testdefaultvalue);
 						//.clicklongTextSupportMultilingual();
 
 					})
@@ -54,62 +87,64 @@ module.exports = {
 			.addColumnButton();
 
 		})
-		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 5 Verify ColumnHeader");
-			
-			var lastObjItem = elems.value.length - 2;
-			console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell';
+		.pause(5000)
+		.perform(function() {
+			console.log("step 4-1 clickAddNewRowButton");
+			coffeeObject
+				.clickAddNewRowButton();
+		})
+		.pause(5000)
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
 
-				browser.getText(itemSelector, function(result) {
-					console.log("getColumnHeaderValue55:" + result.value);
-				    //browser.verify.equal(labelname, result.value);
-				    browser.assert.equal(result.value , labelname );
-				});
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
 
-			})		
-		.pause(2000)	
-		.elements('css selector', '.webix_ss_center_scroll .webix_column', function (elems) {
-			console.log("Step 6 Verify Value");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'div[column="#index#"] .webix_cell';
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
-				browser.getText(itemSelector, function(result) {
-				    //console.log("getColumnHeaderValue55:" + result.value);
-				    browser.assert.equal(result.value , "testlongTextdefaultname");
-				});
-//
-})			
-		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
+			})
+
+		})
+		.perform(function() {
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
+				console.log("Step 6 Verify ColumnValue");
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.elems:" + JSON.stringify(elems));
+
+
+				browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,testdefaultvalue);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+
+			})
+		})
+		browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell span', function (elems) {
 			console.log("Step 7 Verify Icon");
-			var lastObjItem = elems.value.length - 2;
+			var lastObjItem = elems.value.length;
 				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell span';
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
-
-
-				browser.getAttribute(itemSelector, "class", function(result) {
-					console.log("class55: " + result.value);
-					browser.assert.equal(result.value , "webix_icon fa-font");
-				  //browser.expect.element(result).to.be.a('span');
-				});
+				browser.elementIdAttribute(elems.value[lastObjItem-1].ELEMENT,"class", function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value , "webix_icon fa-align-right");
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
 			})			
 		.pause(2000)
@@ -118,9 +153,23 @@ module.exports = {
 
 	'test long  text Case 2 No Data': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
-		var labelname = shared_func.randomTextInput(20);
-		var Name = shared_func.randomTextInput(20);
+		var labelname = shared_func.randomTextInput(2);
+		var Name = shared_func.randomTextInput(2);
+		var testdefaultvalue = "ab";
+
 		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(2000)
 		.perform(function() {
 			console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 			coffeeObject
@@ -151,34 +200,49 @@ module.exports = {
 
 		})
 		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 5 Verify ColumnHeader");
-			
-			var lastObjItem = elems.value.length - 2;
-			console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell';
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
 
-				browser.getText(itemSelector, function(result) {
-					console.log("getColumnHeaderValue55:" + result.value);
-				    //browser.verify.equal(labelname, result.value);
-				    browser.assert.equal(result.value , labelname );
-				});
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
 
-			})	
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
+
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+			})
+
+		})
 		.pause(2000)
 		.end(); 
 	},
 
 	'test long  text Case 3 No Show Icon Checkbox': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
-		var labelname = shared_func.randomTextInput(20);
-		var Name = shared_func.randomTextInput(20);
+		var labelname = shared_func.randomTextInput(2);
+		var Name = shared_func.randomTextInput(2);
+		var testdefaultvalue = "ab";
+
 		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(2000)
 		.perform(function() {
 			console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 			coffeeObject
@@ -198,7 +262,7 @@ module.exports = {
 			.enterlongTextLabelName(labelname)
 			.enterlongTextName(Name)
 			.clicklongTextShowIcon()
-			.enterlongTextDefaultName("testlongTextdefaultname")
+			.enterlongTextDefaultName(testdefaultvalue);
 						//.clicklongTextSupportMultilingual();
 
 					})
@@ -209,52 +273,70 @@ module.exports = {
 
 		})
 		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 5 Verify ColumnHeader");
-			
-			var lastObjItem = elems.value.length - 2;
-			console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell';
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
 
-				browser.getText(itemSelector, function(result) {
-					console.log("getColumnHeaderValue55:" + result.value);
-				    //browser.verify.equal(labelname, result.value);
-				    browser.assert.equal(result.value , labelname );
-				});
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
 
-			})	
-		.pause(2000)	
-		.elements('css selector', '.webix_ss_center_scroll .webix_column', function (elems) {
-			console.log("Step 6 Verify Value");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'div[column="#index#"] .webix_cell';
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
-				browser.getText(itemSelector, function(result) {
-				    //console.log("getColumnHeaderValue55:" + result.value);
-				    browser.assert.equal(result.value , "testlongTextdefaultname");
-				});
-//
-})		
+			})
+
+		})
+		.pause(2000)
+		.perform(function() {
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
+				console.log("Step 6 Verify ColumnValue");
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.elems:" + JSON.stringify(elems));
+
+
+				browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,testdefaultvalue);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+
+			})
+		})	
 		.pause(2000)
 		.end(); 
 	},
 
 	'test long  text Case 4 No Mulltilingual Checkbox': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
-		var labelname = shared_func.randomTextInput(20);
-		var Name = shared_func.randomTextInput(20);
+		var labelname = shared_func.randomTextInput(2);
+		var Name = shared_func.randomTextInput(2);
+		var testdefaultvalue = "ab";
+
 		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(2000)
 		.perform(function() {
 			console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 			coffeeObject
@@ -274,7 +356,7 @@ module.exports = {
 			.enterlongTextLabelName(labelname)
 			.enterlongTextName(Name)
 						//.clicklongTextShowIcon()
-						.enterlongTextDefaultName("testlongTextdefaultname")
+						.enterlongTextDefaultName(testdefaultvalue)
 						.clicklongTextSupportMultilingual();
 
 					})
@@ -284,74 +366,68 @@ module.exports = {
 			.addColumnButton();
 
 		})
-		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 5 Verify ColumnHeader");
-			
-			var lastObjItem = elems.value.length - 2;
-			console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell';
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
 
-				browser.getText(itemSelector, function(result) {
-					console.log("getColumnHeaderValue55:" + result.value);
-				    //browser.verify.equal(labelname, result.value);
-				    browser.assert.equal(result.value , labelname );
-				});
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
 
-			})		
-		.pause(2000)	
-		.elements('css selector', '.webix_ss_center_scroll .webix_column', function (elems) {
-			console.log("Step 6 Verify Value");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'div[column="#index#"] .webix_cell';
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
-				browser.getText(itemSelector, function(result) {
-				    //console.log("getColumnHeaderValue55:" + result.value);
-				    browser.assert.equal(result.value , "testlongTextdefaultname");
-				});
-//
-})			
-		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 7 Verify Icon");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell span';
+			})
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+		})
+		.perform(function() {
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
+				console.log("Step 6 Verify ColumnValue");
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.elems:" + JSON.stringify(elems));
 
 
-				browser.getAttribute(itemSelector, "class", function(result) {
-					console.log("class55: " + result.value);
-					browser.assert.equal(result.value , "webix_icon fa-font");
-				  //browser.expect.element(result).to.be.a('span');
-				});
+				browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,testdefaultvalue);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
-			})			
-		.pause(2000)
-		.pause(2000)
+
+			})
+		})
 		.end(); 
 	},
 
 	'test long  text Case 5 No Mulltilingual and  ShowIcon Checkbox  ': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
-		var labelname = shared_func.randomTextInput(20);
-		var Name = shared_func.randomTextInput(20);
+		var labelname = shared_func.randomTextInput(2);
+		var Name = shared_func.randomTextInput(2);
+		var testdefaultvalue = "ab";
+
 		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(2000)
 		.perform(function() {
 			console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 			coffeeObject
@@ -371,7 +447,7 @@ module.exports = {
 			.enterlongTextLabelName(labelname)
 			.enterlongTextName(Name)
 						//.clicklongTextShowIcon()
-						.enterlongTextDefaultName("testlongTextdefaultname")
+						.enterlongTextDefaultName(testdefaultvalue)
 						//.clicklongTextSupportMultilingual();
 
 					})
@@ -381,66 +457,47 @@ module.exports = {
 			.addColumnButton();
 
 		})
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
+
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
+
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+			})
+
+		})
 		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 5 Verify ColumnHeader");
-			
-			var lastObjItem = elems.value.length - 2;
-			console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell';
+		.perform(function() {
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
+				console.log("Step 6 Verify ColumnValue");
 
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
 
-				browser.getText(itemSelector, function(result) {
-					console.log("getColumnHeaderValue55:" + result.value);
-				    //browser.verify.equal(labelname, result.value);
-				    browser.assert.equal(result.value , labelname );
-				});
-
-			})		
-		.pause(2000)	
-		.elements('css selector', '.webix_ss_center_scroll .webix_column', function (elems) {
-			console.log("Step 6 Verify Value");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'div[column="#index#"] .webix_cell';
-
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
-
-				browser.getText(itemSelector, function(result) {
-				    //console.log("getColumnHeaderValue55:" + result.value);
-				    browser.assert.equal(result.value , "testlongTextdefaultname");
-				});
-//
-})			
-		.pause(2000)
-		.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hcell', function (elems) {
-			console.log("Step 7 Verify Icon");
-			var lastObjItem = elems.value.length - 2;
-				//console.log("getColumnValuesize: "+ lastObjItem);
-				//browser.verify.equal(ColumnHeaderValue, labelname);
-				var self = this,
-				// deferred = Q.defer(),
-				itemSelector = 'td[column="#index#"] .webix_hcell span';
-
-				itemSelector = itemSelector.replace('#index#', lastObjItem);
+				console.log("result.elems:" + JSON.stringify(elems));
 
 
-				browser.getAttribute(itemSelector, "class", function(result) {
-					console.log("class55: " + result.value);
-					browser.assert.equal(result.value , "webix_icon fa-font");
-				  //browser.expect.element(result).to.be.a('span');
-				});
+				browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,testdefaultvalue);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
 
-			})			
-		.pause(2000)
-		.pause(2000)
+
+			})
+		})
 		.end(); 
 	},
 	/*'test long  text Case 6 cancel  ': function (browser) {

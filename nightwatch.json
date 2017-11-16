@@ -8,12 +8,12 @@
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : "../bin/selenium-server-standalone-3.3.1.jar",
+    "server_path" : "../bin/selenium-server-standalone-3.6.0.jar",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "../bin/chromedriver.exe",
-      "webdriver.gecko.driver" : "../bin/geckodriver",
+      "webdriver.gecko.driver" : "../bin/geckodriver.exe",
       "webdriver.edge.driver" : "../bin/MicrosoftWebDriver.exe"
     }
   },
@@ -30,19 +30,27 @@
       },
       "desiredCapabilities": {
         "browserName": "chrome",
-        "marionette": true
+        "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
       }
     },
 
     "chrome" : {
       "desiredCapabilities": {
-        "browserName": "chrome"
+        "browserName": "chrome",
+                "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
       }
     },
 
     "edge" : {
       "desiredCapabilities": {
-        "browserName": "MicrosoftEdge"
+        "browserName": "MicrosoftEdge",
+        "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
       }
     }
   }

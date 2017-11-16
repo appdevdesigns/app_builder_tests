@@ -635,5 +635,6 @@ module.exports = {
 				.waitForElementVisible('div[webix_l_id="DateofBirth"]', 5000)
 				.click('div[webix_l_id="DateofBirth"]');
 		},
+		
 	}]
 };
