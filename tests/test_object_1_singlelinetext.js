@@ -20,7 +20,7 @@ module.exports = {
 
 		
 	},
-	'test add new object': function (browser) {
+	/*'test add new object': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
 		var enternamenewobject = shared_func.randomTextInput(10);
 
@@ -473,6 +473,45 @@ module.exports = {
 		})
 		.pause(2000)
 		.end(); 
-	},
+	},*/
+	/*'Delete object test singlelinetext': function (browser) {
 
+		var coffeeObject = browser.page.app_builder.object_list();
+
+		browser
+		.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.selectObject(lastObjItem+1);
+
+			})
+		})
+		.pause(5000)
+		.perform(function() {
+			console.log("step 2 select edit button ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+					.deleteObject(lastObjItem+1)
+					.deleteObjectMenu();
+
+			})
+		})
+		.pause(5000)
+		.perform(function() {
+			console.log("step 2 deleteObject ");
+				
+
+		})
+		
+		.pause(20000)
+		.end(); */
+
+	}
 	};

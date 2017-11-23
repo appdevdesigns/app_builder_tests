@@ -17,16 +17,50 @@ module.exports = {
 		menuSection.selectTestCoffeeShop();
 	},
 
-	
-		/*'test date Case  selectselectListFieldType': function (browser) {
+	'test add new object': function (browser) {
+		var coffeeObject = browser.page.app_builder.object_list();
+		var enternamenewobject = shared_func.randomTextInput(10);
+
+		browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+			var lastObjItem = elems.value.length;
+			enternamenewobject = lastObjItem + 1;
+
+		})
+
+		browser
+		.perform(function() {
+			coffeeObject
+			.clickAddNewObject()
+			.enterBlankObjectName(enternamenewobject)
+			.saveBlankObject();
+
+		})
+		.pause(2000)
+		.end(); 
+
+	},
+	'test date Case  selectselectListFieldType': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
 			browser
 			.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+				.selectObject(lastObjItem+1);
+
+			})
+		})	
+		.pause(2000)
+			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 					coffeeObject
-						.selectObjectTest()
+						
 						.selectAddNewColumnButton()
 						.selectFieldTypeButton();
 			})
@@ -51,7 +85,69 @@ module.exports = {
 						.addColumnButton();
 
 			})
-			.pause(2000)
+			.pause(5000)
+		.perform(function() {
+			console.log("step 4-1 clickAddNewRowButton");
+			coffeeObject
+				.clickAddNewRowButton();
+		})
+		.pause(5000)
+		.perform(function() {
+			console.log("step 5 ColumnHeader");
+
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.value:" + JSON.stringify(elems.value[lastObjItem-1].ELEMENT));
+
+				 browser.elementIdText(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value,labelname);
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+			})
+
+		})
+		.pause(2000)
+		.perform(function() {
+			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("getColumnValuesize: "+ lastObjItem);
+
+				console.log("result.elems:" + JSON.stringify(elems));
+
+
+				browser.elementIdSelected(elems.value[lastObjItem-1].ELEMENT, function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				//browser.assert.equal(result.value,true);
+          				//console.log("result.value:" + JSON.stringify(result));
+          				//browser.verify.ok(result.value, 'Checkbox is selected');
+        			})
+
+
+			})
+		})
+		.pause(2000)
+		browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell span', function (elems) {
+			console.log("Step 7 Verify Icon");
+			var lastObjItem = elems.value.length;
+				//console.log("getColumnValuesize: "+ lastObjItem);
+
+				browser.elementIdAttribute(elems.value[lastObjItem-1].ELEMENT,"class", function(result){
+          				//browser.assert.equal(result.value,'text')
+          				console.log("result.value: "+ result.value);
+          				browser.assert.equal(result.value , "webix_icon fa-th-list");
+          				///console.log("result.value:" + JSON.stringify(result));
+        			})
+
+			})		
+		.pause(2000)
 			.end(); 
 		},	
 		'test date Case  selectselectListFieldType': function (browser) {
@@ -60,9 +156,21 @@ module.exports = {
 			var Name = shared_func.randomTextInput(20);
 			browser
 			.perform(function() {
+			console.log("step 1 selectObjectTest ");
+			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
+
+				var lastObjItem = elems.value.length;
+				console.log("step 1 lastObjItem: " + lastObjItem);
+				coffeeObject
+				.selectObject(lastObjItem+1);
+
+			})
+		})	
+		.pause(2000)
+			.perform(function() {
 				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
 					coffeeObject
-						.selectObjectTest()
+						
 						.selectAddNewColumnButton()
 						.selectFieldTypeButton();
 			})

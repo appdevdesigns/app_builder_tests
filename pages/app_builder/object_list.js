@@ -84,7 +84,7 @@ module.exports = {
 
 		numberDecimalSelect: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
 		numberDecimalSelectNone: 'div[view_id^="number_typeDecimals"] .webix_inp_static',
-		numberDecimalSelectComma: 'div[webix_l_id="comma"]',
+		numberDecimalSelectComma: 'div[view_id="$suggest4_list"] .webix_scroll_cont div.webix_list_item:nth-of-type(2)',
 		numberDecimalSelectPeriod: 'div[webix_l_id="period"]',
 		numberDecimalSelectSpace: 'div[webix_l_id="space"]',
 
@@ -193,6 +193,7 @@ module.exports = {
 		userEditTableCheckBox : 'div[view_id^="user_ab-user-editable"] .webix_inp_checkbox_border button',
 
 		addNewRowButton : 'div[view_id^="ab_work_object_workspace_buttonRowNew"] button',
+		deleteObjectMenu : 'div[view_id^="ab_common_popupEditMenu_list"] .webix_win_content .webix_win_body .webix_view .webix_scroll_cont .webix_list_item:nth-of-type(2)'
 
 	},
 	commands: [{
@@ -662,7 +663,7 @@ module.exports = {
 			return this;
 		},
 		selectNumberDecimalSelectComma : function(){
-			this.waitForElementVisible('@numberDecimalSelectComma: ', 1000)
+			this.waitForElementVisible('@numberDecimalSelectComma: ', 2000)
 				.click('@numberDecimalSelectComma: ');
 							
 			return this;
@@ -1176,6 +1177,12 @@ module.exports = {
 
 			
 		},
+		deleteObjectMenu : function(){
+			this.waitForElementVisible('@deleteObjectMenu', 2000)
+				.click('@deleteObjectMenu');
+							
+			return this;
+		}
 
 
 	}]
