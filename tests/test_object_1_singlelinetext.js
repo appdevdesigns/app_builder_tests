@@ -20,7 +20,7 @@ module.exports = {
 
 		
 	},
-	/*'test add new object': function (browser) {
+	'test add new object': function (browser) {
 		var coffeeObject = browser.page.app_builder.object_list();
 		var enternamenewobject = shared_func.randomTextInput(10);
 
@@ -473,7 +473,7 @@ module.exports = {
 		})
 		.pause(2000)
 		.end(); 
-	},*/
+	},
 	/*'Delete object test singlelinetext': function (browser) {
 
 		var coffeeObject = browser.page.app_builder.object_list();
@@ -511,7 +511,7 @@ module.exports = {
 		})
 		
 		.pause(20000)
-		.end(); */
+		.end(); 
 
-	}
+	}*/
 	};

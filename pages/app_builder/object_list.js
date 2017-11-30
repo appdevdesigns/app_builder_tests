@@ -43,6 +43,7 @@ module.exports = {
 		selectListFieldType: 'div[webix_l_id="*Select list"]',
 		imageAttachmentFieldType: 'div[webix_l_id="*Image Attachment"]',
 		userFieldType: 'div[webix_l_id="*User"]',
+		fileAttachmentFieldType: 'div[webix_l_id="*File Attachment"]',
 		addColumn : 'div[view_id^="ab_work_object_workspace_popupNewDataField_buttonSave"] button',
 
 		labelNameTextBox: 'div[view_id^="string_label"] input',
@@ -90,15 +91,19 @@ module.exports = {
 
 		numberThousandsSelect: 'div[view_id^="number_typeThousands"] .webix_inp_static',
 		numberThousandsSelectNone : 'div[webix_l_id="comma"]',
-		numberThousandsSelectComma: 'div[webix_l_id="comma"]',
-		numberThousandsSelectPeriod: 'div[webix_l_id="period"]',
-		numberThousandsSelectSpace: 'div[webix_l_id="space"]',
+		numberThousandsSelectComma: 'div[view_id="$suggest7"] .webix_list_item:nth-of-type(2)',
+		numberThousandsSelectPeriod: 'div[view_id="$suggest7"] .webix_list_item:nth-of-type(3)',
+		numberThousandsSelectSpace: 'div[view_id="$suggest7"] .webix_list_item:nth-of-type(4)',
 
 		numberValidateCheckBox: 'div[view_id^="number_validate"] .webix_inp_checkbox_border button',
 		numberValidateMinimum: 'div[view_id^="number_validateMinimum"] input',
 		numberValidateMaximum: 'div[view_id^="number_validateMaximum"] input',
 
 		calcelAddNewColumnButton : 'div[class="ab-cancel-button"]',
+
+		numberPlacesSelect : 'div[view_id^="number_typeDecimalPlaces"] .webix_inp_static',
+		numberPlacesOneSelect : 'div[view_id="$suggest5"] .webix_list_item:nth-of-type(2)',
+
 
 		//date
 		dateLabelNameTextBox: 'div[view_id^="date_label"] input',
@@ -191,6 +196,15 @@ module.exports = {
 		useruserabusermultipleoptionCheckBox : 'div[view_id^="user_ab-user-multiple-option"] .webix_inp_checkbox_border button',
 		userDefaultValueCheckBox : 'div[view_id^="user_ab-user-current-user-option"] .webix_inp_checkbox_border button',
 		userEditTableCheckBox : 'div[view_id^="user_ab-user-editable"] .webix_inp_checkbox_border button',
+
+		//file attachment
+		fileAttachmentLabelNameTextBox: 'div[view_id^="file_label"] input',
+		fileAttachmentNameTextBox : 'div[view_id^="file_columnName"] input',
+		fileAttachmentshowIconCheckBox : 'div[view_id^="file_showIcon"] .webix_inp_checkbox_border button', 		
+		fileAttachmentSizeCheckbox : 'div[view_id^="file_fileSize"] input',
+		fileAttachmentType : 'divview_id^="file_fileType"] input',
+
+
 
 		addNewRowButton : 'div[view_id^="ab_work_object_workspace_buttonRowNew"] button',
 		deleteObjectMenu : 'div[view_id^="ab_common_popupEditMenu_list"] .webix_win_content .webix_win_body .webix_view .webix_scroll_cont .webix_list_item:nth-of-type(2)'
@@ -368,6 +382,12 @@ module.exports = {
 		selectuserFieldType: function(){
 			this.waitForElementVisible('@userFieldType', 10000)
 					.click('@userFieldType');
+
+			return this;
+		},
+		selectfileAttachmentFieldType: function(){
+			this.waitForElementVisible('@fileAttachmentFieldType', 10000)
+					.click('@fileAttachmentFieldType');
 
 			return this;
 		},
@@ -745,17 +765,12 @@ module.exports = {
 			return this;
 		},
 		dateIncludeTimeCheckBox : function(){
-			this.waitForElementVisible('@dateIncludeTimeCheckBox', 1000)
+			this.waitForElementVisible('@dateIncludeTimeCheckBox', 3000)
 				.click('@dateIncludeTimeCheckBox');
 							
 			return this;
 		},
-		dateIncludeTimeCheckBox : function(){
-			this.waitForElementVisible('@dateSetCurrentdateDefaultValue', 1000)
-				.click('@dateSetCurrentdateDefaultValue');
-							
-			return this;
-		},
+		
 		dateDayItem : function(){
 			this.waitForElementVisible('@dateDayItem', 1000)
 				.click('@dateDayItem');
@@ -1089,6 +1104,40 @@ module.exports = {
 							
 			return this;
 		},
+
+		//file attachment
+		enterfileAttachmentLabelNameTextBox: function (fileAttachmentLabelName) {
+			this.waitForElementVisible('@fileAttachmentLabelNameTextBox', 1200)
+				.setValue('@fileAttachmentLabelNameTextBox', fileAttachmentLabelName);
+
+			return this;
+		},
+		enterfileAttachmentNameTextBoxNameTextBox: function (fileName) {
+			this.waitForElementVisible('@fileAttachmentNameTextBox', 1200)
+				.setValue('@fileAttachmentNameTextBox', fileName);
+
+			return this;
+		},
+		userfileAttachmentshowIconCheckBox : function(){
+			this.waitForElementVisible('@fileAttachmentshowIconCheckBox', 1000)
+				.click('@fileAttachmentshowIconCheckBox');
+							
+			return this;
+		},
+		enterfileAttachmentSizeCheckbox: function (fileSize) {
+			this.waitForElementVisible('@fileAttachmentSizeCheckbox', 1200)
+				.setValue('@fileAttachmentSizeCheckbox', fileSize);
+
+			return this;
+		},
+		enterfileAttachmentType: function (fileType) {
+			this.waitForElementVisible('@fileAttachmentType', 1200)
+				.setValue('@fileAttachmentType', fileType);
+
+			return this;
+		},
+
+
 		validateCondition  : function(){
 			this.waitForElementVisible('@validateCondition', 1000)
 				.click('@validateCondition');
@@ -1182,7 +1231,26 @@ module.exports = {
 				.click('@deleteObjectMenu');
 							
 			return this;
+		},
+		numberPlacesSelect : function(){
+			this.waitForElementVisible('@numberPlacesSelect', 2000)
+				.click('@numberPlacesSelect');
+							
+			return this;
+		},
+		numberPlacesOneSelect : function(){
+			this.waitForElementVisible('@numberPlacesOneSelect', 2000)
+				.click('@numberPlacesOneSelect');
+							
+			return this;
+		},
+		dateSetCurrentdateDefaultValue : function(){
+			this.waitForElementVisible('@dateSetCurrentdateDefaultValue', 2000)
+				.click('@dateSetCurrentdateDefaultValue');
+							
+			return this;
 		}
+
 
 
 	}]

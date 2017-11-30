@@ -7,7 +7,6 @@ module.exports = {
 			menuSection = browser.page.opsportal.menu();
 
 		browser
-			.maximizeWindow()
 			.url(browser.launchUrl) // Go to http://localhost:1337/page/opsportal
 			.waitForElementVisible('body', 1000); // Wait for the login page
 
@@ -41,7 +40,7 @@ module.exports = {
 		.end(); 
 
 	},
-	'test date Case 1 selectselectListFieldType': function (browser) {
+	'test date Case  selectselectListFieldType': function (browser) {
 			var coffeeObject = browser.page.app_builder.object_list();
 			var labelname = shared_func.randomTextInput(20);
 			var Name = shared_func.randomTextInput(20);
@@ -69,15 +68,14 @@ module.exports = {
 			.perform(function() {
 				console.log("step 2 selectselectListFieldType");
 					coffeeObject
-						.selectselectListFieldType();
+						.selectfileAttachmentFieldType();
 			})
 			.perform(function() {
 				console.log("step 3 selectFieldType");
 					coffeeObject
-						.enterselectlistLabelNameTextBox(labelname)
-						.enterselectlistNameTextBox(Name)
-						.selectlistshowIconCheckBox();
-
+						.enterfileAttachmentLabelNameTextBox(labelname)
+						.enterfileAttachmentNameTextBoxNameTextBox(Name);
+						
 					
 			})
 			.perform(function() {
@@ -114,27 +112,6 @@ module.exports = {
 
 		})
 		.pause(2000)
-		.perform(function() {
-			browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_body .webix_ss_center .webix_ss_center_scroll .webix_column div.webix_cell', function (elems) {
-
-				var lastObjItem = elems.value.length;
-				console.log("getColumnValuesize: "+ lastObjItem);
-
-				console.log("result.elems:" + JSON.stringify(elems));
-
-
-				browser.elementIdSelected(elems.value[lastObjItem-1].ELEMENT, function(result){
-          				//browser.assert.equal(result.value,'text')
-          				console.log("result.value: "+ result.value);
-          				//browser.assert.equal(result.value,true);
-          				//console.log("result.value:" + JSON.stringify(result));
-          				//browser.verify.ok(result.value, 'Checkbox is selected');
-        			})
-
-
-			})
-		})
-		.pause(2000)
 		browser.elements('css selector', 'div[view_id^="ab_work_object_workspace_datatable_component"] .webix_ss_header .webix_hs_center table tr td .webix_hcell span', function (elems) {
 			console.log("Step 7 Verify Icon");
 			var lastObjItem = elems.value.length;
@@ -143,7 +120,7 @@ module.exports = {
 				browser.elementIdAttribute(elems.value[lastObjItem-1].ELEMENT,"class", function(result){
           				//browser.assert.equal(result.value,'text')
           				console.log("result.value: "+ result.value);
-          				browser.assert.equal(result.value , "webix_icon fa-th-list");
+          				browser.assert.equal(result.value , "webix_icon fa-file");
           				///console.log("result.value:" + JSON.stringify(result));
         			})
 
@@ -151,54 +128,7 @@ module.exports = {
 		.pause(2000)
 			.end(); 
 		},	
-		'test date Case 2 selectselectListFieldType': function (browser) {
-			var coffeeObject = browser.page.app_builder.object_list();
-			var labelname = shared_func.randomTextInput(20);
-			var Name = shared_func.randomTextInput(20);
-			browser
-			.perform(function() {
-			console.log("step 1 selectObjectTest ");
-			browser.elements('css selector', 'div[view_id^="ab_work_object_list_editlist"] .webix_scroll_cont .webix_list_item', function (elems) {
-
-				var lastObjItem = elems.value.length;
-				console.log("step 1 lastObjItem: " + lastObjItem);
-				coffeeObject
-				.selectObject(lastObjItem+1);
-
-			})
-		})	
-		.pause(2000)
-			.perform(function() {
-				console.log("step 1 selectObjectTest selectAddNewColumnButton selectFieldTypeButton");
-					coffeeObject
-						
-						.selectAddNewColumnButton()
-						.selectFieldTypeButton();
-			})
-			.pause(3000)
-			.perform(function() {
-				console.log("step 2 selectselectListFieldType");
-					coffeeObject
-						.selectselectListFieldType();
-			})
-			.perform(function() {
-				console.log("step 3 selectFieldType");
-					coffeeObject
-						.enterselectlistLabelNameTextBox(labelname)
-						.enterselectlistNameTextBox(Name);
-						//.selectlistshowIconCheckBox();
-
-					
-			})
-			.perform(function() {
-				console.log("step 4 addColumn");
-					coffeeObject
-						.addColumnButton();
-
-			})
-			.pause(2000)
-			.end(); 
-		},
+		
 
 	
 };
